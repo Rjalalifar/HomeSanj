@@ -1,123 +1,237 @@
-# خانه‌سنج — جست‌وجوی عادی و پیشرفته
+# Homesanj - Tehran Rental Search
 
-مرحلهٔ دوم روی همان معماری محلی توسعه یافته است: جست‌وجوی عادی با فیلتر مرورگر و SQLite، و جست‌وجوی پیشرفته با Qdrant و embedding چندزبانهٔ محلی. توضیح هوشمند AvalAI اختیاری است؛ بدون کلید، مقایسه از شواهد عددی ساخته می‌شود. راهنمای جامع قراردادها، محدودیت‌ها و تحویل: [handoff مرحلهٔ دوم](docs/handoff-phase-2.md).
+Homesanj helps users find and compare rental apartments in Tehran. It combines budget, property features, neighborhood filters and access to public transport. The application interface is in Persian; this guide is in English.
 
-برای سرویس معنایی، جدا از OTP موجود:
+The demo includes synthetic listings and prices. They demonstrate the product and do not represent current market offers.
 
-```powershell
+## What the application does
+
+- **Normal Search:** filters homes by deposit, monthly rent, size, bedrooms, parking, elevator and location. Browser filtering provides a preview; the backend checks submitted conditions against stored data.
+- **Advanced Search:** adds semantic matching through a local multilingual embedding model and Qdrant. It keeps the same property and location constraints. Gemini can optionally select evidence-backed explanation claims through AvalAI.
+- **Accessibility:** evaluates each home's route to an optional saved destination. Without a destination, it evaluates walking access to the nearest geographically located stop in the imported stop catalog.
+- **Internal evaluation:** provides a protected dashboard and one shared review queue for Normal and Advanced searches. Feedback, annotations and frozen search evidence support offline evaluation and replay.
+
+The stack is React, TypeScript, Vite and Leaflet on the frontend; FastAPI, Pydantic, SQLAlchemy 2 and SQLite on the backend. SQLite stores listings, search snapshots, routing jobs, cached results and review records. The backend calls the existing OpenTripPlanner (OTP) service for routes.
+
+## Local services and addresses
+
+| Service | Address | Purpose |
+|---|---|---|
+| Application | http://127.0.0.1:8000/ | Built frontend and backend API |
+| API documentation | http://127.0.0.1:8000/docs | Interactive API reference |
+| Internal dashboard | http://127.0.0.1:8000/internal | Reviewer login, metrics and review queue |
+| Vite development server | http://127.0.0.1:5173/ | Frontend development; proxies `/api` to port 8000 |
+| Existing OTP service | http://127.0.0.1:8821/ | Route calculation; this port is reserved for OTP |
+| Qdrant | http://127.0.0.1:6333/ | Optional semantic search index |
+
+The commands below use Windows PowerShell and run from the repository root unless stated otherwise. The recorded development environment used Python 3.13.5 and Node.js 20.19.4. Docker is needed for the supplied Qdrant container configuration.
+
+## Start an already configured project
+
+If the virtual environment, database and frontend build already exist, start the backend:
+
+~~~powershell
+.\.venv\Scripts\python.exe -m uvicorn backend.app.main:create_app --factory --host 127.0.0.1 --port 8000
+~~~
+
+Open http://127.0.0.1:8000/. Keep this terminal running. Start the existing OTP service when routing is needed. If Advanced Search is configured, start its existing Qdrant container with:
+
+~~~powershell
+docker compose -f compose.qdrant.yml up -d
+~~~
+
+Regular startup does not regenerate listings, download the embedding model or rebuild the vector index. The routing worker starts with the backend and stores progress in SQLite. One backend process is sufficient for this local MVP.
+
+### After changing frontend files
+
+Port 8000 serves `frontend/dist`, not the TypeScript source files. Build the frontend after UI changes:
+
+~~~powershell
+cd frontend
+npm.cmd run build
+cd ..
+~~~
+
+Reload the browser page after the build finishes. A tab that was already open can continue showing its previously loaded JavaScript; use Ctrl+F5 or reopen the page if necessary.
+
+For frontend development, keep the backend running and use a second terminal:
+
+~~~powershell
+cd frontend
+npm.cmd run dev
+~~~
+
+Then open http://127.0.0.1:5173/ to see source changes through Vite.
+
+## First-time setup
+
+Use this section for a new local installation. Keep an existing `.env` and database when continuing an established project.
+
+### 1. Install dependencies and create local configuration
+
+~~~powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
+if (-not (Test-Path .env)) { Copy-Item .env.example .env }
+cd frontend
+npm.cmd ci
+cd ..
+~~~
+
+### 2. Prepare boundaries, database and demo listings
+
+~~~powershell
+.\.venv\Scripts\python.exe -m backend.app.geo
+.\.venv\Scripts\python.exe -m backend.app.cli migrate
+.\.venv\Scripts\python.exe -m backend.app.cli seed --seed 2026 --dataset-version tehran-2020-v1 --points-per-series-per-neighborhood 5
+~~~
+
+The geometry command prepares and validates the versioned boundary files. The seed command generates reproducible synthetic listings and inserts them without overwriting existing records. The saved report, `data/seed-report.json`, records 5,655 generated listings: five per group in each of 377 neighborhoods, with no shortages in that recorded run.
+
+### 3. Build and run
+
+~~~powershell
+cd frontend
+npm.cmd run build
+cd ..
+.\.venv\Scripts\python.exe -m uvicorn backend.app.main:create_app --factory --host 127.0.0.1 --port 8000
+~~~
+
+Basic property and price searches work without Qdrant or an enabled language model. Route values remain unavailable when OTP cannot provide a valid result.
+
+## Configure accessibility and OTP
+
+Homes are always route origins. A user can save one optional destination in the current browser, change it or remove it.
+
+| Search context | Measurement | Available accessibility sorts in the UI |
+|---|---|---|
+| Saved destination | OTP itinerary duration and total walking time from the home to that destination | Travel time to destination; walking time to destination |
+| No saved destination | Straight-line proximity and OTP walking route to the nearest geographically located stop | Walking time to public transport |
+
+Recommended, rent and deposit sorting are available in both contexts. Straight-line distance can appear as a separate measurement; it is not a walking route or travel-time estimate. Unknown or uncomputed values remain unknown and sort after known values.
+
+Destination routing captures the current `Asia/Tehran` time when a search is submitted. Sorting an existing result reuses stored itineraries and does not request new routes. New routing inputs can require new calculations. Evaluation runs in bounded batches, with three concurrent OTP calls by default; a partial result ranks only the evaluated subset. The UI shows evaluated and candidate counts and supports continuing or cancelling evaluation.
+
+The existing installation was verified as OTP 2.10.0 with the Transmodel API at `/otp/transmodel/v3`. Its recorded profile is `data/otp/api-profile.json`. Relevant `.env` settings are:
+
+~~~dotenv
+OTP_BASE_URL=http://127.0.0.1:8821
+OTP_API_PATH=/otp/transmodel/v3
+OTP_API_TYPE=transmodel_v3
+OTP_PROFILE_PATH=data/otp/api-profile.json
+OTP_TIMEOUT_SECONDS=20
+OTP_MAX_CONCURRENCY=3
+OTP_FIXTURE_MODE=false
+ROUTING_BATCH_LIMIT=30
+~~~
+
+These API settings describe the verified local installation. A reachable OTP homepage alone does not confirm that routing works. For a different installation, verify its version and API before changing the profile. This project does not install OTP, rebuild its graph or replace it with another routing engine.
+
+The imported catalog in `data/otp/stops.json` contains 2,460 usable stops. Coordinates identify quays; mapped entrances and complete city coverage have not been established. The recorded destination-routing profile verifies BUS mode. A metro stop in the catalog does not prove that metro routing is enabled in that profile. The graph version and schedule basis are unknown, and transfer counts are unavailable in the recorded contract.
+
+`live_otp` means a current API call; it does not guarantee realtime or official schedule data. `recorded_otp` identifies reused routing evidence. Synthetic routes require explicit fixture mode. Timeouts, API errors and missing routes remain distinct outcomes.
+
+### If the backend runs in Docker
+
+`127.0.0.1` inside a container refers to that container. On Docker Desktop, use `http://host.docker.internal:8821` only after verifying access from the backend container. Linux Docker Engine may need `extra_hosts: ["host.docker.internal:host-gateway"]`; the host service's bind address and firewall must also allow access. A backend on another machine cannot reach this computer's OTP through its own loopback address.
+
+## Enable Advanced Search with Qdrant
+
+Advanced semantic matching needs the local embedding model and a populated Qdrant index. Run this setup once, after preparing listings:
+
+~~~powershell
 docker compose -f compose.qdrant.yml up -d
 .\.venv\Scripts\python.exe -m backend.app.semantic download-model --report docs/embedding-verification.json
 .\.venv\Scripts\python.exe -m backend.app.semantic index --report docs/qdrant-index-report.json
 .\.venv\Scripts\python.exe -m backend.app.semantic reconcile --report docs/qdrant-reconcile-report.json
-```
+~~~
 
-مدل و ایندکس یک‌بار ایجاد و روی دیسک نگه‌داری می‌شوند؛ اجرای عادی برنامه seed یا دانلود مدل را تکرار نمی‌کند. در نبود Qdrant، جست‌وجوی عادی مستقل می‌ماند و جست‌وجوی پیشرفته وضعیت کاهش قابلیت را نشان می‌دهد. Qdrant فقط روی loopback پورت ۶۳۳۳ است و پورت ۸۸۲۱ برای OTP باقی می‌ماند.
+The pinned model is `Xenova/multilingual-e5-small`. Model files remain under `runtime/models/`; Qdrant data persists in its Docker volume. `reconcile` checks the index against the canonical SQLite inventory; use `index` after changing listings to apply required index updates. Normal application startup does not repeat the model download.
 
-جست‌وجوی فارسی اجارهٔ تهران با **React + TypeScript + Vite + Leaflet**، **FastAPI + Pydantic** و **SQLAlchemy 2 + SQLite**. عضویت مکانی در فرانت بررسی می‌شود؛ بک‌اند نیز هندسهٔ اصلی را برای صحت فیلتر و seed اعتبارسنجی می‌کند. state خود React برای این مرحله کافی است. کامنت‌ها و docstringهای کد انگلیسی و رابط فارسی است.
+Qdrant binds to loopback port 6333. If it is unavailable, Normal Search still works and Advanced Search reports degraded semantic matching while retaining the structured candidate set. Property and location constraints remain enforced in both modes.
 
-## اجرای PowerShell
+## Optional Gemini features through AvalAI
 
-از ریشهٔ پروژه، برای نصب اولیه:
+Language-model features are disabled by default. Normal Search, manual filters, the limited rule-based parser and deterministic evidence-based explanations work without paid calls. Advanced semantic matching uses the local embedding model independently of Gemini.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
-# Copy only if .env does not already exist.
-if (-not (Test-Path .env)) { Copy-Item .env.example .env }
-.\.venv\Scripts\python.exe -m backend.app.geo
-.\.venv\Scripts\python.exe -m backend.app.cli migrate
-.\.venv\Scripts\python.exe -m backend.app.cli seed --seed 2026 --dataset-version tehran-2020-v1 --points-per-series-per-neighborhood 5
-cd frontend
-npm ci
-npm run build
-cd ..
-.\.venv\Scripts\python.exe -m uvicorn backend.app.main:create_app --factory --host 127.0.0.1 --port 8000
-```
+AvalAI uses an OpenAI-compatible endpoint at `https://api.avalai.ir/v1`. Parser, explainer, judge and improvement roles have separate settings and versions; their configured model is `gemini-3.6-flash`. Check account access before enabling a role. The application does not silently replace an unavailable model.
 
-رابط تولیدی: **http://127.0.0.1:8000**؛ مستندات API: **http://127.0.0.1:8000/docs**.
-برای توسعه، بک‌اند را نگه دارید و در ترمینال دیگر `cd frontend` سپس `npm run dev` را اجرا کنید؛ Vite روی پورت ۵۱۷۳ درخواست‌های `/api` را به بک‌اند می‌فرستد. پورت ۸۸۲۱ فقط برای OTP موجود است.
+Configure credentials only in the backend environment. `LLM_ENABLED` controls parser/explainer availability; `INTENT_LLM_ENABLED` and `ADVANCED_AI_ENABLED` control their respective application paths. Judge and improvement jobs have separate opt-in settings. Responses are validated before use, and each role has request, token and retry budgets.
 
-worker همراه سرور اجرا می‌شود. صف و نتایج در SQLite پایدارند و lease منقضی‌شده پس از restart بازیابی می‌شود. برای worker مستقل: `python -m backend.app.cli worker`. یک فرایند سرور برای این MVP کافی است.
+An explicitly enabled smoke test can incur provider charges:
 
-## داده و صداقت نمایش
+~~~powershell
+.\.venv\Scripts\python.exe -m backend.app.cli avalai-smoke --allow-paid --max-requests 1
+~~~
 
-- ۳۷۷ عارضهٔ محله و ۲۲ منطقه؛ عدد ۳۷۶ در نام فایل خام، شمارش رسمی محلات امروز تهران نیست.
-- commitهای فایل‌ها نوامبر ۲۰۲۰ هستند؛ تاریخ صحت مرزها معلوم نیست. این مجموعه استخراج تازهٔ OSM یا مرجع رسمی به‌روز نیست.
-- نسخهٔ آمادهٔ توصیف‌شده در مشخصات دو خودتقاطع اصلاح‌شده، ۱۲۰ جفت هم‌پوشان بالای یک مترمربع، ۱۰۸ محله با بیش از ۱٪ خروج از منطقهٔ منتسب و ۱۱ مورد با بیش از ۵۰٪ خروج دارد. محاسبات همین پروژه در `data/validation-report.json` ثبت می‌شوند.
-- `district_no` انتساب منبع است و خودکار تصحیح نمی‌شود. فیلتر منطقه از نقطه و هندسهٔ منطقه استفاده می‌کند. عضویت چندگانه مبهم است.
-- محلات CRS84 دارند؛ WGS84 مناطق از مختصات و هم‌مکانی استنباط شده، چون metadata خالی است. GeoJSON خروجی `[longitude, latitude]` است.
-- مجوز صریح داده در مخزن بررسی‌شده مشخص نشده است. provenance، اصل هندسه و روش اصلاح حفظ می‌شوند. attribution کاشی‌های مستقل OpenStreetMap باقی است.
-- پوشش کامل شهر ادعا نمی‌شود. حفره و MultiPolygon پشتیبانی می‌شوند؛ فیلتر و seed از هندسهٔ معتبر اصلی استفاده می‌کنند.
+This command also needs the backend key and relevant role enabled. Ordinary seeding and offline unit tests make no paid calls. Keep keys out of source control, browser code, URLs and logs. See `.env.example` and the Phase 3 handoff for role settings and budgets.
 
-[مخزن منبع](https://github.com/mjalalimanesh/tehran-districts-neighborhoods-map-geojson). فایل‌های نسخه‌ثابت، هش‌ها و گزارش تبدیل در `data/` نگه‌داری می‌شوند.
+## Internal dashboard and shared review
 
-## seed و importer
+Open http://127.0.0.1:8000/internal. Set `REVIEW_API_TOKEN` in the backend environment before startup, then enter that credential at the reviewer login. For multiple reviewer identities, use `REVIEWER_TOKENS_JSON`. The page keeps the credential in memory; internal APIs require reviewer authentication.
 
-سه سری `demo_a/demo_b/demo_c` فقط گروه داده‌اند؛ معنای قیمت/کیفیت/دسترسی ندارند. پیش‌فرض ۵ نقطه از هر سری در هر محله است. تعداد واقعی، کمبود و سقف تلاش در `data/seed-report.json` ثبت می‌شوند. seed پایدار است و دادهٔ ذخیره‌شده را بازنویسی نمی‌کند. refresh، sort و فیلتر تصادفی‌سازی ندارند. نقطهٔ چندمحله‌ای رد می‌شود و برای پرکردن تعداد نقطهٔ بیرون مرز ساخته نمی‌شود.
+The dashboard has three primary KPIs per search mode:
 
-مسیر عمودی کوچک پیش از seed کامل:
+| KPI | Normal Search | Advanced Search | Meaning |
+|---|---|---|---|
+| QS@5 | Yes | Yes | Explicit real-user confirmation of a valid home in the first frozen final Top 5; resolved success divided by resolved success plus failure |
+| Human-labeled NDCG@5 | Yes | Yes | Ranking quality using human grades 0-3 and exponential gain over fixed, versioned candidate pools |
+| P95 finalized-search latency | Yes | No | End-to-end submission-to-valid-final-result latency, including required routing |
+| Gemini Evidence Reliance | No | Yes | Supported verifiable Gemini-selected claims divided by evaluated verifiable claims |
 
-```powershell
-.\.venv\Scripts\python.exe -m backend.app.cli seed --seed 2026 --dataset-version tehran-2020-v1 --limit-neighborhoods 2 --report data/seed-small-report.json
-```
+Each card includes source mode, sample count, coverage, observation period and policy information when available. Missing valid evidence is shown as `insufficient_data`. The current event model does not provide dependable end-to-end timing, so the P95 card reports missing instrumentation. Missing labels are not zero grades; deterministic explanations do not count as Gemini evidence. Scores from unmatched traffic do not establish that one mode is better.
 
-قراردادهای ورود داده، اتصال زنده به سایت نیستند:
+Both search modes use the same sampler, review queue, annotations and dataset/experiment workflow. The existing list filters by Normal, Advanced or all records; ambiguous historical modes remain unknown. Review samples retain request and snapshot identities. Rejecting all suggestions is a task outcome, not a negative relevance label for every listing. AI suggestions require human review. Automated test annotations remain separate from independent human labels.
 
-```powershell
+## Data provenance and imports
+
+The boundary source is the [Tehran districts and neighborhoods repository](https://github.com/mjalalimanesh/tehran-districts-neighborhoods-map-geojson). Pinned sources, checksums and transformation reports are stored under `data/`.
+
+- The files contain 377 neighborhood features and 22 districts. The raw neighborhood filename contains `376`; neither number establishes today's official neighborhood count.
+- The source-file commits date to November 2020. Boundary validity dates are unknown. This is not a current official boundary source or a fresh OSM extraction; the OSM basemap is independent.
+- The prepared-data specification records two repaired self-intersections, 120 neighborhood pairs overlapping by more than one square meter, 108 neighborhoods with more than 1% outside their assigned district, and 11 with more than 50% outside. Local validation results and repair details are in `data/validation-report.json`.
+- A neighborhood's `district_no` is a source assignment, not a verified hierarchy. District filters use the property's point and district geometry. Overlapping memberships remain ambiguous; assignments are not silently corrected.
+- Neighborhood source coordinates use CRS84. WGS84 for districts is inferred from coordinates and alignment because source CRS metadata is empty. Output GeoJSON uses `[longitude, latitude]`.
+- No explicit data license was identified in the reviewed source repository. Original geometry, provenance and repair methods are retained. OpenStreetMap tile attribution remains visible.
+- Polygon holes and MultiPolygons are supported. Filtering and seeding use original validated geometry. Complete city coverage is not claimed.
+
+The three demo groups, `demo_a`, `demo_b` and `demo_c`, are visual data categories. They do not indicate price, quality or accessibility tiers. Seeding is reproducible for the same identity and seed; refresh, filters and sorting never randomize stored locations or prices. Sampling rejects ambiguous neighborhood overlaps and records shortages rather than placing points outside boundaries.
+
+Two import formats demonstrate data-ingestion contracts; they are not live website integrations:
+
+~~~powershell
 .\.venv\Scripts\python.exe -m backend.app.cli import tests/fixtures/listings-a.csv --kind csv_a
 .\.venv\Scripts\python.exe -m backend.app.cli import tests/fixtures/listings-b.json --kind json_b
-```
+~~~
 
-fixtureها ناقص/تکراری و پیش‌فرض نمایشی‌اند. `--real` فقط برای دادهٔ واقعی است. منبع و شناسهٔ یکسان شاهد ادغام است؛ قیمت و تاریخ خام همهٔ رکوردها حفظ می‌شوند. نام مشابه یا نزدیکی مکانی کافی نیست. مقادیر مفقود null و پول صحیح تومان است. ودیعه و اجاره مستقل‌اند. قیمت فرضی، قیمت بازار معرفی نمی‌شود.
+Fixtures are synthetic by default; use `--real` only for genuine source records. Strong source identity is required for merging, and raw prices and dates remain preserved. Missing values are `null`. Money is stored as integer toman, durations as seconds and distances as meters. Deposit and monthly rent remain separate.
 
-## OTP و شبکه
+## Tests and technical references
 
-پیش‌فرض بک‌اند همین دستگاه `http://127.0.0.1:8821` است. ریشهٔ وب endpoint مسیریابی نیست. تا کشف API، `OTP_API_PATH` خالی و adapter برابر `not_configured` می‌ماند. هیچ OTP یا graph جدیدی نصب/ساخته نمی‌شود.
+Run offline unit tests from the repository root:
 
-گزارش اتصال `root_reachable`، `routing_api_verified` و `fixture_mode` را جدا نگه می‌دارد. fixture فقط با تنظیم صریح فعال می‌شود. `live_otp` یعنی فراخوانی جاری، نه الزاماً realtime؛ cache با `recorded_otp` ثبت می‌شود. schedule و realtime مستقل‌اند. خطا و نبود مسیر جدا هستند و زمان ساختگی جای مسیر واقعی نمی‌نشیند.
-
-در Docker Desktop فقط پس از آزمون از داخل همان کانتینر از `http://host.docker.internal:8821` استفاده کنید. loopback کانتینر خود کانتینر است. در Linux ممکن است `extra_hosts: ["host.docker.internal:host-gateway"]` لازم باشد؛ این نگاشت دسترسی به سرویسی با bind فقط loopback را تضمین نمی‌کند. bind/firewall را بررسی کنید. در شبکهٔ مشترک Docker نام سرویس و پورت داخلی را از تنظیمات واقعی بگیرید. cloud به loopback دستگاه کاربر وصل نمی‌شود؛ پروژه tunnel یا عمومی‌سازی نمی‌کند.
-
-مراجع: [Docker networking](https://docs.docker.com/desktop/features/networking/)، [host-gateway](https://docs.docker.com/reference/cli/docker/container/run/#add-entries-to-container-hosts-file---add-host).
-
-## AvalAI
-
-پیش‌فرض `LLM_ENABLED=false` است. بدون کلید، فرم و parser محدود با برچسب «حالت نمونه بدون LLM» کار می‌کنند. مثال: «اجاره تا ۱۵ میلیون تومان و حداقل ۲ اتاق و پارکینگ الزامی». متن درک‌نشده نمایش داده می‌شود و مقصد حدس زده نمی‌شود. پیشنهاد patch پیش از اعمال نمایش داده می‌شود.
-
-SDK سازگار OpenAI از `https://api.avalai.ir/v1`، `chat/completions` و فهرست مدل حساب در `models` استفاده می‌کند. مدل هر نقش `gemini-3.6-flash` است؛ جایگزینی بی‌صدا و alias latest نداریم. json_schema ادعا نمی‌شود؛ JSON محدود با Pydantic و یک اصلاح محدود اعتبارسنجی می‌شود. هر تلاش/ retry حتی پس از timeout بودجه رزرو می‌کند؛ 401/403 retry نمی‌شوند. کلید در مرورگر/URL/گزارش نیست.
-
-smoke واقعی نیاز به کلید backend، `LLM_ENABLED=true` و فرمان صریح زیر دارد و ممکن است هزینه داشته باشد:
-
-```powershell
-.\.venv\Scripts\python.exe -m backend.app.cli avalai-smoke --allow-paid --max-requests 1
-```
-
-سقف خروجی smoke برای هر مدل ۶۴ token، retry خاموش و سقف رزرو روزانه برقرار است. seed و آزمون‌های عادی پولی نیستند. parser/explainer/judge/improvement تنظیم و نسخهٔ مستقل دارند؛ judge و پیشنهاد آزمایش خودکار در این مرحله اجرا نمی‌شود.
-
-## بررسی و handoff
-
-```powershell
+~~~powershell
 .\.venv\Scripts\python.exe -m pytest -q
 cd frontend
-npm test
-npm run build
-```
+npm.cmd test
+~~~
 
-آزمون‌های واحد آفلاین‌اند. [قرارداد state و API](docs/phase-1-contract.md) و [تحویل مرحلهٔ اول](docs/handoff-phase-1.md) مستقل از تاریخچهٔ گفتگو قابل استفاده‌اند. برای تولید مجدد schema و typeها: `python -m backend.app.export_schema`.
+Run live browser/integration checks only with their required local services available. From `frontend`:
 
+~~~powershell
+npm.cmd run build
+npx.cmd playwright test --config playwright.accessibility.config.ts
+~~~
 
-## تحویل مرحلهٔ سوم
+This browser configuration starts an isolated backend on port 8001 and uses the existing OTP and Qdrant services for the relevant scenarios. Existing reports record their own execution dates and results; this README is not a claim that every check has just run. Paid provider checks require separate explicit activation.
 
-پیاده‌سازی ارزیابی، بازبینی داخلی، دادهٔ برچسب‌گذاری نسخه‌دار، worker آفلاین و مقایسه/rollback کنترل‌شده تکمیل شده است. پنل در `/internal` از همان برنامه اجرا می‌شود؛ دسترسی آن نیازمند `REVIEW_API_TOKEN` یا توکن مستقل هر بازبین در تنظیمات backend است. کامنت‌های کد انگلیسی‌اند.
+Detailed contracts and recorded evidence:
 
-```powershell
-.\.venv\Scripts\python.exe -m uvicorn backend.app.main:create_app --factory --host 127.0.0.1 --port 8000
-```
+- [Accessibility handoff](docs/handoff-accessibility.md): automatic destination/stop routing, cache policy, API and measured limitations. Its original sort list also documents the backend `stop_distance_asc` option, which is now hidden in the UI.
+- [Accessibility verification report](docs/accessibility-final-verification.json): recorded bounded live routing, cache and browser results.
+- [Phase 1 handoff](docs/handoff-phase-1.md) and [state/API contract](docs/phase-1-contract.md): data, importers, seed, schemas and OTP adapter.
+- [Phase 2 handoff](docs/handoff-phase-2.md): structured/semantic search, frontend filtering and evidence-backed explanations.
+- [Phase 3 handoff](docs/handoff-phase-3.md): evaluation, reviewer workflow, KPI patch and controlled experiments.
+- [Phase 3 acceptance matrix](docs/phase-3-acceptance-matrix.md) and [verification report](docs/phase-3-verification-report.json): recorded checks and remaining evidence gaps.
 
-[راهنمای تحویل مرحلهٔ سوم](docs/handoff-phase-3.md)، [ماتریس پذیرش](docs/phase-3-acceptance-matrix.md) و [نتایج واقعی بررسی‌ها](docs/phase-3-verification-report.json) مرجع وضعیت فعلی‌اند. راهنمای مراحل پیشین: [مرحلهٔ اول](docs/handoff-phase-1.md) و [مرحلهٔ دوم](docs/handoff-phase-2.md).
-
-۵۶۵۵ آگهی نمایشی ذخیره شده‌اند؛ اتصال واقعی OTP در `/otp/transmodel/v3` با پنج مسیر و سلامت ایندکس Qdrant بررسی شده‌اند. کلید backend مربوط به AvalAI موجود است، اما همهٔ نقش‌های مدل غیرفعال‌اند و آزمون پولی اجرا نشده است. شمارش تعویض و مبنای schedule همچنان تابع شواهد همان پاسخ مسیریابی‌اند.
-
-چرخهٔ تغییر وزن رتبه‌بندی و rollback در محدودهٔ آزمایشی بررسی شده است. تعداد برچسب مستقل انسانی صفر است؛ بهبود واقعی کیفیت، QS کاربران واقعی و انتشار رتبه‌بندی جدید در محیط اصلی ادعا یا انجام نشده‌اند. دادهٔ خروجی بازبینی مرورگر با منشأ `test_fixture` نگه‌داری می‌شود.
-
-[Automatic accessibility handoff, API and cache policy](docs/handoff-accessibility.md).
+To regenerate shared JSON schemas and TypeScript types after changing contracts, run `.\.venv\Scripts\python.exe -m backend.app.export_schema` from the repository root.
