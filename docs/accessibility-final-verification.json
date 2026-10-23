@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-22T17:05:24.719148+00:00",
+  "status": "pass",
+  "services": {
+    "docker": "running",
+    "otp_container": "otp-tehran",
+    "otp_root_http_status": 200,
+    "qdrant_container": "homesanj-qdrant",
+    "qdrant_http_status": 200
+  },
+  "backend": {
+    "previous_full_suite": {"passed": 160, "evidence": "docs/accessibility-pytest.xml"},
+    "affected_tests_after_time_precision_fix": {
+      "passed": 9,
+      "evidence": "docs/accessibility-precision-pytest.xml",
+      "command": "python -m pytest -q tests/test_accessibility.py tests/test_accessibility_precision.py"
+    },
+    "note": "The affected run includes one new precision regression case. The full suite was not repeated after the localized time-precision fix."
+  },
+  "frontend": {
+    "unit_tests_passed": 12,
+    "build": "pass",
+    "note": "Previously executed on the current frontend implementation; no subsequent product frontend changes."
+  },
+  "browser": {
+    "latest_status_by_scenario": "all eight scenarios passed",
+    "previously_passed": 6,
+    "previous_evidence": "docs/accessibility-browser-before-service-start.json",
+    "affected_rerun_passed": 2,
+    "rerun_evidence": "docs/accessibility-browser-report.json",
+    "rerun_command": "npx playwright test --config playwright.accessibility.config.ts --grep \"automatic accessibility|advanced confirmation\"",
+    "note": "The final result combines six unchanged passing scenarios with the two service-dependent failures rerun after Docker, OTP and Qdrant became available."
+  },
+  "live_integration": {
+    "status": "pass",
+    "evidence": "docs/accessibility-live-performance-report.json",
+    "command": "python scripts/verify_accessibility.py",
+    "candidate_count": 5655,
+    "otp_requests": 6,
+    "concurrency_peak": 3,
+    "sort_otp_requests": 0,
+    "repeat_stop_search_otp_requests": 0,
+    "cache_hits": 3,
+    "snapshot_replay_status": "ok",
+    "snapshot_replay_network_calls": 0
+  },
+  "unverified": [
+    "Exhaustive routing of all 5655 properties was not performed; the bounded evaluation remains explicitly partial.",
+    "The installed OTP graph version and schedule authenticity remain unknown.",
+    "Optional paid AvalAI calls were not run."
+  ]
+}

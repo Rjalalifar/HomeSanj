@@ -1,0 +1,18 @@
+{
+  "api_status": 201,
+  "listing_count": 5655,
+  "candidate_count": 5655,
+  "displayed_count": 100,
+  "snapshot_id": "snap_4cc6437a10244a27910388f71a1fccc4",
+  "otp": {
+    "configured": true,
+    "status": "configured",
+    "supported_modes": [
+      "BUS"
+    ],
+    "fixture_mode": false,
+    "root_reachable": true,
+    "routing_api_verified": true,
+    "test_status": "passed"
+  }
+}

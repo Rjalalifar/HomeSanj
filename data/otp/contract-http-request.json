@@ -1,0 +1,29 @@
+{
+  "query": "query KhanehSanjTrip($from: Location!, $to: Location!, $dateTime: DateTime!, $arriveBy: Boolean!, $modes: Modes!) {\n  trip(from: $from, to: $to, dateTime: $dateTime, arriveBy: $arriveBy, modes: $modes, numTripPatterns: 5) {\n    routingErrors { code description inputField }\n    tripPatterns {\n      expectedStartTime expectedEndTime duration walkTime walkDistance\n      legs {\n        mode ride duration distance expectedStartTime expectedEndTime realtime\n        pointsOnLink { points }\n        line { id publicCode name transportMode }\n        fromPlace { name latitude longitude }\n        toPlace { name latitude longitude }\n        interchangeFrom { staySeated }\n        interchangeTo { staySeated }\n      }\n    }\n  }\n}",
+  "variables": {
+    "from": {
+      "coordinates": {
+        "latitude": 35.8059894,
+        "longitude": 51.3839047
+      }
+    },
+    "to": {
+      "coordinates": {
+        "latitude": 35.8050421,
+        "longitude": 51.4369707
+      }
+    },
+    "dateTime": "2026-10-20T08:00:00+03:30",
+    "arriveBy": false,
+    "modes": {
+      "accessMode": "foot",
+      "egressMode": "foot",
+      "directMode": null,
+      "transportModes": [
+        {
+          "transportMode": "bus"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+import { test, expect } from '@playwright/test';
+test('manual search, parser preview and destination confirmation', async ({page})=>{
+  const failures:string[]=[];
+  page.on('pageerror',e=>failures.push(e.message));
+  await page.goto('/');
+  await expect(page.getByRole('heading',{name:'خواسته‌های شما'})).toBeVisible();
+  await page.getByRole('button',{name:'جست‌وجوی خانه‌ها'}).click();
+  await expect(page.locator('.listing-card').first()).toBeVisible();
+  await expect(page.locator('.synthetic-tag').first()).toHaveText('آگهی نمایشی');
+  await expect(page.locator('.map-legend')).toContainText('بدون معنای قیمت');
+  await page.getByLabel('توضیح کوتاه').fill('اجاره تا ۱۵ میلیون تومان و حداقل ۲ اتاق');
+  await page.getByRole('button',{name:'برداشت شروط از متن'}).click();
+  await expect(page.locator('.parse-preview')).toContainText('شرط پیشنهادی');
+  await page.getByRole('button',{name:'اعمال شروط پیشنهادی'}).click();
+  await expect(page.getByLabel('سقف اجارهٔ ماهانه')).toHaveValue('15000000');
+  await page.getByRole('button',{name:'انتخاب مقصد روی نقشه'}).click();
+  await page.locator('.leaflet-container').click({position:{x:300,y:150}});
+  await expect(page.locator('.destination-preview')).toBeVisible();
+  await page.getByRole('button',{name:'تأیید مقصد',exact:true}).click();
+  await expect(page.locator('.destination-label')).toContainText('مقصد تأیید شده');
+  await page.evaluate(()=>window.scrollTo(0,0));
+  await page.screenshot({path:'test-results/desktop.png',fullPage:false});
+  await page.setViewportSize({width:390,height:844});
+  await page.screenshot({path:'test-results/mobile.png',fullPage:false});
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBeTruthy();
+  expect(failures).toEqual([]);
+});

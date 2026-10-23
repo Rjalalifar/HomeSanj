@@ -1,0 +1,33 @@
+{
+  "request_id": "req_2cac5b7a70c4477f8405aafcf7a277a3",
+  "snapshot_id": "snap_2dca5dc6565b4c5783ed449d23596048",
+  "candidate_count": 15,
+  "evaluated_count": 3,
+  "completion_status": "partial",
+  "result_count": 3,
+  "subset_method": "monthly_rent_toman ascending; null last; property_id tie-break; first batch_limit",
+  "ranking_scope": "evaluated_subset",
+  "statuses": {
+    "demo_1f937948549725ed1f9ae222": "ok",
+    "demo_3bd4ba657d572a4f8aaa3390": "ok",
+    "demo_dc0f1fff243d228947fad273": "ok"
+  },
+  "neighborhood_ids": [
+    "neighborhood_d40fcaf83e87b3416dbc6d39"
+  ],
+  "travel": {
+    "destination": {
+      "latitude": 35.8050421,
+      "longitude": 51.4369707,
+      "confirmed": true
+    },
+    "date": "2026-10-20",
+    "time": "08:00:00",
+    "timezone": "Asia/Tehran",
+    "time_mode": "DEPART_AT",
+    "modes": [
+      "BUS"
+    ],
+    "include_walk_only": false
+  }
+}

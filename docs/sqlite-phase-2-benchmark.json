@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-10-21T05:16:07.890940+00:00",
+  "inventory_count": 5655,
+  "sqlite_indexed": {
+    "samples": 30,
+    "p50_ms": 0.21505000768229365,
+    "p95_ms": 0.8150999783538282
+  },
+  "fts5": {
+    "samples": 30,
+    "p50_ms": 3.1579500064253807,
+    "p95_ms": 7.333200017455965
+  },
+  "query_plan": [
+    [
+      4,
+      0,
+      47,
+      "SEARCH listings USING COVERING INDEX ix_listing_price_order (dataset_version=? AND monthly_rent_toman<?)"
+    ]
+  ],
+  "normal_api_snapshot_creation": {
+    "samples": 10,
+    "p50_ms": 129.73230001807678,
+    "p95_ms": 881.0807000263594
+  },
+  "api_workload": "one actual neighborhood, rent <= 20m, no destination; immutable snapshot and measurement",
+  "fts5_available": true,
+  "paid_requests": 0,
+  "limitations": "Local warm-process serial measurements; not a concurrent throughput claim."
+}

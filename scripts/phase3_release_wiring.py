@@ -1,0 +1,22 @@
+"""Wire actual release configuration while preserving the empty baseline default."""
+from pathlib import Path
+p = Path('backend/app/db.py')
+s = p.read_text(encoding='utf-8').replace('feedback, evaluation_store\n', 'feedback, evaluation_store, release_control\n')
+p.write_text(s, encoding='utf-8')
+p = Path('backend/app/evaluation_experiments.py')
+s = p.read_text(encoding='utf-8')
+s = s.replace("approved_by='test_operator', target_id=None):", "approved_by='test_operator', target_id=None, approval_id=None):")
+s = s.replace("                raise ValueError('Production promotion requires independently signed guardrails and human approval; current prototype cannot authorize it')", "                from .release_control import verify_promotion\n                gates = verify_promotion(session, experiment, approval_id, approved_by)\n                if not all(gates.values()):\n                    raise ValueError('Production promotion blocked: ' + ', '.join(k for k, passed in gates.items() if not passed))")
+s = s.replace("        labels = labels_for(db, replay['request_id'], replay['rows'])", "        labels = labels_for(db, replay['request_id'], replay['rows'])\n        if state.travel.destination:\n            for pid, row in replay['rows'].items():\n                if row.get('route_status') != 'ok' or not row.get('selected_itinerary'):\n                    labels[pid]['hard'] = 'unknown'")
+s = s.replace("'inventory_hash': digest(replay['candidate_refs'])", "'labels_hash': digest(labels), 'inventory_hash': digest(replay['candidate_refs'])")
+s = s.replace("    cases, pairs = [], []", "    cases, pairs = [], []\n    if split == 'holdout':\n        with db.session() as session:\n            previous = list(session.scalars(select(Experiment)))\n        validation = [e for e in previous if e.report['split'] == 'validation' and e.report['candidate_config'] == candidate and e.report['status'] == 'offline_measured']\n        if not validation:\n            raise ValueError('Final holdout requires a measured validation experiment for this candidate first')\n        used = [e for e in previous if e.report['split'] == 'holdout']\n        if used:\n            raise ValueError('This holdout milestone has already been consumed; create a new versioned dataset before another milestone')")
+p.write_text(s, encoding='utf-8')
+p = Path('backend/app/search.py')
+s = p.read_text(encoding='utf-8')
+if 'active_production_config' not in s:
+    s = s.replace("        rows = rank_rows(rows, state, analysis.priority_ids if analysis else [])", "        from .release_control import active_production_config\n        release_config = active_production_config(db)\n        rows = rank_rows(rows, state, analysis.priority_ids if analysis else [], config=release_config)")
+    s = s.replace("'ranking_policy': policy(state)", "'ranking_policy': policy(state, release_config)")
+p.write_text(s, encoding='utf-8')
+p = Path('backend/app/phase3_api.py')
+s = p.read_text(encoding='utf-8').replace('    target_id: str | None = None', '    target_id: str | None = None\n    approval_id: str | None = None')
+p.write_text(s, encoding='utf-8')

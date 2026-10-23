@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "measured_at": "2026-10-21T20:17:54.242860+00:00",
+  "stop_dataset_version": "otp-stops-1-0adc3fd9969896d292af",
+  "stop_count": 2460,
+  "property_count": 5655,
+  "properties_with_nearest_stop": 5655,
+  "index_build_seconds": 0.02588860000105342,
+  "all_properties_nearest_stop_seconds": 0.2887892999970063,
+  "mean_lookup_milliseconds": 0.05106795755915231,
+  "routing_requests": 0,
+  "method": "Exact spherical 3D k-d tree; final distances use Haversine.",
+  "scope": "Single local-process catalogue load and lookup pass; not an end-to-end routing latency benchmark."
+}

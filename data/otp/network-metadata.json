@@ -1,0 +1,20 @@
+{
+  "errors": [
+    {
+      "message": "Exception while fetching data (/lines) : null",
+      "locations": [
+        {
+          "line": 1,
+          "column": 75
+        }
+      ],
+      "path": [
+        "lines"
+      ],
+      "extensions": {
+        "classification": "DataFetchingException"
+      }
+    }
+  ],
+  "data": null
+}

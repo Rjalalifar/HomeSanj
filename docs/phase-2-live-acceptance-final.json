@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-10-21T10:23:55.467638+00:00",
+  "status": "PASS",
+  "candidate_count": 3,
+  "evaluated_count": 3,
+  "eligible_count": 3,
+  "completion_status": "complete",
+  "route_statuses": [
+    "ok",
+    "ok",
+    "ok"
+  ],
+  "initial_cache_hits": 0,
+  "initial_cache_misses": 3,
+  "sort_only_cache_hits": 3,
+  "sort_only_cache_misses": 0,
+  "otp_latency": {
+    "samples": 3,
+    "p50_ms": 247.53039999632165,
+    "p95_ms": 440.71189998066984
+  },
+  "selected_itinerary_policy": "walk_time_asc selects least total walking among jointly qualifying returned itineraries",
+  "explanation_mode": "deterministic",
+  "paid_requests": 0,
+  "schedule_basis": [
+    "unknown"
+  ],
+  "transfer_values": [
+    null,
+    null,
+    null
+  ],
+  "source_kinds": [
+    "live_otp"
+  ],
+  "scope": "three price-selected demo properties near the verified OTP origin; not a global relevance measurement"
+}

@@ -1,0 +1,1016 @@
+{
+  "$defs": {
+    "Accessibility": {
+      "additionalProperties": false,
+      "properties": {
+        "semantics_version": {
+          "const": "accessibility-1",
+          "default": "accessibility-1",
+          "title": "Semantics Version",
+          "type": "string"
+        },
+        "enabled": {
+          "default": true,
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "time_policy": {
+          "const": "request_execution",
+          "default": "request_execution",
+          "title": "Time Policy",
+          "type": "string"
+        },
+        "effective_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Effective At"
+        }
+      },
+      "title": "Accessibility",
+      "type": "object"
+    },
+    "Destination": {
+      "additionalProperties": false,
+      "properties": {
+        "latitude": {
+          "maximum": 90,
+          "minimum": -90,
+          "title": "Latitude",
+          "type": "number"
+        },
+        "longitude": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "Longitude",
+          "type": "number"
+        },
+        "label": {
+          "default": "مقصد روی نقشه",
+          "maxLength": 200,
+          "title": "Label",
+          "type": "string"
+        },
+        "confirmed": {
+          "const": true,
+          "title": "Confirmed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "latitude",
+        "longitude",
+        "confirmed"
+      ],
+      "title": "Destination",
+      "type": "object"
+    },
+    "Itinerary": {
+      "additionalProperties": false,
+      "properties": {
+        "itinerary_id": {
+          "title": "Itinerary Id",
+          "type": "string"
+        },
+        "otp_response_id": {
+          "title": "Otp Response Id",
+          "type": "string"
+        },
+        "origin": {
+          "additionalProperties": true,
+          "title": "Origin",
+          "type": "object"
+        },
+        "destination": {
+          "additionalProperties": true,
+          "title": "Destination",
+          "type": "object"
+        },
+        "request_datetime": {
+          "title": "Request Datetime",
+          "type": "string"
+        },
+        "time_mode": {
+          "enum": [
+            "ARRIVE_BY",
+            "DEPART_AT"
+          ],
+          "title": "Time Mode",
+          "type": "string"
+        },
+        "start_datetime": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Start Datetime"
+        },
+        "end_datetime": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "End Datetime"
+        },
+        "total_duration_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Total Duration Seconds"
+        },
+        "walk_duration_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Walk Duration Seconds"
+        },
+        "walk_distance_meters": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Walk Distance Meters"
+        },
+        "transfers": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Transfers"
+        },
+        "legs": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Legs",
+          "type": "array"
+        },
+        "geometry": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Geometry"
+        },
+        "status": {
+          "title": "Status",
+          "type": "string"
+        },
+        "source_kind": {
+          "enum": [
+            "live_otp",
+            "recorded_otp",
+            "synthetic_fixture"
+          ],
+          "title": "Source Kind",
+          "type": "string"
+        },
+        "schedule_basis": {
+          "enum": [
+            "official_schedule",
+            "synthetic_schedule",
+            "unknown"
+          ],
+          "title": "Schedule Basis",
+          "type": "string"
+        },
+        "realtime_status": {
+          "enum": [
+            "available",
+            "unavailable",
+            "unknown"
+          ],
+          "title": "Realtime Status",
+          "type": "string"
+        },
+        "location_accuracy": {
+          "title": "Location Accuracy",
+          "type": "string"
+        },
+        "graph_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Graph Version"
+        },
+        "fetched_at": {
+          "title": "Fetched At",
+          "type": "string"
+        },
+        "missing_fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Fields",
+          "type": "array"
+        },
+        "request_to_start_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Request To Start Seconds"
+        }
+      },
+      "required": [
+        "itinerary_id",
+        "otp_response_id",
+        "origin",
+        "destination",
+        "request_datetime",
+        "time_mode",
+        "start_datetime",
+        "end_datetime",
+        "total_duration_seconds",
+        "walk_duration_seconds",
+        "walk_distance_meters",
+        "transfers",
+        "legs",
+        "geometry",
+        "status",
+        "source_kind",
+        "schedule_basis",
+        "realtime_status",
+        "location_accuracy",
+        "graph_version",
+        "fetched_at",
+        "missing_fields"
+      ],
+      "title": "Itinerary",
+      "type": "object"
+    },
+    "ParseOutput": {
+      "additionalProperties": false,
+      "properties": {
+        "operations": {
+          "items": {
+            "$ref": "#/$defs/PatchOperation"
+          },
+          "maxItems": 20,
+          "title": "Operations",
+          "type": "array"
+        },
+        "unsupported": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Unsupported",
+          "type": "array"
+        },
+        "mode": {
+          "default": "حالت نمونه بدون LLM",
+          "title": "Mode",
+          "type": "string"
+        },
+        "parser_version": {
+          "default": "confirmed-fa-2",
+          "title": "Parser Version",
+          "type": "string"
+        }
+      },
+      "title": "ParseOutput",
+      "type": "object"
+    },
+    "PatchOperation": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "title": "Field",
+          "type": "string"
+        },
+        "value": {
+          "default": null,
+          "title": "Value"
+        },
+        "remove": {
+          "default": false,
+          "title": "Remove",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "field"
+      ],
+      "title": "PatchOperation",
+      "type": "object"
+    },
+    "PropertyConditions": {
+      "additionalProperties": false,
+      "properties": {
+        "max_deposit_toman": {
+          "anyOf": [
+            {
+              "maximum": 9000000000000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Deposit Toman"
+        },
+        "max_monthly_rent_toman": {
+          "anyOf": [
+            {
+              "maximum": 9000000000000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Monthly Rent Toman"
+        },
+        "min_area_m2": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Min Area M2"
+        },
+        "min_bedrooms": {
+          "anyOf": [
+            {
+              "maximum": 9000000000000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Min Bedrooms"
+        },
+        "parking_required": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": false,
+          "title": "Parking Required"
+        },
+        "elevator_required": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": false,
+          "title": "Elevator Required"
+        }
+      },
+      "title": "PropertyConditions",
+      "type": "object"
+    },
+    "PropertyListing": {
+      "additionalProperties": false,
+      "properties": {
+        "property_id": {
+          "title": "Property Id",
+          "type": "string"
+        },
+        "series_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Series Id"
+        },
+        "neighborhood_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Neighborhood Id"
+        },
+        "neighborhood_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Neighborhood Ids",
+          "type": "array"
+        },
+        "neighborhood_membership_status": {
+          "default": "unknown",
+          "enum": [
+            "unique",
+            "ambiguous",
+            "outside",
+            "unknown"
+          ],
+          "title": "Neighborhood Membership Status",
+          "type": "string"
+        },
+        "district_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "District Ids",
+          "type": "array"
+        },
+        "district_membership_status": {
+          "enum": [
+            "unique",
+            "ambiguous",
+            "outside",
+            "unknown"
+          ],
+          "title": "District Membership Status",
+          "type": "string"
+        },
+        "title_fa": {
+          "title": "Title Fa",
+          "type": "string"
+        },
+        "latitude": {
+          "anyOf": [
+            {
+              "maximum": 90,
+              "minimum": -90,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Latitude"
+        },
+        "longitude": {
+          "anyOf": [
+            {
+              "maximum": 180,
+              "minimum": -180,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Longitude"
+        },
+        "deposit_toman": {
+          "anyOf": [
+            {
+              "maximum": 9000000000000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Deposit Toman"
+        },
+        "monthly_rent_toman": {
+          "anyOf": [
+            {
+              "maximum": 9000000000000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Monthly Rent Toman"
+        },
+        "area_m2": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Area M2"
+        },
+        "bedrooms": {
+          "anyOf": [
+            {
+              "maximum": 9000000000000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bedrooms"
+        },
+        "parking": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parking"
+        },
+        "elevator": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Elevator"
+        },
+        "location_accuracy": {
+          "default": "unknown",
+          "title": "Location Accuracy",
+          "type": "string"
+        },
+        "source_records": {
+          "items": {
+            "$ref": "#/$defs/SourceRecord"
+          },
+          "title": "Source Records",
+          "type": "array"
+        },
+        "published_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published At"
+        },
+        "collected_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Collected At"
+        },
+        "is_synthetic": {
+          "title": "Is Synthetic",
+          "type": "boolean"
+        },
+        "dataset_version": {
+          "title": "Dataset Version",
+          "type": "string"
+        },
+        "seed": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Seed"
+        },
+        "quality_flags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Quality Flags",
+          "type": "array"
+        }
+      },
+      "required": [
+        "property_id",
+        "district_membership_status",
+        "title_fa",
+        "source_records",
+        "is_synthetic",
+        "dataset_version"
+      ],
+      "title": "PropertyListing",
+      "type": "object"
+    },
+    "SearchState": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0.0",
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "dataset_version": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Dataset Version",
+          "type": "string"
+        },
+        "state_revision": {
+          "default": 0,
+          "minimum": 0,
+          "title": "State Revision",
+          "type": "integer"
+        },
+        "query": {
+          "default": "",
+          "maxLength": 1000,
+          "title": "Query",
+          "type": "string"
+        },
+        "property": {
+          "$ref": "#/$defs/PropertyConditions"
+        },
+        "selected_neighborhood_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 400,
+          "title": "Selected Neighborhood Ids",
+          "type": "array"
+        },
+        "selected_district_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "title": "Selected District Ids",
+          "type": "array"
+        },
+        "travel": {
+          "$ref": "#/$defs/Travel"
+        },
+        "accessibility": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Accessibility"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "preference": {
+          "default": "balanced",
+          "enum": [
+            "balanced",
+            "lower_rent",
+            "faster_commute",
+            "less_walking",
+            "fewer_transfers"
+          ],
+          "title": "Preference",
+          "type": "string"
+        },
+        "soft_preferences": {
+          "items": {
+            "enum": [
+              "parking",
+              "elevator",
+              "lower_rent",
+              "faster_commute",
+              "less_walking",
+              "fewer_transfers"
+            ],
+            "type": "string"
+          },
+          "maxItems": 6,
+          "title": "Soft Preferences",
+          "type": "array"
+        },
+        "sort": {
+          "default": "recommended",
+          "enum": [
+            "recommended",
+            "rent_asc",
+            "deposit_asc",
+            "travel_time_asc",
+            "walk_time_asc",
+            "transfers_asc",
+            "stop_walk_time_asc",
+            "stop_distance_asc"
+          ],
+          "title": "Sort",
+          "type": "string"
+        }
+      },
+      "required": [
+        "dataset_version"
+      ],
+      "title": "SearchState",
+      "type": "object"
+    },
+    "SourceRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "title": "Source",
+          "type": "string"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "raw": {
+          "additionalProperties": true,
+          "title": "Raw",
+          "type": "object"
+        },
+        "published_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Published At"
+        },
+        "collected_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Collected At"
+        }
+      },
+      "required": [
+        "source",
+        "source_id"
+      ],
+      "title": "SourceRecord",
+      "type": "object"
+    },
+    "Travel": {
+      "additionalProperties": false,
+      "properties": {
+        "destination": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Destination"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Date"
+        },
+        "time": {
+          "anyOf": [
+            {
+              "format": "time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Time"
+        },
+        "time_mode": {
+          "default": "DEPART_AT",
+          "enum": [
+            "ARRIVE_BY",
+            "DEPART_AT"
+          ],
+          "title": "Time Mode",
+          "type": "string"
+        },
+        "timezone": {
+          "const": "Asia/Tehran",
+          "default": "Asia/Tehran",
+          "title": "Timezone",
+          "type": "string"
+        },
+        "max_duration_seconds": {
+          "anyOf": [
+            {
+              "maximum": 9000000000000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Duration Seconds"
+        },
+        "max_walk_seconds": {
+          "anyOf": [
+            {
+              "maximum": 9000000000000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Walk Seconds"
+        },
+        "max_walk_meters": {
+          "anyOf": [
+            {
+              "maximum": 9000000000000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Walk Meters"
+        },
+        "max_transfers": {
+          "anyOf": [
+            {
+              "maximum": 9000000000000000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Transfers"
+        },
+        "modes": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 10,
+          "title": "Modes",
+          "type": "array"
+        },
+        "include_walk_only": {
+          "default": false,
+          "title": "Include Walk Only",
+          "type": "boolean"
+        },
+        "duration_scope": {
+          "const": "itinerary",
+          "default": "itinerary",
+          "title": "Duration Scope",
+          "type": "string"
+        }
+      },
+      "title": "Travel",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "state": {
+      "$ref": "#/$defs/SearchState"
+    },
+    "property": {
+      "$ref": "#/$defs/PropertyListing"
+    },
+    "parser_output": {
+      "$ref": "#/$defs/ParseOutput"
+    },
+    "itinerary": {
+      "$ref": "#/$defs/Itinerary"
+    }
+  },
+  "required": [
+    "state",
+    "property",
+    "parser_output",
+    "itinerary"
+  ],
+  "title": "Contracts",
+  "type": "object"
+}

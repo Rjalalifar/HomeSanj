@@ -1,0 +1,20 @@
+{
+  "status": "NOT RUN",
+  "reason": "No enabled verified offline role",
+  "backend_key_present": true,
+  "roles_enabled": {
+    "parser": false,
+    "explainer": false,
+    "judge": false,
+    "improvement": false
+  },
+  "requested_models": {
+    "parser": "gemini-3.6-flash",
+    "explainer": "gemini-3.6-flash",
+    "judge": "gemini-3.6-flash",
+    "improvement": "gemini-3.6-flash"
+  },
+  "paid_calls_this_verification": 0,
+  "next_command": "python -m backend.app.cli avalai-smoke --allow-paid --max-requests 1 --report docs/phase-3-avalai-report.json",
+  "prerequisite": "Configure backend key, enable only the desired role and set its request/token/cost budgets first"
+}

@@ -1,0 +1,10 @@
+{
+  "data": {
+    "serverInfo": {
+      "version": "2.10.0",
+      "buildTime": "2026-09-09T09:23:32Z",
+      "gitCommit": "521cd5d8acaae628878f43bf5946f4942c118548",
+      "internalTransitModelTimeZone": "Asia/Tehran"
+    }
+  }
+}

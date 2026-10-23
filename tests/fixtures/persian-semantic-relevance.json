@@ -1,0 +1,25 @@
+﻿{
+  "fixture_version": "persian-property-paraphrases-1",
+  "label_origin": "Authored synthetic factual relevance fixture; not independent user satisfaction labels",
+  "neighborhoods": {"n1": "ستارخان", "n2": "نارمک", "n3": "صادقیه", "n4": "جنت آباد"},
+  "properties": [
+    {"property_id": "fixture_p1", "neighborhood_id": "n1", "bedrooms": 2, "area_m2": 85, "parking": true, "elevator": true, "monthly_rent_toman": 12000000, "deposit_toman": 300000000},
+    {"property_id": "fixture_p2", "neighborhood_id": "n1", "bedrooms": 2, "area_m2": 90, "parking": false, "elevator": false, "monthly_rent_toman": 13000000, "deposit_toman": 400000000},
+    {"property_id": "fixture_p3", "neighborhood_id": "n2", "bedrooms": 1, "area_m2": 45, "parking": false, "elevator": false, "monthly_rent_toman": 7000000, "deposit_toman": 200000000},
+    {"property_id": "fixture_p4", "neighborhood_id": "n2", "bedrooms": 3, "area_m2": 140, "parking": true, "elevator": true, "monthly_rent_toman": 35000000, "deposit_toman": 900000000},
+    {"property_id": "fixture_p5", "neighborhood_id": "n3", "bedrooms": 2, "area_m2": 75, "parking": false, "elevator": true, "monthly_rent_toman": 15000000, "deposit_toman": 350000000},
+    {"property_id": "fixture_p6", "neighborhood_id": "n3", "bedrooms": 1, "area_m2": 50, "parking": true, "elevator": false, "monthly_rent_toman": 8000000, "deposit_toman": 250000000},
+    {"property_id": "fixture_p7", "neighborhood_id": "n4", "bedrooms": 4, "area_m2": 200, "parking": true, "elevator": true, "monthly_rent_toman": 60000000, "deposit_toman": 1500000000},
+    {"property_id": "fixture_p8", "neighborhood_id": "n4", "bedrooms": 0, "area_m2": 30, "parking": false, "elevator": true, "monthly_rent_toman": 6000000, "deposit_toman": 150000000}
+  ],
+  "queries": [
+    {"query_id": "q1", "text": "دو اتاق با جای خودرو و بالابر", "relevant_ids": ["fixture_p1"]},
+    {"query_id": "q2", "text": "واحد کوچک یک اتاقه با اجاره پایین", "relevant_ids": ["fixture_p3", "fixture_p6"]},
+    {"query_id": "q3", "text": "خانه بزرگ سه خوابه با آسانسور", "relevant_ids": ["fixture_p4"]},
+    {"query_id": "q4", "text": "آپارتمان در نارمک", "relevant_ids": ["fixture_p3", "fixture_p4"]},
+    {"query_id": "q5", "text": "دو خوابه در ستارخان", "relevant_ids": ["fixture_p1", "fixture_p2"]},
+    {"query_id": "q6", "text": "جای پارک دارد و آسانسور ندارد", "relevant_ids": ["fixture_p6"]},
+    {"query_id": "q7", "text": "آپارتمان چهار خوابه", "relevant_ids": ["fixture_p7"]},
+    {"query_id": "q8", "text": "واحد بدون اتاق خواب", "relevant_ids": ["fixture_p8"]}
+  ]
+}

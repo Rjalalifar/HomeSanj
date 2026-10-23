@@ -1,0 +1,489 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "E:\\Projects\\Golrang\\Task\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "playwright.accessibility.config.ts"
+    ],
+    "configFile": "E:\\Projects\\Golrang\\Task\\frontend\\playwright.accessibility.config.ts",
+    "rootDir": "E:/Projects/Golrang/Task/frontend/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "E:/Projects/Golrang/Task/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "E:/Projects/Golrang/Task/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "accessibility*.spec.ts",
+          "phase3.spec.ts",
+          "phase2.spec.ts"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "E:\\Projects\\Golrang\\Task\\frontend\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "E:\\Projects\\Golrang\\Task\\frontend\\e2e",
+        "snapshotDir": "E:\\Projects\\Golrang\\Task\\frontend\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "accessibility*.spec.ts",
+          "phase3.spec.ts",
+          "phase2.spec.ts"
+        ],
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8001",
+          "browserName": "chromium",
+          "channel": "msedge",
+          "headless": true,
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../docs/accessibility-browser-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": ".\\.venv\\Scripts\\python.exe scripts/serve_accessibility_browser.py",
+      "cwd": "..",
+      "url": "http://127.0.0.1:8001/api/health",
+      "reuseExistingServer": false,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "accessibility.spec.ts",
+      "file": "accessibility.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "automatic accessibility uses actual OTP, shared candidate filters and cached sort views",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16064,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.accessibility-summary[data-accessibility-status=\"ok\"]').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.accessibility-summary[data-accessibility-status=\"ok\"]').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.accessibility-summary[data-accessibility-status=\"ok\"]').first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.accessibility-summary[data-accessibility-status=\"ok\"]').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.accessibility-summary[data-accessibility-status=\"ok\"]').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.accessibility-summary[data-accessibility-status=\"ok\"]').first()\u001b[22m\n\n    at E:\\Projects\\Golrang\\Task\\frontend\\e2e\\accessibility.spec.ts:20:96",
+                    "location": {
+                      "file": "E:\\Projects\\Golrang\\Task\\frontend\\e2e\\accessibility.spec.ts",
+                      "column": 96,
+                      "line": 20
+                    },
+                    "snippet": "  18 |   await page.getByRole('button', { name: 'جست‌وجوی خانه', exact: true }).click();\n  19 |   await expect(page.locator('.search-progress')).toContainText('۳ آگهی با بررسی دسترسی', { timeout: 60000 });\n> 20 |   await expect(page.locator('.accessibility-summary[data-accessibility-status=\"ok\"]').first()).toBeVisible();\n     |                                                                                                ^\n  21 |   const cards = (await page.locator('.property-card').evaluateAll(nodes => nodes.map(node => node.getAttribute('data-property-id')))).sort();\n  22 |   expect(cards).toEqual(previewIds);\n  23 |   await expect(page.locator('.search-progress')).toContainText('زیرمجموعه');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "E:\\Projects\\Golrang\\Task\\frontend\\e2e\\accessibility.spec.ts",
+                        "column": 96,
+                        "line": 20
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.accessibility-summary[data-accessibility-status=\"ok\"]').first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.accessibility-summary[data-accessibility-status=\"ok\"]').first() with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.accessibility-summary[data-accessibility-status=\"ok\"]').first()\u001b[22m\n\n\n  18 |   await page.getByRole('button', { name: 'جست‌وجوی خانه', exact: true }).click();\n  19 |   await expect(page.locator('.search-progress')).toContainText('۳ آگهی با بررسی دسترسی', { timeout: 60000 });\n> 20 |   await expect(page.locator('.accessibility-summary[data-accessibility-status=\"ok\"]').first()).toBeVisible();\n     |                                                                                                ^\n  21 |   const cards = (await page.locator('.property-card').evaluateAll(nodes => nodes.map(node => node.getAttribute('data-property-id')))).sort();\n  22 |   expect(cards).toEqual(previewIds);\n  23 |   await expect(page.locator('.search-progress')).toContainText('زیرمجموعه');\n    at E:\\Projects\\Golrang\\Task\\frontend\\e2e\\accessibility.spec.ts:20:96"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T09:02:48.319Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "E:\\Projects\\Golrang\\Task\\frontend\\test-results\\accessibility-automatic-ac-13f6e-lters-and-cached-sort-views\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "E:\\Projects\\Golrang\\Task\\frontend\\test-results\\accessibility-automatic-ac-13f6e-lters-and-cached-sort-views\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "E:\\Projects\\Golrang\\Task\\frontend\\e2e\\accessibility.spec.ts",
+                    "column": 96,
+                    "line": 20
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ddd864604af8a6a0198f-dd02482926ccd4af3acc",
+          "file": "accessibility.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "regular destination is saved, changed and removed without changing neighborhood selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13768,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T09:03:06.111Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ddd864604af8a6a0198f-e3d134cad5682288bf84",
+          "file": "accessibility.spec.ts",
+          "line": 40,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "phase2.spec.ts",
+      "file": "phase2.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "advanced confirmation uses actual semantic retrieval and preserves hard conditions",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 18398,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.search-progress')\nExpected substring: \u001b[32m\"کاندیدای معنایی بازیابی شد\"\u001b[39m\nReceived string:    \u001b[31m\"بررسی بخشی از گزینه‌ها۳ آگهی با بررسی دسترسی از ۷ کاندیدای ملک · ۰ استفاده از مسیر ذخیره‌شدهترتیب دسترسی فقط در زیرمجموعهٔ بررسی‌شده معتبر است؛ رتبه‌بندی کل هنوز نهایی نیست.بازیابی معنایی در دسترس نیست؛ نتیجهٔ فیلترهای ساخت‌یافته حفظ شده است.بررسی دستهٔ بعدی\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.search-progress') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.search-progress')\u001b[22m\n\u001b[2m    14 × locator resolved to <div role=\"status\" class=\"search-progress\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"بررسی بخشی از گزینه‌ها۳ آگهی با بررسی دسترسی از ۷ کاندیدای ملک · ۰ استفاده از مسیر ذخیره‌شدهترتیب دسترسی فقط در زیرمجموعهٔ بررسی‌شده معتبر است؛ رتبه‌بندی کل هنوز نهایی نیست.بازیابی معنایی در دسترس نیست؛ نتیجهٔ فیلترهای ساخت‌یافته حفظ شده است.بررسی دستهٔ بعدی\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.search-progress')\nExpected substring: \u001b[32m\"کاندیدای معنایی بازیابی شد\"\u001b[39m\nReceived string:    \u001b[31m\"بررسی بخشی از گزینه‌ها۳ آگهی با بررسی دسترسی از ۷ کاندیدای ملک · ۰ استفاده از مسیر ذخیره‌شدهترتیب دسترسی فقط در زیرمجموعهٔ بررسی‌شده معتبر است؛ رتبه‌بندی کل هنوز نهایی نیست.بازیابی معنایی در دسترس نیست؛ نتیجهٔ فیلترهای ساخت‌یافته حفظ شده است.بررسی دستهٔ بعدی\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.search-progress') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.search-progress')\u001b[22m\n\u001b[2m    14 × locator resolved to <div role=\"status\" class=\"search-progress\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"بررسی بخشی از گزینه‌ها۳ آگهی با بررسی دسترسی از ۷ کاندیدای ملک · ۰ استفاده از مسیر ذخیره‌شدهترتیب دسترسی فقط در زیرمجموعهٔ بررسی‌شده معتبر است؛ رتبه‌بندی کل هنوز نهایی نیست.بازیابی معنایی در دسترس نیست؛ نتیجهٔ فیلترهای ساخت‌یافته حفظ شده است.بررسی دستهٔ بعدی\"\u001b[22m\n\n    at E:\\Projects\\Golrang\\Task\\frontend\\e2e\\phase2.spec.ts:57:50",
+                    "location": {
+                      "file": "E:\\Projects\\Golrang\\Task\\frontend\\e2e\\phase2.spec.ts",
+                      "column": 50,
+                      "line": 57
+                    },
+                    "snippet": "  55 |   expect(submitted.state.property.max_monthly_rent_toman).toBe(15000000);\n  56 |   await expect(page.getByRole('button', { name: 'چرا این گزینه‌ها پیشنهاد شدند؟' })).toBeEnabled({ timeout: 30000 });\n> 57 |   await expect(page.locator('.search-progress')).toContainText('کاندیدای معنایی بازیابی شد');\n     |                                                  ^\n  58 |   await page.getByRole('button', { name: 'چرا این گزینه‌ها پیشنهاد شدند؟' }).click();\n  59 |   await expect(page.locator('.explanation')).toContainText('دلیل پیشنهاد');\n  60 |   await page.getByRole('button', { name: 'جست‌وجوی معمولی', exact: true }).click();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "E:\\Projects\\Golrang\\Task\\frontend\\e2e\\phase2.spec.ts",
+                        "column": 50,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.search-progress')\nExpected substring: \u001b[32m\"کاندیدای معنایی بازیابی شد\"\u001b[39m\nReceived string:    \u001b[31m\"بررسی بخشی از گزینه‌ها۳ آگهی با بررسی دسترسی از ۷ کاندیدای ملک · ۰ استفاده از مسیر ذخیره‌شدهترتیب دسترسی فقط در زیرمجموعهٔ بررسی‌شده معتبر است؛ رتبه‌بندی کل هنوز نهایی نیست.بازیابی معنایی در دسترس نیست؛ نتیجهٔ فیلترهای ساخت‌یافته حفظ شده است.بررسی دستهٔ بعدی\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.search-progress') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.search-progress')\u001b[22m\n\u001b[2m    14 × locator resolved to <div role=\"status\" class=\"search-progress\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"بررسی بخشی از گزینه‌ها۳ آگهی با بررسی دسترسی از ۷ کاندیدای ملک · ۰ استفاده از مسیر ذخیره‌شدهترتیب دسترسی فقط در زیرمجموعهٔ بررسی‌شده معتبر است؛ رتبه‌بندی کل هنوز نهایی نیست.بازیابی معنایی در دسترس نیست؛ نتیجهٔ فیلترهای ساخت‌یافته حفظ شده است.بررسی دستهٔ بعدی\"\u001b[22m\n\n\n  55 |   expect(submitted.state.property.max_monthly_rent_toman).toBe(15000000);\n  56 |   await expect(page.getByRole('button', { name: 'چرا این گزینه‌ها پیشنهاد شدند؟' })).toBeEnabled({ timeout: 30000 });\n> 57 |   await expect(page.locator('.search-progress')).toContainText('کاندیدای معنایی بازیابی شد');\n     |                                                  ^\n  58 |   await page.getByRole('button', { name: 'چرا این گزینه‌ها پیشنهاد شدند؟' }).click();\n  59 |   await expect(page.locator('.explanation')).toContainText('دلیل پیشنهاد');\n  60 |   await page.getByRole('button', { name: 'جست‌وجوی معمولی', exact: true }).click();\n    at E:\\Projects\\Golrang\\Task\\frontend\\e2e\\phase2.spec.ts:57:50"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T09:03:20.284Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "E:\\Projects\\Golrang\\Task\\frontend\\test-results\\phase2-advanced-confirmati-4f202-d-preserves-hard-conditions\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "E:\\Projects\\Golrang\\Task\\frontend\\test-results\\phase2-advanced-confirmati-4f202-d-preserves-hard-conditions\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "E:\\Projects\\Golrang\\Task\\frontend\\e2e\\phase2.spec.ts",
+                    "column": 50,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-0f19dab6ec9bed06f1dd",
+          "file": "phase2.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "mobile filters and map survive tile failure without horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3273,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T09:03:40.021Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-1e61d21f0bcb1401abc8",
+          "file": "phase2.spec.ts",
+          "line": 65,
+          "column": 1
+        },
+        {
+          "title": "a late search response cannot overwrite a newer filter state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3287,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T09:03:43.654Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4611f7184bd5eaa3983-35b56de3d9e32f6ed793",
+          "file": "phase2.spec.ts",
+          "line": 103,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "phase3.spec.ts",
+      "file": "phase3.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "restricted internal review remains blind, leased and provenance-aware",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1366,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T09:03:47.005Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a64b8b583ae028ac2231-4d31b9304a54c7a02bfb",
+          "file": "phase3.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "internal page works on mobile without horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 897,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T09:03:48.385Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a64b8b583ae028ac2231-e10f4c07bcb8d93eb6d3",
+          "file": "phase3.spec.ts",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "normal consumer search stays independent of internal evaluation services",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5505,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T09:03:49.295Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a64b8b583ae028ac2231-f2d19c1c848871c3f898",
+          "file": "phase3.spec.ts",
+          "line": 36,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-22T09:02:00.167Z",
+    "duration": 115652.89600000001,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

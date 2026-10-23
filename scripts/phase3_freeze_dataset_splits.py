@@ -1,0 +1,18 @@
+"""Bind comparisons and acquisition to exported immutable group split manifests."""
+from pathlib import Path
+p = Path('backend/app/annotation_datasets.py')
+s = p.read_text(encoding='utf-8').replace("'count': len(rows), 'independent_groups'", "'task_groups': {task: {'group_id': group, 'split': group_split(group, seed)} for task, group in sorted(groups.items())},\n        'count': len(rows), 'independent_groups'")
+p.write_text(s, encoding='utf-8')
+p = Path('backend/app/evaluation_experiments.py')
+s = p.read_text(encoding='utf-8')
+s = s.replace("    cases, pairs = [], []\n", "    from .annotation_datasets import export_dataset\n    label_dataset = export_dataset(db, seed=seed)\n    cases, pairs = [], []\n")
+s = s.replace("e.report['status'] == 'offline_measured']", "e.report['status'] == 'offline_measured' and e.report.get('label_dataset_id') == label_dataset['dataset_id']]")
+s = s.replace("e.report['split'] == 'holdout']", "e.report['split'] == 'holdout' and e.report.get('label_dataset_id') == label_dataset['dataset_id']]")
+s = s.replace("        group = groups.get(task, task)", "        group = label_dataset['task_groups'].get(task, {}).get('group_id', groups.get(task, task))")
+s = s.replace("'baseline_config': {}, 'candidate_config': candidate,", "'baseline_config': {}, 'candidate_config': candidate, 'label_dataset_id': label_dataset['dataset_id'], 'label_dataset_sha256': label_dataset['sha256'],")
+p.write_text(s, encoding='utf-8')
+p = Path('backend/app/review_workflow.py')
+s = p.read_text(encoding='utf-8')
+s = s.replace("    frames, strata = {}, defaultdict(list)", "    from .evaluation_store import DatasetVersion\n    with db.session() as session:\n        locked_holdout = {task for version in session.scalars(select(DatasetVersion)) for task, group in version.manifest.get('task_groups', {}).items() if group['split'] == 'holdout'}\n        blocked_requests = {r.request_id for r in session.scalars(select(SearchRequest).where(SearchRequest.request_id.in_(request_ids))) if r.task_id in locked_holdout}\n    request_ids = [rid for rid in request_ids if rid not in blocked_requests]\n    frames, strata = {}, defaultdict(list)")
+s = s.replace("'batch_size': batch_size, 'policy': SAMPLING_POLICY, 'seed': seed}", "'batch_size': batch_size, 'policy': SAMPLING_POLICY, 'seed': seed, 'holdout_requests_excluded': len(blocked_requests)}")
+p.write_text(s, encoding='utf-8')

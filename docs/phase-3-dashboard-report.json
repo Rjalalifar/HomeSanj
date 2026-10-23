@@ -1,0 +1,378 @@
+{
+  "metric_version": "graded-fixed-pool-1",
+  "rubric_version": "hard-pass-relevance-0-3-1",
+  "qs": [
+    {
+      "mode": "unexposed",
+      "actor_cohort": "demo",
+      "experiment_arm": "unassigned",
+      "solicitation_policy": "explicit_top5_v1",
+      "S": 0,
+      "F": 0,
+      "U": 0,
+      "pending": 27,
+      "N": 0,
+      "qs_at_5": {
+        "value": null,
+        "numerator": 0,
+        "denominator": 0,
+        "reason": "zero_denominator"
+      },
+      "coverage": {
+        "value": null,
+        "numerator": 0,
+        "denominator": 0,
+        "reason": "zero_denominator"
+      },
+      "confirmed_success_over_all_tasks": {
+        "value": null,
+        "numerator": 0,
+        "denominator": 0,
+        "reason": "zero_denominator"
+      },
+      "missing_outcome_bounds": null,
+      "bounds_are_confidence_interval": false,
+      "policy_version": "first-final-explicit-24h-1",
+      "window_hours": 24.0,
+      "status": "insufficient_data"
+    },
+    {
+      "mode": "normal",
+      "actor_cohort": "demo",
+      "experiment_arm": "unassigned",
+      "solicitation_policy": "explicit_top5_v1",
+      "S": 0,
+      "F": 0,
+      "U": 0,
+      "pending": 8,
+      "N": 0,
+      "qs_at_5": {
+        "value": null,
+        "numerator": 0,
+        "denominator": 0,
+        "reason": "zero_denominator"
+      },
+      "coverage": {
+        "value": null,
+        "numerator": 0,
+        "denominator": 0,
+        "reason": "zero_denominator"
+      },
+      "confirmed_success_over_all_tasks": {
+        "value": null,
+        "numerator": 0,
+        "denominator": 0,
+        "reason": "zero_denominator"
+      },
+      "missing_outcome_bounds": null,
+      "bounds_are_confidence_interval": false,
+      "policy_version": "first-final-explicit-24h-1",
+      "window_hours": 24.0,
+      "status": "insufficient_data"
+    },
+    {
+      "mode": "advanced",
+      "actor_cohort": "demo",
+      "experiment_arm": "unassigned",
+      "solicitation_policy": "explicit_top5_v1",
+      "S": 0,
+      "F": 0,
+      "U": 0,
+      "pending": 5,
+      "N": 0,
+      "qs_at_5": {
+        "value": null,
+        "numerator": 0,
+        "denominator": 0,
+        "reason": "zero_denominator"
+      },
+      "coverage": {
+        "value": null,
+        "numerator": 0,
+        "denominator": 0,
+        "reason": "zero_denominator"
+      },
+      "confirmed_success_over_all_tasks": {
+        "value": null,
+        "numerator": 0,
+        "denominator": 0,
+        "reason": "zero_denominator"
+      },
+      "missing_outcome_bounds": null,
+      "bounds_are_confidence_interval": false,
+      "policy_version": "first-final-explicit-24h-1",
+      "window_hours": 24.0,
+      "status": "insufficient_data"
+    },
+    {
+      "mode": "unexposed",
+      "actor_cohort": "real_user",
+      "experiment_arm": "unassigned",
+      "solicitation_policy": "explicit_top5_v1",
+      "S": 0,
+      "F": 0,
+      "U": 0,
+      "pending": 1,
+      "N": 0,
+      "qs_at_5": {
+        "value": null,
+        "numerator": 0,
+        "denominator": 0,
+        "reason": "zero_denominator"
+      },
+      "coverage": {
+        "value": null,
+        "numerator": 0,
+        "denominator": 0,
+        "reason": "zero_denominator"
+      },
+      "confirmed_success_over_all_tasks": {
+        "value": null,
+        "numerator": 0,
+        "denominator": 0,
+        "reason": "zero_denominator"
+      },
+      "missing_outcome_bounds": null,
+      "bounds_are_confidence_interval": false,
+      "policy_version": "first-final-explicit-24h-1",
+      "window_hours": 24.0,
+      "status": "insufficient_data"
+    }
+  ],
+  "real_qs_status": "unavailable",
+  "conversational_success": {
+    "count": 0,
+    "primary_qs_rewritten": false
+  },
+  "search": {
+    "request_count": 49,
+    "completion": {
+      "complete": 48,
+      "partial": 1
+    },
+    "modes": {
+      "normal": 37,
+      "advanced": 6
+    }
+  },
+  "behavioral_diagnostics": {
+    "ctr": {
+      "value": 0.07692307692307693,
+      "numerator": 1,
+      "denominator": 13,
+      "reason": null
+    },
+    "clicks_without_valid_impressions": 2,
+    "is_relevance_metric": false,
+    "rank_stratification": "unavailable_without_rank_at_impression_evidence"
+  },
+  "otp": {
+    "statuses": {
+      "ok": 21,
+      "api_error": 3
+    },
+    "evaluated": 24,
+    "cache_hits": 9
+  },
+  "retrieval": {
+    "statuses": {
+      "not_requested": 37,
+      "ok": 6
+    },
+    "human_fixed_pool_recall": null,
+    "ann_report": "docs/phase-3-ann-report.json"
+  },
+  "providers": {
+    "parser": {
+      "calls": 0,
+      "statuses": {},
+      "reserved_tokens": 0,
+      "observed_total_tokens": null,
+      "measured_cost": null,
+      "cost_status": "unavailable_without_provider_billing"
+    },
+    "explainer": {
+      "calls": 0,
+      "statuses": {},
+      "reserved_tokens": 0,
+      "observed_total_tokens": null,
+      "measured_cost": null,
+      "cost_status": "unavailable_without_provider_billing"
+    },
+    "judge": {
+      "calls": 0,
+      "statuses": {},
+      "reserved_tokens": 0,
+      "observed_total_tokens": null,
+      "measured_cost": null,
+      "cost_status": "unavailable_without_provider_billing"
+    },
+    "improvement": {
+      "calls": 0,
+      "statuses": {},
+      "reserved_tokens": 0,
+      "observed_total_tokens": null,
+      "measured_cost": null,
+      "cost_status": "unavailable_without_provider_billing"
+    }
+  },
+  "grounding": {
+    "claim_count": 0,
+    "correct": 0,
+    "unsupported": 0,
+    "contradicted": 0,
+    "unknown": 0,
+    "no_claim_cases": 0,
+    "rate": {
+      "value": null,
+      "numerator": 0,
+      "denominator": 0,
+      "reason": "zero_denominator"
+    }
+  },
+  "human_judge_agreement": {
+    "common_independent_annotations": 0,
+    "binary_mismatch": {
+      "value": null,
+      "numerator": 0,
+      "denominator": 0,
+      "reason": "zero_denominator"
+    },
+    "grade_difference_at_least_two": {
+      "value": null,
+      "numerator": 0,
+      "denominator": 0,
+      "reason": "zero_denominator"
+    },
+    "confusion": {},
+    "selection_bias": "Review acquisition is not a representative random user sample"
+  },
+  "stage_latency": [
+    {
+      "mode": "advanced",
+      "stage": "advanced_explanation_completed",
+      "count": 4,
+      "p50": 10.536549991229549,
+      "p95": 14.7210050112335,
+      "unit": "ms"
+    },
+    {
+      "mode": "advanced",
+      "stage": "retrieval_pipeline",
+      "count": 6,
+      "p50": 3090.3771500015864,
+      "p95": 17444.0041499995,
+      "unit": "ms"
+    },
+    {
+      "mode": "advanced",
+      "stage": "search_submitted",
+      "count": 6,
+      "p50": 154.3993999948725,
+      "p95": 1885.430925003078,
+      "unit": "ms"
+    },
+    {
+      "mode": "advanced",
+      "stage": "semantic_retrieval_completed",
+      "count": 6,
+      "p50": 3093.339200000628,
+      "p95": 17490.22189999877,
+      "unit": "ms"
+    },
+    {
+      "mode": "normal",
+      "stage": "advanced_explanation_completed",
+      "count": 2,
+      "p50": 18.305499979760498,
+      "p95": 19.822179977199994,
+      "unit": "ms"
+    },
+    {
+      "mode": "normal",
+      "stage": "search_submitted",
+      "count": 37,
+      "p50": 213.5806999867782,
+      "p95": 612.137640005675,
+      "unit": "ms"
+    }
+  ],
+  "review": {
+    "samples": 0,
+    "statuses": {},
+    "annotations": 0,
+    "origins": {},
+    "independent_real_graded": 0
+  },
+  "datasets": [
+    {
+      "dataset_id": "annotations_5d8b060474bc0586ce4b4b51",
+      "schema_version": "annotation-jsonl-1",
+      "rubric_version": "hard-pass-relevance-0-3-1",
+      "split_seed": 17,
+      "split_policy": "linked_task_property_confirmed_intent_70_15_15",
+      "task_groups": {},
+      "count": 0,
+      "independent_groups": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "existing_review_annotations",
+      "human_real_graded": 0,
+      "holdout_policy": "final_milestone_only; not acquisition, prompts or tuning"
+    }
+  ],
+  "experiments": [
+    {
+      "experiment_id": "experiment_bedc12818bd6d2f378249ea225bd781556c08d4e69b9799d0bad6ca21221cfe9",
+      "status": "insufficient_evidence",
+      "split": "mechanical_demo",
+      "independent_tasks": 3
+    },
+    {
+      "experiment_id": "experiment_d58dc7545cbb1497c749a11dd6c7a5159035f65c813392cda213c0dc9f6a35b8",
+      "status": "insufficient_evidence",
+      "split": "mechanical_demo",
+      "independent_tasks": 3
+    }
+  ],
+  "jobs": {},
+  "releases": [
+    {
+      "release_id": "release_88fd7e82cb354e13ade7d68ef2574e8e",
+      "scope": "test",
+      "action": "promote",
+      "config": {
+        "rent_weight_multiplier": 1.25
+      },
+      "previous_id": null
+    },
+    {
+      "release_id": "release_376c9d96370541f99453a2b80797c7f7",
+      "scope": "test",
+      "action": "rollback",
+      "config": {},
+      "previous_id": "release_88fd7e82cb354e13ade7d68ef2574e8e"
+    },
+    {
+      "release_id": "release_a87e291c6179442b86411e1e728ed7c2",
+      "scope": "test",
+      "action": "promote",
+      "config": {
+        "rent_weight_multiplier": 1.25
+      },
+      "previous_id": "release_376c9d96370541f99453a2b80797c7f7"
+    },
+    {
+      "release_id": "release_6054da4f680c458094b4129b255c13f9",
+      "scope": "test",
+      "action": "rollback",
+      "config": {},
+      "previous_id": "release_a87e291c6179442b86411e1e728ed7c2"
+    }
+  ],
+  "unavailable_metrics": {
+    "human_ranking_quality": "A fully independently judged fixed pool is required",
+    "human_judge_agreement": "Independent common graded annotations are required",
+    "live_judge_quality": "Opt-in judge and account-visible model verification required"
+  },
+  "training_status": "not_trained_insufficient_human_labels"
+}

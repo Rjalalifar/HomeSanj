@@ -1,0 +1,1795 @@
+{
+  "neighborhood_count": 377,
+  "district_count": 22,
+  "overlap_pairs_over_1m2": 120,
+  "outside_assigned_district_over_1pct": 108,
+  "outside_assigned_district_over_50pct": 11,
+  "overlaps": [
+    {
+      "a": "neighborhood_6f56f1da349765c7ed3170c5",
+      "b": "neighborhood_285eabcb6df6aa96a1ada6c7",
+      "area_m2": 117.73293285124356
+    },
+    {
+      "a": "neighborhood_cdee2a6fc16c2b59e7f5e790",
+      "b": "neighborhood_74ac6f84180113e94c187718",
+      "area_m2": 806.9502191867573
+    },
+    {
+      "a": "neighborhood_edd88b960062bb48a0ddbdc7",
+      "b": "neighborhood_cda6388475e930ab3308f8bf",
+      "area_m2": 216.04200854872352
+    },
+    {
+      "a": "neighborhood_edd88b960062bb48a0ddbdc7",
+      "b": "neighborhood_76cac860833cf54b6225cdab",
+      "area_m2": 527.5253715219092
+    },
+    {
+      "a": "neighborhood_edd88b960062bb48a0ddbdc7",
+      "b": "neighborhood_72aa7d0c189bd17bf4ceb170",
+      "area_m2": 84.96976607151453
+    },
+    {
+      "a": "neighborhood_1dccc7782ec36085368c899b",
+      "b": "neighborhood_ea7f322195b37d7574572986",
+      "area_m2": 73.95360138452122
+    },
+    {
+      "a": "neighborhood_1dccc7782ec36085368c899b",
+      "b": "neighborhood_9d08373d81848888b9f31148",
+      "area_m2": 410.3975656091594
+    },
+    {
+      "a": "neighborhood_72aa7d0c189bd17bf4ceb170",
+      "b": "neighborhood_76cac860833cf54b6225cdab",
+      "area_m2": 6.845256859072499
+    },
+    {
+      "a": "neighborhood_72aa7d0c189bd17bf4ceb170",
+      "b": "neighborhood_769a2e94832cbfc69e634328",
+      "area_m2": 137.156531274759
+    },
+    {
+      "a": "neighborhood_fcf57306f5a500f7778f0dee",
+      "b": "neighborhood_514f1572a41561a62d6fe635",
+      "area_m2": 20.326043675444712
+    },
+    {
+      "a": "neighborhood_285eabcb6df6aa96a1ada6c7",
+      "b": "neighborhood_b311f8f489fffda87bf36a24",
+      "area_m2": 440.30381176832503
+    },
+    {
+      "a": "neighborhood_356ee59ac1e15bb909cf58be",
+      "b": "neighborhood_2060222b8c7e5d2023482c16",
+      "area_m2": 31.810874889944557
+    },
+    {
+      "a": "neighborhood_dcd7f72bf168aea59eaf2450",
+      "b": "neighborhood_89d8ea84e8ea2e7e7b11a9a3",
+      "area_m2": 94.66824791197166
+    },
+    {
+      "a": "neighborhood_b311f8f489fffda87bf36a24",
+      "b": "neighborhood_769a2e94832cbfc69e634328",
+      "area_m2": 29.009961268008553
+    },
+    {
+      "a": "neighborhood_0e6c6659a14e4e8dcf198b12",
+      "b": "neighborhood_8d1c8aa0a1ef457648c4bf1b",
+      "area_m2": 19.64202872096975
+    },
+    {
+      "a": "neighborhood_43579d4b8b6fe5a11a0c3422",
+      "b": "neighborhood_e3246eda0bc0d6e2d25586fc",
+      "area_m2": 350.5390673763337
+    },
+    {
+      "a": "neighborhood_43579d4b8b6fe5a11a0c3422",
+      "b": "neighborhood_ebabb8f391bffe87a04e7135",
+      "area_m2": 43.34103368763453
+    },
+    {
+      "a": "neighborhood_43b39f64c3083edbc188ea4d",
+      "b": "neighborhood_2180d7ad37fd1c79731b7d26",
+      "area_m2": 20.7033817120564
+    },
+    {
+      "a": "neighborhood_be0d6ee89336571fa3ea0b6e",
+      "b": "neighborhood_e3246eda0bc0d6e2d25586fc",
+      "area_m2": 547.2308648725517
+    },
+    {
+      "a": "neighborhood_3a7b74411ddb0365d6a34054",
+      "b": "neighborhood_b8b2a85557e01cca9bd13512",
+      "area_m2": 14475.241866333556
+    },
+    {
+      "a": "neighborhood_8d1c8aa0a1ef457648c4bf1b",
+      "b": "neighborhood_9d08373d81848888b9f31148",
+      "area_m2": 6.845114623485124
+    },
+    {
+      "a": "neighborhood_606706e643289696ebc6b0d0",
+      "b": "neighborhood_c5e2f59f5f6befe470f0aedb",
+      "area_m2": 129.36449134422094
+    },
+    {
+      "a": "neighborhood_606706e643289696ebc6b0d0",
+      "b": "neighborhood_9d08373d81848888b9f31148",
+      "area_m2": 2.152553050475099
+    },
+    {
+      "a": "neighborhood_9d08373d81848888b9f31148",
+      "b": "neighborhood_ee8165705550ef4653fe35e2",
+      "area_m2": 89.52129791784317
+    },
+    {
+      "a": "neighborhood_305d29dd1960b9fdb96d4b3b",
+      "b": "neighborhood_042b317f8acc8e0bf3e63e17",
+      "area_m2": 899.8211684494487
+    },
+    {
+      "a": "neighborhood_042b317f8acc8e0bf3e63e17",
+      "b": "neighborhood_43dac4399fb65bdbc958e2e9",
+      "area_m2": 1147.2025771082317
+    },
+    {
+      "a": "neighborhood_042b317f8acc8e0bf3e63e17",
+      "b": "neighborhood_ee8165705550ef4653fe35e2",
+      "area_m2": 1493.651710215137
+    },
+    {
+      "a": "neighborhood_43dac4399fb65bdbc958e2e9",
+      "b": "neighborhood_e63737a419a8eb924b55b0b1",
+      "area_m2": 43.3754336454771
+    },
+    {
+      "a": "neighborhood_b0094c5be69f17b7ce857e71",
+      "b": "neighborhood_a00e3fc92f729c31d6d40066",
+      "area_m2": 737.9503746383059
+    },
+    {
+      "a": "neighborhood_3a0c0ce3200b44904664a86e",
+      "b": "neighborhood_f0b160e9fbb16959f64733c9",
+      "area_m2": 7077.664441970099
+    },
+    {
+      "a": "neighborhood_3a0c0ce3200b44904664a86e",
+      "b": "neighborhood_864e79d68fdc90e5944c45c1",
+      "area_m2": 21.830737897720386
+    },
+    {
+      "a": "neighborhood_68b43ca37e171536a705fe51",
+      "b": "neighborhood_eca407c89fa6c75ef9c28d3f",
+      "area_m2": 14.680049783918232
+    },
+    {
+      "a": "neighborhood_68b43ca37e171536a705fe51",
+      "b": "neighborhood_cf784924ac2ca99163173900",
+      "area_m2": 2108.2864456726793
+    },
+    {
+      "a": "neighborhood_eca407c89fa6c75ef9c28d3f",
+      "b": "neighborhood_f0b160e9fbb16959f64733c9",
+      "area_m2": 2647.911547089334
+    },
+    {
+      "a": "neighborhood_cf784924ac2ca99163173900",
+      "b": "neighborhood_988da34203d5c0898a5d9034",
+      "area_m2": 51.27144210557658
+    },
+    {
+      "a": "neighborhood_988da34203d5c0898a5d9034",
+      "b": "neighborhood_375fc04f518526c7d6501fbe",
+      "area_m2": 64.45252673625916
+    },
+    {
+      "a": "neighborhood_988da34203d5c0898a5d9034",
+      "b": "neighborhood_4ebe584a628d9754def22444",
+      "area_m2": 19.295449087486453
+    },
+    {
+      "a": "neighborhood_988da34203d5c0898a5d9034",
+      "b": "neighborhood_74ac6f84180113e94c187718",
+      "area_m2": 26.192871878048607
+    },
+    {
+      "a": "neighborhood_29580b26ee62ce46b6dca241",
+      "b": "neighborhood_d23adfdd269603730e8a51c0",
+      "area_m2": 8345.25483681254
+    },
+    {
+      "a": "neighborhood_29580b26ee62ce46b6dca241",
+      "b": "neighborhood_b8d41acf565a93b73027e7d1",
+      "area_m2": 42.42979710837864
+    },
+    {
+      "a": "neighborhood_b8d41acf565a93b73027e7d1",
+      "b": "neighborhood_d23adfdd269603730e8a51c0",
+      "area_m2": 333.019179868104
+    },
+    {
+      "a": "neighborhood_b8d41acf565a93b73027e7d1",
+      "b": "neighborhood_7bd021d9477a3eccc21b652e",
+      "area_m2": 10664.654943428555
+    },
+    {
+      "a": "neighborhood_b8d41acf565a93b73027e7d1",
+      "b": "neighborhood_2a18d46d522f9358f2849c20",
+      "area_m2": 2479.5688203125314
+    },
+    {
+      "a": "neighborhood_74ac6f84180113e94c187718",
+      "b": "neighborhood_c23e17d456b2fd1c9aaedda7",
+      "area_m2": 12.063065741526636
+    },
+    {
+      "a": "neighborhood_4ebe584a628d9754def22444",
+      "b": "neighborhood_5c2bc5d88496893f4c500a3d",
+      "area_m2": 20.623094562842788
+    },
+    {
+      "a": "neighborhood_375fc04f518526c7d6501fbe",
+      "b": "neighborhood_5c2bc5d88496893f4c500a3d",
+      "area_m2": 4922.912780873414
+    },
+    {
+      "a": "neighborhood_6c4c480ab27412b96b71e0bf",
+      "b": "neighborhood_91fc32e635f23c10b59dd5f1",
+      "area_m2": 39.67631528113027
+    },
+    {
+      "a": "neighborhood_6c4c480ab27412b96b71e0bf",
+      "b": "neighborhood_0e96f2a2d16bb9890a98b384",
+      "area_m2": 2622.084625023912
+    },
+    {
+      "a": "neighborhood_6c4c480ab27412b96b71e0bf",
+      "b": "neighborhood_64abcb6fc9e066233efc6ee0",
+      "area_m2": 931.8050829098493
+    },
+    {
+      "a": "neighborhood_6c4c480ab27412b96b71e0bf",
+      "b": "neighborhood_5c2bc5d88496893f4c500a3d",
+      "area_m2": 402.18947008790195
+    },
+    {
+      "a": "neighborhood_c23e17d456b2fd1c9aaedda7",
+      "b": "neighborhood_5c2bc5d88496893f4c500a3d",
+      "area_m2": 2460.1252410550437
+    },
+    {
+      "a": "neighborhood_99ba679051014f2edc76a8c4",
+      "b": "neighborhood_5c2bc5d88496893f4c500a3d",
+      "area_m2": 1963.6153975765906
+    },
+    {
+      "a": "neighborhood_4626e40646448440c88e5f72",
+      "b": "neighborhood_91fc32e635f23c10b59dd5f1",
+      "area_m2": 317.5996727960078
+    },
+    {
+      "a": "neighborhood_4626e40646448440c88e5f72",
+      "b": "neighborhood_5c2bc5d88496893f4c500a3d",
+      "area_m2": 2118.646157295415
+    },
+    {
+      "a": "neighborhood_db4b15d5d2e1b644946fd3d4",
+      "b": "neighborhood_199a908ba8744af17c708b7a",
+      "area_m2": 6.3804761313086615
+    },
+    {
+      "a": "neighborhood_db4b15d5d2e1b644946fd3d4",
+      "b": "neighborhood_91fc32e635f23c10b59dd5f1",
+      "area_m2": 2009.899648431912
+    },
+    {
+      "a": "neighborhood_7e173e9ddebbfb2fc47e7c56",
+      "b": "neighborhood_199a908ba8744af17c708b7a",
+      "area_m2": 847303.9299169149
+    },
+    {
+      "a": "neighborhood_2052deb96322ebf3958f6352",
+      "b": "neighborhood_68fc7cee46ae6d0da8a7ef17",
+      "area_m2": 1230.885661851498
+    },
+    {
+      "a": "neighborhood_7dc9f1ee4a1329c934685d3f",
+      "b": "neighborhood_37c87d629f768188b825c3e3",
+      "area_m2": 5.944118904763288
+    },
+    {
+      "a": "neighborhood_62f56f3a99b5e7ac995f3eba",
+      "b": "neighborhood_61de118e6cbea32bac9d5970",
+      "area_m2": 74.69384160149934
+    },
+    {
+      "a": "neighborhood_61de118e6cbea32bac9d5970",
+      "b": "neighborhood_d90668873e98858da6175e24",
+      "area_m2": 466.84059046707125
+    },
+    {
+      "a": "neighborhood_8becc32295e773d265992c36",
+      "b": "neighborhood_3912cc3735e8e60653431e37",
+      "area_m2": 5.539004866964722
+    },
+    {
+      "a": "neighborhood_e0f641ca73b7d09dbf999766",
+      "b": "neighborhood_cc152c5e0c4d8fdd725a1576",
+      "area_m2": 4.76132110204077
+    },
+    {
+      "a": "neighborhood_e9248b5192dda3a60bad9b03",
+      "b": "neighborhood_106f0baf4cf011f83b5730c7",
+      "area_m2": 63.838629094290695
+    },
+    {
+      "a": "neighborhood_d0b9af7e3efcd49813a4a636",
+      "b": "neighborhood_9dbc1e4b6588b6509403f243",
+      "area_m2": 33906.17593020038
+    },
+    {
+      "a": "neighborhood_d0b9af7e3efcd49813a4a636",
+      "b": "neighborhood_5976a2488b21155bacd2f782",
+      "area_m2": 2055.087525673618
+    },
+    {
+      "a": "neighborhood_5976a2488b21155bacd2f782",
+      "b": "neighborhood_20b585baa3356a25269b9d3c",
+      "area_m2": 1932.8999259633729
+    },
+    {
+      "a": "neighborhood_7e3f18d40f5dff809fc2c390",
+      "b": "neighborhood_9dbc1e4b6588b6509403f243",
+      "area_m2": 4454.773646296002
+    },
+    {
+      "a": "neighborhood_161dbb5d9b0e12d06d0cbe78",
+      "b": "neighborhood_20b585baa3356a25269b9d3c",
+      "area_m2": 156.8796903855178
+    },
+    {
+      "a": "neighborhood_106f0baf4cf011f83b5730c7",
+      "b": "neighborhood_2d03cd74d3d7b83ef1be5383",
+      "area_m2": 7.810219710003766
+    },
+    {
+      "a": "neighborhood_047804a24a4732af644fc05c",
+      "b": "neighborhood_b8b2a85557e01cca9bd13512",
+      "area_m2": 990.7396106618053
+    },
+    {
+      "a": "neighborhood_047804a24a4732af644fc05c",
+      "b": "neighborhood_c5e2f59f5f6befe470f0aedb",
+      "area_m2": 91.55182966121009
+    },
+    {
+      "a": "neighborhood_20b585baa3356a25269b9d3c",
+      "b": "neighborhood_4620f04cdbcc9d9fe88f0a90",
+      "area_m2": 140.42731375741926
+    },
+    {
+      "a": "neighborhood_c5e2f59f5f6befe470f0aedb",
+      "b": "neighborhood_501de4b0a0a5c35d0b85d0e4",
+      "area_m2": 287.57163533417986
+    },
+    {
+      "a": "neighborhood_e22457587cd2e67939e24e84",
+      "b": "neighborhood_24283b57888f53fc62720639",
+      "area_m2": 28.996529002667103
+    },
+    {
+      "a": "neighborhood_e22457587cd2e67939e24e84",
+      "b": "neighborhood_0b36dbe89b5a92d7e9f121bf",
+      "area_m2": 226.69405654620545
+    },
+    {
+      "a": "neighborhood_75a841ce070b3afc36430a6c",
+      "b": "neighborhood_4ff33e9895994ea375f45252",
+      "area_m2": 199.50560559797148
+    },
+    {
+      "a": "neighborhood_c2b566b8689cd70a03fdb8c5",
+      "b": "neighborhood_dfd80bb49e7c951b1613eda8",
+      "area_m2": 45.15253277265019
+    },
+    {
+      "a": "neighborhood_c389572d0e05b040046e86f1",
+      "b": "neighborhood_f5ea16ab434fb23c2792798c",
+      "area_m2": 667.7157640889445
+    },
+    {
+      "a": "neighborhood_c389572d0e05b040046e86f1",
+      "b": "neighborhood_4ff33e9895994ea375f45252",
+      "area_m2": 77.21691896604416
+    },
+    {
+      "a": "neighborhood_47d835fc0ad3e7cf11d4b74b",
+      "b": "neighborhood_25262c7eab3130f2cc948cc3",
+      "area_m2": 1331.2343052340648
+    },
+    {
+      "a": "neighborhood_25262c7eab3130f2cc948cc3",
+      "b": "neighborhood_3c6cb49c8c7f0d36da929136",
+      "area_m2": 132.79811421177016
+    },
+    {
+      "a": "neighborhood_4ff33e9895994ea375f45252",
+      "b": "neighborhood_f0b160e9fbb16959f64733c9",
+      "area_m2": 2.031170068955234
+    },
+    {
+      "a": "neighborhood_03af25be75eb3492dc1d5748",
+      "b": "neighborhood_0e96f2a2d16bb9890a98b384",
+      "area_m2": 18.428115774817968
+    },
+    {
+      "a": "neighborhood_99a65959ba8824b42fd6c8e1",
+      "b": "neighborhood_778c26a4513b031e1ee9b8c5",
+      "area_m2": 2400.7315930947766
+    },
+    {
+      "a": "neighborhood_be2509feba8567eaaf87afba",
+      "b": "neighborhood_73ad316cfb60074bf24300ba",
+      "area_m2": 8.297960308513119
+    },
+    {
+      "a": "neighborhood_05b0b120e0da29c60460736b",
+      "b": "neighborhood_7f8f8abe9e34651234b19e45",
+      "area_m2": 105.87222917845392
+    },
+    {
+      "a": "neighborhood_24283b57888f53fc62720639",
+      "b": "neighborhood_d28ebe22711244e99c2767e5",
+      "area_m2": 5.164354966998026
+    },
+    {
+      "a": "neighborhood_24283b57888f53fc62720639",
+      "b": "neighborhood_0b36dbe89b5a92d7e9f121bf",
+      "area_m2": 853.3717913265828
+    },
+    {
+      "a": "neighborhood_64aebd5529dfeba2f6457eb5",
+      "b": "neighborhood_f7f2e52b5e6dcddbafd8c1c4",
+      "area_m2": 1.4397466561690815
+    },
+    {
+      "a": "neighborhood_42b4b80f2c4dd9ddf6b1f16f",
+      "b": "neighborhood_1566246ee59cfe88630064ee",
+      "area_m2": 862.9217128313605
+    },
+    {
+      "a": "neighborhood_d22393ca6d664d96a996e6bc",
+      "b": "neighborhood_d1f5ed89d9a51060c2632671",
+      "area_m2": 3.984068931862461
+    },
+    {
+      "a": "neighborhood_aeee1c0b108c78ca6a24890a",
+      "b": "neighborhood_4b4ab632e069130b847a6584",
+      "area_m2": 8.338766722031936
+    },
+    {
+      "a": "neighborhood_f2f81175f2489f08d62aa911",
+      "b": "neighborhood_94c56d361443fbbc721720ae",
+      "area_m2": 24.761061065013372
+    },
+    {
+      "a": "neighborhood_3a4573c47a880cbd473d574a",
+      "b": "neighborhood_94c56d361443fbbc721720ae",
+      "area_m2": 71.32873897708767
+    },
+    {
+      "a": "neighborhood_8f1c155b3e752430cb1d1284",
+      "b": "neighborhood_94c56d361443fbbc721720ae",
+      "area_m2": 131.96593007935772
+    },
+    {
+      "a": "neighborhood_94fb82707d372a605705a87c",
+      "b": "neighborhood_73f9e456b537d2058e5a9b17",
+      "area_m2": 642.0869902745453
+    },
+    {
+      "a": "neighborhood_bc0a2db64e3af9d6a9bc3c1c",
+      "b": "neighborhood_06351eadef38164a18e66a01",
+      "area_m2": 498.2023580850929
+    },
+    {
+      "a": "neighborhood_7b30e4356c8d103fc73138b8",
+      "b": "neighborhood_bb0597eb31a9d3929ca5390b",
+      "area_m2": 125.45581694470087
+    },
+    {
+      "a": "neighborhood_17c41de758ff868f036f3d8a",
+      "b": "neighborhood_dd21e19843f49a65d3ac2507",
+      "area_m2": 1188.4042573733175
+    },
+    {
+      "a": "neighborhood_17c41de758ff868f036f3d8a",
+      "b": "neighborhood_3c299e40f8bcfc7fd1fb02ef",
+      "area_m2": 9044.582749167996
+    },
+    {
+      "a": "neighborhood_b76cd7b0acafc809b2658e8b",
+      "b": "neighborhood_dd21e19843f49a65d3ac2507",
+      "area_m2": 194.09665858929105
+    },
+    {
+      "a": "neighborhood_b76cd7b0acafc809b2658e8b",
+      "b": "neighborhood_8d0529710cd78ddfa9dd29c8",
+      "area_m2": 506.921807816733
+    },
+    {
+      "a": "neighborhood_c6f84c88c6e928e2b62e67f4",
+      "b": "neighborhood_8d0529710cd78ddfa9dd29c8",
+      "area_m2": 176.96575463086748
+    },
+    {
+      "a": "neighborhood_f3dda70df28709fe559e0448",
+      "b": "neighborhood_8d0529710cd78ddfa9dd29c8",
+      "area_m2": 563.7350793059534
+    },
+    {
+      "a": "neighborhood_f3dda70df28709fe559e0448",
+      "b": "neighborhood_3c299e40f8bcfc7fd1fb02ef",
+      "area_m2": 1528.1892679983657
+    },
+    {
+      "a": "neighborhood_fc09760960704e4b993737ac",
+      "b": "neighborhood_d1f56288ee5ca40472747df6",
+      "area_m2": 14.874846173617582
+    },
+    {
+      "a": "neighborhood_fb7ebb37ddd4ae4d5393ce85",
+      "b": "neighborhood_89ff2f8b47d3f757128aaaf2",
+      "area_m2": 30.457697216585345
+    },
+    {
+      "a": "neighborhood_fb7ebb37ddd4ae4d5393ce85",
+      "b": "neighborhood_f172cedf1825fb7d011c137d",
+      "area_m2": 106.58363857837166
+    },
+    {
+      "a": "neighborhood_40c8147ee3c301492dd63935",
+      "b": "neighborhood_b9de85208fb157c4ceb117f4",
+      "area_m2": 3.7846875331455925
+    },
+    {
+      "a": "neighborhood_4efe71df031a69ed19889186",
+      "b": "neighborhood_812fc8832d8e81db5d8e5289",
+      "area_m2": 2795.501741787721
+    },
+    {
+      "a": "neighborhood_06f2ea6273e0901ac630dff2",
+      "b": "neighborhood_1f6e0fa4f5c15d0ea7985961",
+      "area_m2": 3646.955731312794
+    },
+    {
+      "a": "neighborhood_18574d75a6df9e9b7f75741f",
+      "b": "neighborhood_9ba2a3694dc82ee36945efd0",
+      "area_m2": 37.9284019511295
+    },
+    {
+      "a": "neighborhood_4f13e21683bddcac481703d4",
+      "b": "neighborhood_b757fa7933ccc5029fe3a024",
+      "area_m2": 13.78774086514423
+    },
+    {
+      "a": "neighborhood_8fbce1c5c06c3296928bf989",
+      "b": "neighborhood_21ad325f10c3054f32296bfe",
+      "area_m2": 61.85979171892613
+    },
+    {
+      "a": "neighborhood_21ad325f10c3054f32296bfe",
+      "b": "neighborhood_157458a6201aa890b9fc1d86",
+      "area_m2": 117.95379773512786
+    },
+    {
+      "a": "neighborhood_100d40b0c66ee4dcce54ac41",
+      "b": "neighborhood_157458a6201aa890b9fc1d86",
+      "area_m2": 834.9223240369815
+    },
+    {
+      "a": "neighborhood_157458a6201aa890b9fc1d86",
+      "b": "neighborhood_b757fa7933ccc5029fe3a024",
+      "area_m2": 196.65178199750335
+    },
+    {
+      "a": "neighborhood_8d0529710cd78ddfa9dd29c8",
+      "b": "neighborhood_689e47dfb87a214f78fe76be",
+      "area_m2": 87.69106936948799
+    },
+    {
+      "a": "neighborhood_dd81f08df48a8eab72967e85",
+      "b": "neighborhood_94c56d361443fbbc721720ae",
+      "area_m2": 153.93818022458527
+    }
+  ],
+  "district_mismatches": [
+    {
+      "id": "neighborhood_cdee2a6fc16c2b59e7f5e790",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.20206462200556055
+    },
+    {
+      "id": "neighborhood_c7eabb75ddf965c7e136fc51",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.024580425320197205
+    },
+    {
+      "id": "neighborhood_72aa7d0c189bd17bf4ceb170",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.13437941442477816
+    },
+    {
+      "id": "neighborhood_285eabcb6df6aa96a1ada6c7",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.023610970206263224
+    },
+    {
+      "id": "neighborhood_3c5e0e933d939c61a805e470",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.10756480251469573
+    },
+    {
+      "id": "neighborhood_d40fcaf83e87b3416dbc6d39",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.28151912673753543
+    },
+    {
+      "id": "neighborhood_356ee59ac1e15bb909cf58be",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.021838149460907588
+    },
+    {
+      "id": "neighborhood_6e0822930c1db361e55c75f8",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.4172310501893343
+    },
+    {
+      "id": "neighborhood_1067d9b2924ca3af672ac378",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.14607518986066365
+    },
+    {
+      "id": "neighborhood_89d8ea84e8ea2e7e7b11a9a3",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.035105506235509044
+    },
+    {
+      "id": "neighborhood_b311f8f489fffda87bf36a24",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.03557164858736427
+    },
+    {
+      "id": "neighborhood_76cac860833cf54b6225cdab",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.35476065614965296
+    },
+    {
+      "id": "neighborhood_769a2e94832cbfc69e634328",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.08464305270885222
+    },
+    {
+      "id": "neighborhood_2060222b8c7e5d2023482c16",
+      "assigned_district_no": 1,
+      "outside_fraction": 0.044027356388149495
+    },
+    {
+      "id": "neighborhood_96d4f60e062850b5c25af391",
+      "assigned_district_no": 2,
+      "outside_fraction": 0.017067210160521464
+    },
+    {
+      "id": "neighborhood_43b39f64c3083edbc188ea4d",
+      "assigned_district_no": 2,
+      "outside_fraction": 0.25315294962544177
+    },
+    {
+      "id": "neighborhood_780689f15e9aefaddab6c003",
+      "assigned_district_no": 2,
+      "outside_fraction": 0.017437859392549708
+    },
+    {
+      "id": "neighborhood_6f0291e19ddba86506fccbd0",
+      "assigned_district_no": 2,
+      "outside_fraction": 0.21231738680504542
+    },
+    {
+      "id": "neighborhood_9de8d73d74d415f1f6cb59db",
+      "assigned_district_no": 2,
+      "outside_fraction": 0.20784169662385316
+    },
+    {
+      "id": "neighborhood_6449784b2c591038cedeb52b",
+      "assigned_district_no": 2,
+      "outside_fraction": 0.011133075882418133
+    },
+    {
+      "id": "neighborhood_dfd1841fb72e61a82bc76250",
+      "assigned_district_no": 2,
+      "outside_fraction": 0.012780171596208164
+    },
+    {
+      "id": "neighborhood_0b2841d3b50b6d75e65ca6ab",
+      "assigned_district_no": 2,
+      "outside_fraction": 0.01583402651071543
+    },
+    {
+      "id": "neighborhood_2180d7ad37fd1c79731b7d26",
+      "assigned_district_no": 2,
+      "outside_fraction": 0.5375589694486889
+    },
+    {
+      "id": "neighborhood_ed6d8520acb77c3ec6e8a675",
+      "assigned_district_no": 2,
+      "outside_fraction": 0.841621486901756
+    },
+    {
+      "id": "neighborhood_e3246eda0bc0d6e2d25586fc",
+      "assigned_district_no": 3,
+      "outside_fraction": 0.010891557181177179
+    },
+    {
+      "id": "neighborhood_9d08373d81848888b9f31148",
+      "assigned_district_no": 3,
+      "outside_fraction": 0.02009242209981599
+    },
+    {
+      "id": "neighborhood_637947a964be543ec33f3c84",
+      "assigned_district_no": 3,
+      "outside_fraction": 0.011690642729576733
+    },
+    {
+      "id": "neighborhood_e63737a419a8eb924b55b0b1",
+      "assigned_district_no": 3,
+      "outside_fraction": 0.0152230949066293
+    },
+    {
+      "id": "neighborhood_812cd7584800cad3e8d4665c",
+      "assigned_district_no": 3,
+      "outside_fraction": 0.03711785575162705
+    },
+    {
+      "id": "neighborhood_3a0c0ce3200b44904664a86e",
+      "assigned_district_no": 4,
+      "outside_fraction": 0.013382378458788983
+    },
+    {
+      "id": "neighborhood_cf784924ac2ca99163173900",
+      "assigned_district_no": 4,
+      "outside_fraction": 0.023300498674156775
+    },
+    {
+      "id": "neighborhood_29580b26ee62ce46b6dca241",
+      "assigned_district_no": 4,
+      "outside_fraction": 0.016395922267067285
+    },
+    {
+      "id": "neighborhood_7e173e9ddebbfb2fc47e7c56",
+      "assigned_district_no": 4,
+      "outside_fraction": 0.10274295633590755
+    },
+    {
+      "id": "neighborhood_af6c35fb08ed77c9b87b4766",
+      "assigned_district_no": 5,
+      "outside_fraction": 0.9873439215191919
+    },
+    {
+      "id": "neighborhood_2052deb96322ebf3958f6352",
+      "assigned_district_no": 5,
+      "outside_fraction": 1.0
+    },
+    {
+      "id": "neighborhood_68fc7cee46ae6d0da8a7ef17",
+      "assigned_district_no": 5,
+      "outside_fraction": 0.9890629262031955
+    },
+    {
+      "id": "neighborhood_047804a24a4732af644fc05c",
+      "assigned_district_no": 6,
+      "outside_fraction": 0.9867401502904682
+    },
+    {
+      "id": "neighborhood_c5e2f59f5f6befe470f0aedb",
+      "assigned_district_no": 6,
+      "outside_fraction": 0.9203014011070061
+    },
+    {
+      "id": "neighborhood_501de4b0a0a5c35d0b85d0e4",
+      "assigned_district_no": 6,
+      "outside_fraction": 0.027770849020998276
+    },
+    {
+      "id": "neighborhood_2d03cd74d3d7b83ef1be5383",
+      "assigned_district_no": 7,
+      "outside_fraction": 0.01230623071869081
+    },
+    {
+      "id": "neighborhood_2a18d46d522f9358f2849c20",
+      "assigned_district_no": 8,
+      "outside_fraction": 0.036077096941366696
+    },
+    {
+      "id": "neighborhood_cdf38032584092719d9a267a",
+      "assigned_district_no": 8,
+      "outside_fraction": 0.029204542913596563
+    },
+    {
+      "id": "neighborhood_d967207b3a7efa6e8f471f33",
+      "assigned_district_no": 8,
+      "outside_fraction": 0.022249889559555945
+    },
+    {
+      "id": "neighborhood_945e00bf54939aa745050704",
+      "assigned_district_no": 10,
+      "outside_fraction": 0.025589455771504725
+    },
+    {
+      "id": "neighborhood_50f54d5a808a82d60750bd5e",
+      "assigned_district_no": 10,
+      "outside_fraction": 0.019150067165873357
+    },
+    {
+      "id": "neighborhood_d43f6b94263fbd3051a73d50",
+      "assigned_district_no": 10,
+      "outside_fraction": 0.02390276070585346
+    },
+    {
+      "id": "neighborhood_0b36dbe89b5a92d7e9f121bf",
+      "assigned_district_no": 11,
+      "outside_fraction": 0.03403641045525312
+    },
+    {
+      "id": "neighborhood_83f5b968d12a312f05355dcd",
+      "assigned_district_no": 11,
+      "outside_fraction": 0.012875100943712312
+    },
+    {
+      "id": "neighborhood_d28ebe22711244e99c2767e5",
+      "assigned_district_no": 11,
+      "outside_fraction": 0.06746974743318726
+    },
+    {
+      "id": "neighborhood_e19cc66e54956f77f25cd42d",
+      "assigned_district_no": 11,
+      "outside_fraction": 0.03583313403179369
+    },
+    {
+      "id": "neighborhood_1d52a29726126c614e600b66",
+      "assigned_district_no": 11,
+      "outside_fraction": 0.04216846492203912
+    },
+    {
+      "id": "neighborhood_7fa1806700ccb7f6f15be78d",
+      "assigned_district_no": 12,
+      "outside_fraction": 0.01246809929160574
+    },
+    {
+      "id": "neighborhood_c030e5a166e453248baf8bbf",
+      "assigned_district_no": 12,
+      "outside_fraction": 0.012391417342388114
+    },
+    {
+      "id": "neighborhood_d594751fdaf3cf45337ed6a4",
+      "assigned_district_no": 13,
+      "outside_fraction": 0.017402041769028615
+    },
+    {
+      "id": "neighborhood_6a46ade7d4e9c4f6fab8e4dd",
+      "assigned_district_no": 13,
+      "outside_fraction": 0.026075192495886877
+    },
+    {
+      "id": "neighborhood_26af28cafd712d9553685d24",
+      "assigned_district_no": 13,
+      "outside_fraction": 0.02128285142168246
+    },
+    {
+      "id": "neighborhood_6f0eebaaad98c452e8016e13",
+      "assigned_district_no": 13,
+      "outside_fraction": 0.011409792588933454
+    },
+    {
+      "id": "neighborhood_199a908ba8744af17c708b7a",
+      "assigned_district_no": 13,
+      "outside_fraction": 0.025385484911034466
+    },
+    {
+      "id": "neighborhood_c929b9d699959d8ed4e41194",
+      "assigned_district_no": 14,
+      "outside_fraction": 0.03387674596351966
+    },
+    {
+      "id": "neighborhood_c9a2f74df1007550b088295a",
+      "assigned_district_no": 14,
+      "outside_fraction": 0.01633848970145483
+    },
+    {
+      "id": "neighborhood_dea94245f33947a2f88aaa93",
+      "assigned_district_no": 14,
+      "outside_fraction": 0.03486799654868157
+    },
+    {
+      "id": "neighborhood_d67893239018a8acddad2c5d",
+      "assigned_district_no": 15,
+      "outside_fraction": 0.9499377782704523
+    },
+    {
+      "id": "neighborhood_76a1219b7f04aca7983e941d",
+      "assigned_district_no": 15,
+      "outside_fraction": 0.3301712026193221
+    },
+    {
+      "id": "neighborhood_bb33db2bcc0ed9064072ae95",
+      "assigned_district_no": 15,
+      "outside_fraction": 0.19534594823965581
+    },
+    {
+      "id": "neighborhood_aeddd16f04d7d93ecb3555c0",
+      "assigned_district_no": 15,
+      "outside_fraction": 0.022228956848835052
+    },
+    {
+      "id": "neighborhood_aa1e3b25a1a5c3bab92ba42d",
+      "assigned_district_no": 15,
+      "outside_fraction": 0.014717420837671729
+    },
+    {
+      "id": "neighborhood_0c0acd2dbd619367e05bdf2e",
+      "assigned_district_no": 15,
+      "outside_fraction": 0.22417548955648745
+    },
+    {
+      "id": "neighborhood_1566246ee59cfe88630064ee",
+      "assigned_district_no": 16,
+      "outside_fraction": 0.01861726827465208
+    },
+    {
+      "id": "neighborhood_54b5ddb10e492263324ebf85",
+      "assigned_district_no": 17,
+      "outside_fraction": 0.013144072296849368
+    },
+    {
+      "id": "neighborhood_d48f30584d2fcac42c5c358c",
+      "assigned_district_no": 17,
+      "outside_fraction": 0.024976115957936848
+    },
+    {
+      "id": "neighborhood_599064d6076cbe364501dcc8",
+      "assigned_district_no": 17,
+      "outside_fraction": 0.025520398630659056
+    },
+    {
+      "id": "neighborhood_a088b65c8dc4baf8965171de",
+      "assigned_district_no": 17,
+      "outside_fraction": 0.043768072819494706
+    },
+    {
+      "id": "neighborhood_877a879d69808dc004f63ec1",
+      "assigned_district_no": 17,
+      "outside_fraction": 0.035073913761391254
+    },
+    {
+      "id": "neighborhood_65ba1b86b8f56f6519e424af",
+      "assigned_district_no": 17,
+      "outside_fraction": 0.011038838753352896
+    },
+    {
+      "id": "neighborhood_50e8e1bcd7bd26788a599e03",
+      "assigned_district_no": 18,
+      "outside_fraction": 0.016723285702380374
+    },
+    {
+      "id": "neighborhood_7c104359d9af33586b95c4d3",
+      "assigned_district_no": 18,
+      "outside_fraction": 0.016282171163720913
+    },
+    {
+      "id": "neighborhood_7f8f8abe9e34651234b19e45",
+      "assigned_district_no": 18,
+      "outside_fraction": 0.01031163924379024
+    },
+    {
+      "id": "neighborhood_f5bdc555a9f43c719879cfb9",
+      "assigned_district_no": 18,
+      "outside_fraction": 0.016561775017072795
+    },
+    {
+      "id": "neighborhood_17c41de758ff868f036f3d8a",
+      "assigned_district_no": 19,
+      "outside_fraction": 0.021962900761726953
+    },
+    {
+      "id": "neighborhood_c6f84c88c6e928e2b62e67f4",
+      "assigned_district_no": 19,
+      "outside_fraction": 0.015599472590960313
+    },
+    {
+      "id": "neighborhood_fc09760960704e4b993737ac",
+      "assigned_district_no": 19,
+      "outside_fraction": 0.034129104175696576
+    },
+    {
+      "id": "neighborhood_fb7ebb37ddd4ae4d5393ce85",
+      "assigned_district_no": 19,
+      "outside_fraction": 0.011496857694093135
+    },
+    {
+      "id": "neighborhood_06351eadef38164a18e66a01",
+      "assigned_district_no": 20,
+      "outside_fraction": 0.15446235365444522
+    },
+    {
+      "id": "neighborhood_01b2c87f5f80039c0a4b9a1c",
+      "assigned_district_no": 20,
+      "outside_fraction": 0.07800890878937126
+    },
+    {
+      "id": "neighborhood_97e1c0e41aa65b5b773097f6",
+      "assigned_district_no": 20,
+      "outside_fraction": 0.015018513924181808
+    },
+    {
+      "id": "neighborhood_eaa277aa787856ef032d25ae",
+      "assigned_district_no": 20,
+      "outside_fraction": 0.8720466712237693
+    },
+    {
+      "id": "neighborhood_dd21e19843f49a65d3ac2507",
+      "assigned_district_no": 20,
+      "outside_fraction": 0.11673537086150416
+    },
+    {
+      "id": "neighborhood_add6354a2704d8baf26e1d95",
+      "assigned_district_no": 21,
+      "outside_fraction": 0.02268029232132278
+    },
+    {
+      "id": "neighborhood_90d70298b8b04f38aa2e1d3a",
+      "assigned_district_no": 21,
+      "outside_fraction": 0.015271188776911028
+    },
+    {
+      "id": "neighborhood_a591c9427d9e185a19595a47",
+      "assigned_district_no": 21,
+      "outside_fraction": 0.012524321118797557
+    },
+    {
+      "id": "neighborhood_424edfd655782d431ca74555",
+      "assigned_district_no": 21,
+      "outside_fraction": 0.02326427230839432
+    },
+    {
+      "id": "neighborhood_a3fa77d21b1cf32f73fad2a0",
+      "assigned_district_no": 21,
+      "outside_fraction": 0.0167117168732636
+    },
+    {
+      "id": "neighborhood_f542df7ab8a62bb419f07146",
+      "assigned_district_no": 21,
+      "outside_fraction": 0.01457244751247489
+    },
+    {
+      "id": "neighborhood_a44803a789cd3d2503b12378",
+      "assigned_district_no": 21,
+      "outside_fraction": 0.010944802499055085
+    },
+    {
+      "id": "neighborhood_b8ba943b69d64a34e376a38d",
+      "assigned_district_no": 21,
+      "outside_fraction": 0.04061480667214619
+    },
+    {
+      "id": "neighborhood_71aaaeb15021a682b1383b0b",
+      "assigned_district_no": 22,
+      "outside_fraction": 1.0000000000000002
+    },
+    {
+      "id": "neighborhood_cc152c5e0c4d8fdd725a1576",
+      "assigned_district_no": 22,
+      "outside_fraction": 0.15439717822934412
+    },
+    {
+      "id": "neighborhood_8fbce1c5c06c3296928bf989",
+      "assigned_district_no": 22,
+      "outside_fraction": 0.06105254626993829
+    },
+    {
+      "id": "neighborhood_21ad325f10c3054f32296bfe",
+      "assigned_district_no": 22,
+      "outside_fraction": 0.010276319306280847
+    },
+    {
+      "id": "neighborhood_848c3254cc8412c1791c52be",
+      "assigned_district_no": 22,
+      "outside_fraction": 0.010694896667713595
+    },
+    {
+      "id": "neighborhood_5d8ac81e571594ea1006a521",
+      "assigned_district_no": 22,
+      "outside_fraction": 0.035495242951649096
+    },
+    {
+      "id": "neighborhood_812fc8832d8e81db5d8e5289",
+      "assigned_district_no": 20,
+      "outside_fraction": 0.021829636915203687
+    },
+    {
+      "id": "neighborhood_2310fb051c3b6f78474f28f4",
+      "assigned_district_no": 20,
+      "outside_fraction": 0.01624919951996553
+    },
+    {
+      "id": "neighborhood_be691a614c00dd591bd2489c",
+      "assigned_district_no": 20,
+      "outside_fraction": 0.015837369787817523
+    },
+    {
+      "id": "neighborhood_1f6e0fa4f5c15d0ea7985961",
+      "assigned_district_no": 20,
+      "outside_fraction": 0.021022941754623225
+    },
+    {
+      "id": "neighborhood_f172cedf1825fb7d011c137d",
+      "assigned_district_no": 19,
+      "outside_fraction": 0.01585978516713278
+    },
+    {
+      "id": "neighborhood_bf2ef633e7b1dbe8803a1990",
+      "assigned_district_no": 6,
+      "outside_fraction": 0.996184903155952
+    },
+    {
+      "id": "neighborhood_b8b2a85557e01cca9bd13512",
+      "assigned_district_no": 6,
+      "outside_fraction": 0.03194971176568582
+    }
+  ],
+  "metric_crs": "EPSG:32639",
+  "source_assignments_changed": false,
+  "full_city_coverage_verified": false,
+  "repair_count": 2,
+  "repairs": [
+    {
+      "id": "neighborhood_988da34203d5c0898a5d9034",
+      "method": "shapely.make_valid; polygonal components only",
+      "reason": "Self-intersection[51.4872567417498 35.760503278866]",
+      "original_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              51.4840076711822,
+              35.7444564454451,
+              0.0
+            ],
+            [
+              51.4850013394507,
+              35.7444315244249,
+              0.0
+            ],
+            [
+              51.4900478407165,
+              35.7443861383249,
+              0.0
+            ],
+            [
+              51.4909771172036,
+              35.7438423222619,
+              0.0
+            ],
+            [
+              51.491438722214,
+              35.7433045254712,
+              0.0
+            ],
+            [
+              51.4923760134215,
+              35.7430640921479,
+              0.0
+            ],
+            [
+              51.4933903030604,
+              35.7425390028362,
+              0.0
+            ],
+            [
+              51.4938542106818,
+              35.7423990371027,
+              0.0
+            ],
+            [
+              51.4942247492349,
+              35.7421135131277,
+              0.0
+            ],
+            [
+              51.4947246721099,
+              35.7426877833841,
+              0.0
+            ],
+            [
+              51.4957542223661,
+              35.7433320577729,
+              0.0
+            ],
+            [
+              51.4968202133494,
+              35.7440697780116,
+              0.0
+            ],
+            [
+              51.4979290158071,
+              35.7450012336726,
+              0.0
+            ],
+            [
+              51.4987544810869,
+              35.7459542449268,
+              0.0
+            ],
+            [
+              51.499599630369,
+              35.7463162584698,
+              0.0
+            ],
+            [
+              51.5004208213301,
+              35.7468894397681,
+              0.0
+            ],
+            [
+              51.5010606716572,
+              35.747556169963,
+              0.0
+            ],
+            [
+              51.5017235702816,
+              35.7479076059875,
+              0.0
+            ],
+            [
+              51.5027607301888,
+              35.7487003760981,
+              0.0
+            ],
+            [
+              51.5038206121191,
+              35.7492922348857,
+              0.0
+            ],
+            [
+              51.5050376034026,
+              35.7502207651202,
+              0.0
+            ],
+            [
+              51.5060114073056,
+              35.7509563215824,
+              0.0
+            ],
+            [
+              51.5065842065802,
+              35.7515497954799,
+              0.0
+            ],
+            [
+              51.5073305729614,
+              35.7521800059783,
+              0.0
+            ],
+            [
+              51.5088134414478,
+              35.7530400730609,
+              0.0
+            ],
+            [
+              51.5095735817264,
+              35.7536203980211,
+              0.0
+            ],
+            [
+              51.5104180775313,
+              35.7542457493152,
+              0.0
+            ],
+            [
+              51.5115368741166,
+              35.7551982707367,
+              0.0
+            ],
+            [
+              51.5125217333874,
+              35.7563576464582,
+              0.0
+            ],
+            [
+              51.5132339228164,
+              35.7572401132634,
+              0.0
+            ],
+            [
+              51.5135860064116,
+              35.7584933901589,
+              0.0
+            ],
+            [
+              51.5137641868455,
+              35.759239447167,
+              0.0
+            ],
+            [
+              51.5137519002297,
+              35.7605734337655,
+              0.0
+            ],
+            [
+              51.513715692202,
+              35.7617793801777,
+              0.0
+            ],
+            [
+              51.5137099791514,
+              35.7631053789164,
+              0.0
+            ],
+            [
+              51.5136469742588,
+              35.7642121039746,
+              0.0
+            ],
+            [
+              51.5134934062322,
+              35.7650037875066,
+              0.0
+            ],
+            [
+              51.513249652804,
+              35.7662208944668,
+              0.0
+            ],
+            [
+              51.5130445239911,
+              35.7673535291113,
+              0.0
+            ],
+            [
+              51.5128147141162,
+              35.7686351696355,
+              0.0
+            ],
+            [
+              51.5127213145044,
+              35.7695043915508,
+              0.0
+            ],
+            [
+              51.5124853610973,
+              35.7703581796773,
+              0.0
+            ],
+            [
+              51.5118979074445,
+              35.770806834782,
+              0.0
+            ],
+            [
+              51.5111715707704,
+              35.7713210012547,
+              0.0
+            ],
+            [
+              51.5103154877711,
+              35.7718960495063,
+              0.0
+            ],
+            [
+              51.5096611554745,
+              35.7721791290787,
+              0.0
+            ],
+            [
+              51.5088478115926,
+              35.7726065912709,
+              0.0
+            ],
+            [
+              51.5077940059212,
+              35.7731935915297,
+              0.0
+            ],
+            [
+              51.5065184987419,
+              35.7732696049875,
+              0.0
+            ],
+            [
+              51.5051695558181,
+              35.7734376181616,
+              0.0
+            ],
+            [
+              51.5036991847741,
+              35.7731166830926,
+              0.0
+            ],
+            [
+              51.50247324897,
+              35.7717184716244,
+              0.0
+            ],
+            [
+              51.5014269232389,
+              35.7713446873098,
+              0.0
+            ],
+            [
+              51.5000944547483,
+              35.7711961171503,
+              0.0
+            ],
+            [
+              51.4986639939475,
+              35.7712566218722,
+              0.0
+            ],
+            [
+              51.4973948342674,
+              35.7714727549468,
+              0.0
+            ],
+            [
+              51.4963809593169,
+              35.7713382638732,
+              0.0
+            ],
+            [
+              51.49517692824,
+              35.7706507761455,
+              0.0
+            ],
+            [
+              51.4944417274209,
+              35.7698356365465,
+              0.0
+            ],
+            [
+              51.4930756383227,
+              35.7676122778354,
+              0.0
+            ],
+            [
+              51.4912623210455,
+              35.7667528445534,
+              0.0
+            ],
+            [
+              51.4899780123639,
+              35.7664870862703,
+              0.0
+            ],
+            [
+              51.4889878179895,
+              35.765276365017,
+              0.0
+            ],
+            [
+              51.4878981083974,
+              35.7611524618943,
+              0.0
+            ],
+            [
+              51.4872187372981,
+              35.7604648112514,
+              0.0
+            ],
+            [
+              51.4872508889955,
+              35.7604906678703,
+              0.0
+            ],
+            [
+              51.4872722381738,
+              35.7605078612618,
+              0.0
+            ],
+            [
+              51.4862896821215,
+              35.760217312895,
+              0.0
+            ],
+            [
+              51.4851426956271,
+              35.7601504946701,
+              0.0
+            ],
+            [
+              51.4845163327422,
+              35.760140348054,
+              0.0
+            ],
+            [
+              51.4851312031708,
+              35.7589769385971,
+              0.0
+            ],
+            [
+              51.4848543223909,
+              35.7577092987245,
+              0.0
+            ],
+            [
+              51.4855449820622,
+              35.7538058394484,
+              0.0
+            ],
+            [
+              51.4856461085043,
+              35.7525508145146,
+              0.0
+            ],
+            [
+              51.4848457494882,
+              35.750539173937,
+              0.0
+            ],
+            [
+              51.483941020868,
+              35.7465205277877,
+              0.0
+            ],
+            [
+              51.4840076711822,
+              35.7444564454451,
+              0.0
+            ]
+          ]
+        ]
+      },
+      "original_hash": "0aa555f4ff478f235545105e9d148e3870c10f9d84acd09a2606f39aa6557a9c",
+      "valid_hash": "ce8d4251e8e9bc2aa3f831764824c4e3cefddf4a0ba711964ead33b758044efa",
+      "area_before_m2": 6241207.45197771,
+      "area_after_m2": 6241203.211495659
+    },
+    {
+      "id": "neighborhood_5d8ac81e571594ea1006a521",
+      "method": "shapely.make_valid; polygonal components only",
+      "reason": "Self-intersection[51.1077612942011 35.7476827921085]",
+      "original_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              51.1533859909729,
+              35.741971188528,
+              0.0
+            ],
+            [
+              51.1590427292356,
+              35.7617981542588,
+              0.0
+            ],
+            [
+              51.1567710503229,
+              35.7616338357547,
+              0.0
+            ],
+            [
+              51.1538810531773,
+              35.7609719624762,
+              0.0
+            ],
+            [
+              51.1538530959513,
+              35.7609719192162,
+              0.0
+            ],
+            [
+              51.1446739710585,
+              35.7579654347721,
+              0.0
+            ],
+            [
+              51.1365203481916,
+              35.7560272692355,
+              0.0
+            ],
+            [
+              51.1307614195697,
+              35.7546350346865,
+              0.0
+            ],
+            [
+              51.125902252227,
+              35.7534783262733,
+              0.0
+            ],
+            [
+              51.1237443445501,
+              35.7533973367616,
+              0.0
+            ],
+            [
+              51.1214056174938,
+              35.7538265203657,
+              0.0
+            ],
+            [
+              51.1190850380611,
+              35.7540323046785,
+              0.0
+            ],
+            [
+              51.1172766581103,
+              35.7537560650555,
+              0.0
+            ],
+            [
+              51.1152969180573,
+              35.7529584611814,
+              0.0
+            ],
+            [
+              51.1134713739983,
+              35.7516144337528,
+              0.0
+            ],
+            [
+              51.1109659966752,
+              35.749474470185,
+              0.0
+            ],
+            [
+              51.1095093660118,
+              35.7484191518388,
+              0.0
+            ],
+            [
+              51.1077027497291,
+              35.7476581307694,
+              0.0
+            ],
+            [
+              51.1077607606982,
+              35.7476797784168,
+              0.0
+            ],
+            [
+              51.1077659443307,
+              35.7477090601132,
+              0.0
+            ],
+            [
+              51.1057057698967,
+              35.7474629291645,
+              0.0
+            ],
+            [
+              51.0993052222799,
+              35.747697410666,
+              0.0
+            ],
+            [
+              51.096037070342,
+              35.7483161766272,
+              0.0
+            ],
+            [
+              51.0874665501843,
+              35.7511557907217,
+              0.0
+            ],
+            [
+              51.0853682792883,
+              35.7475825153512,
+              0.0
+            ],
+            [
+              51.0890505968096,
+              35.7460108633638,
+              0.0
+            ],
+            [
+              51.0910864081592,
+              35.7453336376173,
+              0.0
+            ],
+            [
+              51.0948035850458,
+              35.7444710437014,
+              0.0
+            ],
+            [
+              51.0977449630364,
+              35.7439978563233,
+              0.0
+            ],
+            [
+              51.1010616005692,
+              35.7435827893236,
+              0.0
+            ],
+            [
+              51.1046832907518,
+              35.7431886490069,
+              0.0
+            ],
+            [
+              51.1131715694511,
+              35.7422484672225,
+              0.0
+            ],
+            [
+              51.1163727546253,
+              35.7419021925546,
+              0.0
+            ],
+            [
+              51.1196998900322,
+              35.7419441522066,
+              0.0
+            ],
+            [
+              51.1233683149926,
+              35.7424301318841,
+              0.0
+            ],
+            [
+              51.1273588798985,
+              35.7433470119154,
+              0.0
+            ],
+            [
+              51.1324053064775,
+              35.7444469654543,
+              0.0
+            ],
+            [
+              51.1359538850312,
+              35.7448334466534,
+              0.0
+            ],
+            [
+              51.1414950988534,
+              35.7447663040796,
+              0.0
+            ],
+            [
+              51.1450898235813,
+              35.7443235929902,
+              0.0
+            ],
+            [
+              51.1458857515453,
+              35.7442042816104,
+              0.0
+            ],
+            [
+              51.1494862473231,
+              35.7433358783878,
+              0.0
+            ],
+            [
+              51.1522022576286,
+              35.742441406792,
+              0.0
+            ],
+            [
+              51.1533859909729,
+              35.741971188528,
+              0.0
+            ]
+          ]
+        ]
+      },
+      "original_hash": "74528ea48c7e957b8f77d1816568a75a8ad2cfe672371e5103c8b51bc7726257",
+      "valid_hash": "770e6d25557f631e45ccd30c2b61a411e8935beb4755c74aabef3dbd11243d45",
+      "area_before_m2": 6798157.565276121,
+      "area_after_m2": 6798155.922023159
+    }
+  ],
+  "transform_version": "geometry-v1"
+}

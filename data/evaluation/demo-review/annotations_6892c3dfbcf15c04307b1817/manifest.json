@@ -1,0 +1,13 @@
+{
+  "dataset_id": "annotations_6892c3dfbcf15c04307b1817",
+  "schema_version": "annotation-jsonl-1",
+  "rubric_version": "hard-pass-relevance-0-3-1",
+  "split_seed": 17,
+  "split_policy": "linked_task_property_confirmed_intent_70_15_15",
+  "count": 1,
+  "independent_groups": 1,
+  "sha256": "f98cad70ed795d1a420ffe08900d86e7bdf3ef47feaf7d238839b48268245152",
+  "source": "existing_review_annotations",
+  "human_real_graded": 0,
+  "holdout_policy": "final_milestone_only; not acquisition, prompts or tuning"
+}

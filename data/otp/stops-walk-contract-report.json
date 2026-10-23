@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-21T19:39:29+03:30",
+  "fixture_mode": false,
+  "status": "pass",
+  "api_path": "/otp/transmodel/v3",
+  "otp_version": "2.10.0",
+  "graph_version": null,
+  "schedule_basis": "unknown",
+  "schema_sha256": "1f2052962acaef1ceaea4737c3f4cc7f2dd1fb902dd5e948a94e9b4d3142805f",
+  "schema_evidence": {
+    "directMode": "The mode used to get from the origin to the destination directly, without using the transit network. If the element is not present or null,direct travel without using transit will be disallowed.",
+    "transportModes": "The allowed modes for the transit part of the trip. Use an empty list to disallow transit for this search. If the element is not present or null, it will default to all transport modes."
+  },
+  "point_source": "Existing synthetic property origin; nearest imported OTP quay coordinate.",
+  "property_id": "demo_001536e18aca205d2a2404fd",
+  "stop_id": "TEHRAN:osm_n14052251405",
+  "stop_dataset_version": "otp-stops-1-0adc3fd9969896d292af",
+  "straight_line_meters": 328.4781119618974,
+  "http_status": 200,
+  "routing_status": "ok",
+  "walking_api_verified": true,
+  "itinerary_count": 1,
+  "measurements": [
+    {
+      "total_duration_seconds": 387,
+      "walk_duration_seconds": 387,
+      "walk_distance_meters": 510.51,
+      "start_datetime": "2026-10-21T19:39:29+03:30",
+      "end_datetime": "2026-10-21T19:45:56+03:30",
+      "source_kind": "live_otp"
+    }
+  ]
+}

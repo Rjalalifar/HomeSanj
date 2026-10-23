@@ -1,0 +1,20 @@
+{
+  "base_url": "http://127.0.0.1:8821",
+  "root_reachable": true,
+  "routing_api_verified": true,
+  "fixture_mode": false,
+  "contract_test_status": "passed",
+  "api_path": "/otp/transmodel/v3",
+  "checked_at": "2026-10-20T15:04:15.988322+00:00",
+  "root_status": 200,
+  "ui_scripts": [
+    "https://www.opentripplanner.org/debug-client-assets/2026/09/2026-09-07T12:25/assets/index-B1VUfEow.js"
+  ],
+  "ui_declared_api_paths": [
+    "/otp/transmodel/v3"
+  ],
+  "introspection_verified": true,
+  "reason": "Real coordinate route validated from the backend Python environment",
+  "route_status": "ok",
+  "otp_version": "2.10.0"
+}

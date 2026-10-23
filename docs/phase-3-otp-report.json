@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "root_reachable": true,
+  "routing_api_verified": true,
+  "fixture_mode": false,
+  "api_type": "transmodel_v3",
+  "api_path": "/otp/transmodel/v3",
+  "base_url": "http://127.0.0.1:8821",
+  "itinerary_count": 5,
+  "source_kinds": [
+    "live_otp"
+  ],
+  "request_fixture": "data/otp/contract-input.json",
+  "checked_at": "2026-10-21T15:46:03.810372+00:00",
+  "command": "python -m backend.app.otp_probe --contract data/otp/contract-input.json --output runtime/phase3-otp"
+}

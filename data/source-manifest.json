@@ -1,0 +1,38 @@
+{
+  "dataset_version": "tehran-2020-v1",
+  "transform_version": "geometry-v1",
+  "files": [
+    {
+      "type": "neighborhood",
+      "url": "https://raw.githubusercontent.com/mjalalimanesh/tehran-districts-neighborhoods-map-geojson/01028855efac0571a13f2a1ab8d29e6077825090/tehran_neighborhoods_376.geojson",
+      "sha256": "2c5eb1fdbf196349d9c02d5c63f91838f5eee5e562cb864ed2ed926fb3ad9b15",
+      "input_path": "data\\raw\\neighborhood.geojson",
+      "output_path": "data\\tehran-neighborhoods-377.geojson",
+      "feature_count": 377
+    },
+    {
+      "type": "district",
+      "url": "https://raw.githubusercontent.com/mjalalimanesh/tehran-districts-neighborhoods-map-geojson/5ec6a85f0419d177135babc3e43871eda4e185dc/tehran_districts_22.geojson",
+      "sha256": "631eb77e006fdc15d1b7cb6d1a81a66f1c9d741c6067a59f65f3c48b988c025d",
+      "input_path": "data\\raw\\district.geojson",
+      "output_path": "data\\tehran-districts-22.geojson",
+      "feature_count": 22
+    }
+  ],
+  "source_last_file_commits": "November 2020",
+  "boundary_validity_date": null,
+  "license_status": "No explicit data license identified in reviewed upstream repository",
+  "neighborhood_crs": "CRS84 declared in source",
+  "district_crs": "WGS84 inferred from coordinates and colocation; metadata empty",
+  "output_coordinate_order": "[longitude, latitude]",
+  "district_no_is_source_attribution": true,
+  "full_city_coverage_verified": false,
+  "fresh_osm_extraction": false,
+  "osm_tiles_independent": true,
+  "prepared_reference_statistics": {
+    "repairs": 2,
+    "overlap_pairs_over_1m2": 120,
+    "outside_assigned_district_over_1pct": 108,
+    "outside_assigned_district_over_50pct": 11
+  }
+}

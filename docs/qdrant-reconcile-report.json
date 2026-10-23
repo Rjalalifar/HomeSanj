@@ -1,0 +1,18 @@
+{
+  "status": "healthy",
+  "canonical_count": 5655,
+  "indexed_count": 5655,
+  "missing_count": 0,
+  "stale_count": 0,
+  "orphan_count": 0,
+  "wrong_version_count": 0,
+  "missing_payload_indexes": [],
+  "index_version": "Xenova/multilingual-e5-small@761b726dd34fb83930e26aab4e9ac3899aa1fa78:q8:mean-l2:384:known-facts-fa-1",
+  "collection": "homesanj_properties_v1",
+  "changed_property_ids": [],
+  "orphan_point_ids": [],
+  "upserted_count": 0,
+  "deleted_count": 0,
+  "verified_at": "2026-10-20T20:29:41.173234+00:00",
+  "latency_ms": 1540.69
+}

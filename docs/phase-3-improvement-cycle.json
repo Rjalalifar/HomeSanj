@@ -1,0 +1,1317 @@
+{
+  "status": "mechanics_verified",
+  "synthetic": true,
+  "human_lift": null,
+  "experiment": {
+    "experiment_id": "experiment_d58dc7545cbb1497c749a11dd6c7a5159035f65c813392cda213c0dc9f6a35b8",
+    "experiment_version": "paired-frozen-ranker-1",
+    "declared_variable": "rent_weight_multiplier",
+    "baseline_config": {},
+    "candidate_config": {
+      "rent_weight_multiplier": 1.25
+    },
+    "label_dataset_id": "annotations_5d8b060474bc0586ce4b4b51",
+    "label_dataset_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fixed_inputs": "same canonical candidate facts, hard eligibility, route evidence, labels and semantic priority",
+    "metric_version": "graded-fixed-pool-1",
+    "rubric_version": "hard-pass-relevance-0-3-1",
+    "split": "mechanical_demo",
+    "seed": 17,
+    "hypothesis": "Increasing the rent weight by 25 percent may better match independently reviewed preference for lower rent",
+    "primary_metric": "ndcg_at_5",
+    "target_cohort": "independent_human_judged_fixed_pool",
+    "error_evidence_annotation_ids": [],
+    "reviewer_time_seconds": null,
+    "candidate_diff": {
+      "rent_weight_multiplier": {
+        "before": 1.0,
+        "after": 1.25
+      }
+    },
+    "guardrail_policy": {
+      "hard_fail": 0,
+      "unknown_as_pass": 0,
+      "privacy_leaks": 0,
+      "minimum_human_labels": 200,
+      "minimum_independent_groups": 30,
+      "latency_cost_coverage": "explicit human sign-off on measured evidence"
+    },
+    "cases": [
+      {
+        "manifest_id": "replay_53a82610b8c1acbcd918917822d7d83eba314f1d073ff0bfead0dd5b13b0994c",
+        "task_id": "task_d5661b6618fe4fd391fa687add7af74f",
+        "intent_group": "task_d5661b6618fe4fd391fa687add7af74f",
+        "mode": "normal",
+        "actor_cohort": "demo",
+        "split": "mechanical_demo",
+        "dataset": "tehran-2020-v1",
+        "versions": {
+          "schema": "1.0.0",
+          "dataset": "tehran-2020-v1",
+          "parser": "confirmed-fa-2",
+          "ranker": "fixed-reference-utility-2",
+          "adapter": "otp-explicit-1.0.0",
+          "graph": null,
+          "llm_provider": "avalai-chat-1",
+          "llm_role_models": {
+            "parser": "gemini-3.6-flash",
+            "explainer": "gemini-3.6-flash",
+            "judge": "gemini-3.6-flash",
+            "improvement": "gemini-3.6-flash"
+          },
+          "llm_role_versions": {
+            "parser": "1",
+            "explainer": "1",
+            "judge": "1",
+            "improvement": "1"
+          }
+        },
+        "scope": "all_candidates",
+        "status": "ok",
+        "baseline_ids": [
+          "demo_3bd4ba657d572a4f8aaa3390",
+          "demo_1f937948549725ed1f9ae222",
+          "demo_dc0f1fff243d228947fad273"
+        ],
+        "candidate_ids": [
+          "demo_3bd4ba657d572a4f8aaa3390",
+          "demo_1f937948549725ed1f9ae222",
+          "demo_dc0f1fff243d228947fad273"
+        ],
+        "changed_top5": false,
+        "metrics": {
+          "baseline": {
+            "ndcg_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "precision_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 5,
+              "reason": "unjudged_displayed_card"
+            },
+            "mrr_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "earlier_unjudged"
+            },
+            "recall_at_20_fixed_pool": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "human_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judge_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judged_coverage": {
+              "value": 0.0,
+              "numerator": 0,
+              "denominator": 3,
+              "reason": null
+            },
+            "pool_size": 3,
+            "fully_judged_pool": false,
+            "metric_version": "graded-fixed-pool-1"
+          },
+          "candidate": {
+            "ndcg_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "precision_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 5,
+              "reason": "unjudged_displayed_card"
+            },
+            "mrr_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "earlier_unjudged"
+            },
+            "recall_at_20_fixed_pool": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "human_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judge_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judged_coverage": {
+              "value": 0.0,
+              "numerator": 0,
+              "denominator": 3,
+              "reason": null
+            },
+            "pool_size": 3,
+            "fully_judged_pool": false,
+            "metric_version": "graded-fixed-pool-1"
+          }
+        },
+        "judged_coverage": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 3,
+          "reason": null
+        },
+        "label_origin": "unjudged",
+        "frozen_labels": {
+          "demo_3bd4ba657d572a4f8aaa3390": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_dc0f1fff243d228947fad273": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_1f937948549725ed1f9ae222": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          }
+        },
+        "labels_hash": "dbfc9531c6d0053b5c16a2882693e794b547c13001aa02e5a0f341a5621c70d8",
+        "inventory_hash": "eef924e7016d4fb435d03f488e71e3d39194f115fde32b13ce043bb51abaf248",
+        "route_hash": "82527c1fc94f11828a6c2020da3f8f8eeaa28a56cfc935355463f575e6228129"
+      },
+      {
+        "manifest_id": "replay_c4bee4989ce2173ea44b091d34280cf32a97b7853835f296bb73c2010dc2a050",
+        "task_id": "task_d5661b6618fe4fd391fa687add7af74f",
+        "intent_group": "task_d5661b6618fe4fd391fa687add7af74f",
+        "mode": "normal",
+        "actor_cohort": "demo",
+        "split": "mechanical_demo",
+        "dataset": "tehran-2020-v1",
+        "versions": {
+          "schema": "1.0.0",
+          "dataset": "tehran-2020-v1",
+          "parser": "confirmed-fa-2",
+          "ranker": "fixed-reference-utility-2",
+          "adapter": "otp-explicit-1.0.0",
+          "graph": null,
+          "llm_provider": "avalai-chat-1",
+          "llm_role_models": {
+            "parser": "gemini-3.6-flash",
+            "explainer": "gemini-3.6-flash",
+            "judge": "gemini-3.6-flash",
+            "improvement": "gemini-3.6-flash"
+          },
+          "llm_role_versions": {
+            "parser": "1",
+            "explainer": "1",
+            "judge": "1",
+            "improvement": "1"
+          }
+        },
+        "scope": "all_candidates",
+        "status": "ok",
+        "baseline_ids": [
+          "demo_3bd4ba657d572a4f8aaa3390",
+          "demo_1f937948549725ed1f9ae222",
+          "demo_dc0f1fff243d228947fad273"
+        ],
+        "candidate_ids": [
+          "demo_3bd4ba657d572a4f8aaa3390",
+          "demo_1f937948549725ed1f9ae222",
+          "demo_dc0f1fff243d228947fad273"
+        ],
+        "changed_top5": false,
+        "metrics": {
+          "baseline": {
+            "ndcg_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "precision_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 5,
+              "reason": "unjudged_displayed_card"
+            },
+            "mrr_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "earlier_unjudged"
+            },
+            "recall_at_20_fixed_pool": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "human_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judge_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judged_coverage": {
+              "value": 0.0,
+              "numerator": 0,
+              "denominator": 3,
+              "reason": null
+            },
+            "pool_size": 3,
+            "fully_judged_pool": false,
+            "metric_version": "graded-fixed-pool-1"
+          },
+          "candidate": {
+            "ndcg_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "precision_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 5,
+              "reason": "unjudged_displayed_card"
+            },
+            "mrr_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "earlier_unjudged"
+            },
+            "recall_at_20_fixed_pool": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "human_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judge_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judged_coverage": {
+              "value": 0.0,
+              "numerator": 0,
+              "denominator": 3,
+              "reason": null
+            },
+            "pool_size": 3,
+            "fully_judged_pool": false,
+            "metric_version": "graded-fixed-pool-1"
+          }
+        },
+        "judged_coverage": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 3,
+          "reason": null
+        },
+        "label_origin": "unjudged",
+        "frozen_labels": {
+          "demo_3bd4ba657d572a4f8aaa3390": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_dc0f1fff243d228947fad273": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_1f937948549725ed1f9ae222": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          }
+        },
+        "labels_hash": "dbfc9531c6d0053b5c16a2882693e794b547c13001aa02e5a0f341a5621c70d8",
+        "inventory_hash": "eef924e7016d4fb435d03f488e71e3d39194f115fde32b13ce043bb51abaf248",
+        "route_hash": "5b86d4eafa7d52e4839003a9b3feb01d682e1ff4a49c19d51985d1c5b56b9ee2"
+      },
+      {
+        "manifest_id": "replay_de0f9624041840921812fad7c55a560790639886855cbfb92c2f922978ba3376",
+        "task_id": "task_2c5c8da865ef4dba9309e7d89f3b7880",
+        "intent_group": "task_2c5c8da865ef4dba9309e7d89f3b7880",
+        "mode": "normal",
+        "actor_cohort": "demo",
+        "split": "mechanical_demo",
+        "dataset": "tehran-2020-v1",
+        "versions": {
+          "schema": "1.0.0",
+          "dataset": "tehran-2020-v1",
+          "parser": "confirmed-fa-2",
+          "ranker": "fixed-reference-utility-2",
+          "adapter": "otp-explicit-1.0.0",
+          "graph": null,
+          "llm_provider": "avalai-chat-1",
+          "llm_role_models": {
+            "parser": "gemini-3.6-flash",
+            "explainer": "gemini-3.6-flash",
+            "judge": "gemini-3.6-flash",
+            "improvement": "gemini-3.6-flash"
+          },
+          "llm_role_versions": {
+            "parser": "1",
+            "explainer": "1",
+            "judge": "1",
+            "improvement": "1"
+          }
+        },
+        "scope": "property_only",
+        "status": "ok",
+        "baseline_ids": [
+          "demo_384cde338f81ca2829d14d7b",
+          "demo_ff6f492e925493cb9d0fb110",
+          "demo_f3f130868943551df0667675",
+          "demo_75c589239da6154836936f4c",
+          "demo_02c95a961c11429c5f70f140",
+          "demo_1d0f1141d2187d5608fef135",
+          "demo_d541a1d3c7097b93f0d962ef",
+          "demo_07a86955be547d382aded3c3",
+          "demo_6a9fc6f6cf60e37bea8cedcb",
+          "demo_3edd9011527166202d30d5cc",
+          "demo_54428d446a918b043250ae5a",
+          "demo_39e08e16027f5e10f7b56849",
+          "demo_c4abe61ddcb3bcc2f352f8e6",
+          "demo_4eb44af8a1eb9a16332d3163",
+          "demo_6d4660808e997621665e0d35",
+          "demo_c62abaa3198789185ac91467",
+          "demo_10b9b0b1b661bb944582831b",
+          "demo_661ebc4c82dc5f327fe4922e",
+          "demo_d04d84b9618e3a61deda1e50",
+          "demo_d305987558faeae05975fbe4"
+        ],
+        "candidate_ids": [
+          "demo_384cde338f81ca2829d14d7b",
+          "demo_ff6f492e925493cb9d0fb110",
+          "demo_f3f130868943551df0667675",
+          "demo_75c589239da6154836936f4c",
+          "demo_02c95a961c11429c5f70f140",
+          "demo_1d0f1141d2187d5608fef135",
+          "demo_d541a1d3c7097b93f0d962ef",
+          "demo_07a86955be547d382aded3c3",
+          "demo_6a9fc6f6cf60e37bea8cedcb",
+          "demo_54428d446a918b043250ae5a",
+          "demo_39e08e16027f5e10f7b56849",
+          "demo_3edd9011527166202d30d5cc",
+          "demo_c4abe61ddcb3bcc2f352f8e6",
+          "demo_4eb44af8a1eb9a16332d3163",
+          "demo_6d4660808e997621665e0d35",
+          "demo_c62abaa3198789185ac91467",
+          "demo_10b9b0b1b661bb944582831b",
+          "demo_661ebc4c82dc5f327fe4922e",
+          "demo_d04d84b9618e3a61deda1e50",
+          "demo_d305987558faeae05975fbe4"
+        ],
+        "changed_top5": false,
+        "metrics": {
+          "baseline": {
+            "ndcg_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "precision_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 5,
+              "reason": "unjudged_displayed_card"
+            },
+            "mrr_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "earlier_unjudged"
+            },
+            "recall_at_20_fixed_pool": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "human_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judge_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judged_coverage": {
+              "value": 0.0,
+              "numerator": 0,
+              "denominator": 30,
+              "reason": null
+            },
+            "pool_size": 30,
+            "fully_judged_pool": false,
+            "metric_version": "graded-fixed-pool-1"
+          },
+          "candidate": {
+            "ndcg_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "precision_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 5,
+              "reason": "unjudged_displayed_card"
+            },
+            "mrr_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "earlier_unjudged"
+            },
+            "recall_at_20_fixed_pool": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "human_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judge_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judged_coverage": {
+              "value": 0.0,
+              "numerator": 0,
+              "denominator": 30,
+              "reason": null
+            },
+            "pool_size": 30,
+            "fully_judged_pool": false,
+            "metric_version": "graded-fixed-pool-1"
+          }
+        },
+        "judged_coverage": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 30,
+          "reason": null
+        },
+        "label_origin": "unjudged",
+        "frozen_labels": {
+          "demo_f3f130868943551df0667675": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_384cde338f81ca2829d14d7b": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_75c589239da6154836936f4c": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_ff6f492e925493cb9d0fb110": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_02c95a961c11429c5f70f140": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_1d0f1141d2187d5608fef135": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_d541a1d3c7097b93f0d962ef": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_07a86955be547d382aded3c3": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_6a9fc6f6cf60e37bea8cedcb": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_54428d446a918b043250ae5a": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_39e08e16027f5e10f7b56849": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_c4abe61ddcb3bcc2f352f8e6": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_4eb44af8a1eb9a16332d3163": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_6d4660808e997621665e0d35": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_c62abaa3198789185ac91467": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_10b9b0b1b661bb944582831b": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_661ebc4c82dc5f327fe4922e": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_d04d84b9618e3a61deda1e50": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_d305987558faeae05975fbe4": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_dafa8b5ac089ca7e7892cfed": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_82797eb4fdce82f4db424c93": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_114f3c2b1205beca2b3e2638": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_3edd9011527166202d30d5cc": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_477f1afc6af896e06301b7a7": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_4b9ddcbcea0d238a885be7f3": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_58e7b6a63ab76097ef7681f5": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_30477521cf8af8c8bc697118": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_a235b99e253bbff5476c3206": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_ffcad4641f4a868dc3a5e7e4": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_19bae9c40f0a686c516ac67f": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          }
+        },
+        "labels_hash": "9b662b279964b19abaa80adb7842148a229b31cd4b7848c059259a789b85605c",
+        "inventory_hash": "ea4bc885a9226f362657a20384b99e2a3ff96f162b77bdc8d36c3d39ec75c0aa",
+        "route_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "manifest_id": "replay_f4169957f48f7675772366389adfd1e043ae25423d6e55d72ba26b630e2aede9",
+        "task_id": "task_1c8fbfa557454e5d9c64aff2bd0cfcf4",
+        "intent_group": "task_1c8fbfa557454e5d9c64aff2bd0cfcf4",
+        "mode": "normal",
+        "actor_cohort": "demo",
+        "split": "mechanical_demo",
+        "dataset": "tehran-2020-v1",
+        "versions": {
+          "schema": "1.0.0",
+          "dataset": "tehran-2020-v1",
+          "parser": "confirmed-fa-2",
+          "ranker": "fixed-reference-utility-2",
+          "adapter": "otp-explicit-1.0.0",
+          "graph": null,
+          "llm_provider": "avalai-chat-1",
+          "llm_role_models": {
+            "parser": "gemini-3.6-flash",
+            "explainer": "gemini-3.6-flash",
+            "judge": "gemini-3.6-flash",
+            "improvement": "gemini-3.6-flash"
+          },
+          "llm_role_versions": {
+            "parser": "1",
+            "explainer": "1",
+            "judge": "1",
+            "improvement": "1"
+          }
+        },
+        "scope": "property_only",
+        "status": "ok",
+        "baseline_ids": [
+          "demo_4ea19feb6edd097f6155ca87",
+          "demo_a2ed0f6be03eb0903b1593fc",
+          "demo_d95001b0acef97044e3cd342",
+          "demo_00a80760e9adb0b164013c10",
+          "demo_a740fe969c276d3937bf03b4",
+          "demo_b1b55dbc0ff05e3db20be91d",
+          "demo_ebf6232b3ac36d9c6c9de7d7",
+          "demo_a59417c52f8a5b76e100a024",
+          "demo_1a2e5fed4caa74cafc1fe3f5",
+          "demo_a0ddb8ed92dba6adaa1febb2",
+          "demo_92148194de64b0b59df55169",
+          "demo_1c304923aec883096fa87955",
+          "demo_84766115a00138b89a3e8884",
+          "demo_cda4507079bbfc8ba195890f",
+          "demo_de26cdd1c08452115d6745fb",
+          "demo_9a3f38a77b8da09b6ae763a2",
+          "demo_0e266901f7c2513617534296",
+          "demo_4991dbb39495dc6d1537ee94",
+          "demo_b1ed3b8483943774d9427722",
+          "demo_5dc20ab1a0ea0b40fac3123c"
+        ],
+        "candidate_ids": [
+          "demo_4ea19feb6edd097f6155ca87",
+          "demo_a2ed0f6be03eb0903b1593fc",
+          "demo_d95001b0acef97044e3cd342",
+          "demo_b1b55dbc0ff05e3db20be91d",
+          "demo_a740fe969c276d3937bf03b4",
+          "demo_ebf6232b3ac36d9c6c9de7d7",
+          "demo_00a80760e9adb0b164013c10",
+          "demo_a59417c52f8a5b76e100a024",
+          "demo_a0ddb8ed92dba6adaa1febb2",
+          "demo_1a2e5fed4caa74cafc1fe3f5",
+          "demo_92148194de64b0b59df55169",
+          "demo_1c304923aec883096fa87955",
+          "demo_84766115a00138b89a3e8884",
+          "demo_cda4507079bbfc8ba195890f",
+          "demo_de26cdd1c08452115d6745fb",
+          "demo_9a3f38a77b8da09b6ae763a2",
+          "demo_0e266901f7c2513617534296",
+          "demo_4991dbb39495dc6d1537ee94",
+          "demo_b1ed3b8483943774d9427722",
+          "demo_5dc20ab1a0ea0b40fac3123c"
+        ],
+        "changed_top5": true,
+        "metrics": {
+          "baseline": {
+            "ndcg_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "precision_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 5,
+              "reason": "unjudged_displayed_card"
+            },
+            "mrr_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "earlier_unjudged"
+            },
+            "recall_at_20_fixed_pool": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "human_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judge_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judged_coverage": {
+              "value": 0.0,
+              "numerator": 0,
+              "denominator": 45,
+              "reason": null
+            },
+            "pool_size": 45,
+            "fully_judged_pool": false,
+            "metric_version": "graded-fixed-pool-1"
+          },
+          "candidate": {
+            "ndcg_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "precision_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 5,
+              "reason": "unjudged_displayed_card"
+            },
+            "mrr_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "earlier_unjudged"
+            },
+            "recall_at_20_fixed_pool": {
+              "value": null,
+              "numerator": null,
+              "denominator": null,
+              "reason": "unjudged_pool"
+            },
+            "human_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judge_hit_rate_at_5": {
+              "value": null,
+              "numerator": null,
+              "denominator": 1,
+              "reason": "unjudged_origin"
+            },
+            "judged_coverage": {
+              "value": 0.0,
+              "numerator": 0,
+              "denominator": 45,
+              "reason": null
+            },
+            "pool_size": 45,
+            "fully_judged_pool": false,
+            "metric_version": "graded-fixed-pool-1"
+          }
+        },
+        "judged_coverage": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 45,
+          "reason": null
+        },
+        "label_origin": "unjudged",
+        "frozen_labels": {
+          "demo_b1b55dbc0ff05e3db20be91d": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_ebf6232b3ac36d9c6c9de7d7": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_4ea19feb6edd097f6155ca87": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_a2ed0f6be03eb0903b1593fc": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_a59417c52f8a5b76e100a024": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_a0ddb8ed92dba6adaa1febb2": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_a740fe969c276d3937bf03b4": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_92148194de64b0b59df55169": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_1c304923aec883096fa87955": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_84766115a00138b89a3e8884": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_cda4507079bbfc8ba195890f": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_1a2e5fed4caa74cafc1fe3f5": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_d95001b0acef97044e3cd342": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_0e266901f7c2513617534296": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_4991dbb39495dc6d1537ee94": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_b1ed3b8483943774d9427722": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_5dc20ab1a0ea0b40fac3123c": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_26facc19a44afcffe43e5d52": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_558ff908ed02952fcf25f20e": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_fdce222ba2c4084ce42dd689": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_00a80760e9adb0b164013c10": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_5185457c622e3242579a47d4": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_d33ecd6026f71c0420fe7b91": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_8ab7ad592bf9f48acf5411aa": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_9a3f38a77b8da09b6ae763a2": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_1239de36e0a64e65924d1c34": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_cd8abd15c03628809b62b26f": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_852b31a137c8dbad3fb3c16c": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_883a4dc610a04ffb1e877186": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_de26cdd1c08452115d6745fb": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_e01ee5ca0c500332fbb61e7e": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_d040eee04fd9cdac527a074d": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_01f29946c31d88e65aedb3ff": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_091134a640c2c6f91f80b082": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_00d5ca8a24a7153564c8c2f3": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_3da69bfed2a1db91803e45e2": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_e4dc75fc42cc3d58963beda2": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_5574cdf692a88fd9d4ef6ef6": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_bb2f82cf5fade684fa08ce55": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_8397f9b0d583f9c814924b30": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_f38452e13545cb5a695b0dba": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_369ae252940fc485f96e9d0a": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_aea78967337e018dcc3f02d8": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_d8f022412d505aa6e544a4a1": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          },
+          "demo_a9bd9958c6c20f519c8623e5": {
+            "grade": null,
+            "hard": "pass",
+            "origin": "unjudged",
+            "synthetic": true,
+            "annotation_ids": []
+          }
+        },
+        "labels_hash": "5d11ee9808cefdc2571d00aea38b87014c3cef02705fc1a199f48ec80aa84868",
+        "inventory_hash": "c0c374f6a982846a013cd85b54c0f18e48b6f6828c66c08e73be83653800e1ea",
+        "route_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    ],
+    "uncertainty": {
+      "status": "insufficient_evidence",
+      "independent_tasks": 0,
+      "interval": null
+    },
+    "independent_tasks": 3,
+    "status": "insufficient_evidence",
+    "real_user_causal_lift": null,
+    "production_promotion": "blocked_pending_independent_human_evidence_and_approval",
+    "not_run": {
+      "live_llm": "offline replay makes no provider calls",
+      "real_user_causal_experiment": "no randomized real cohort"
+    },
+    "latency_cost_policy": "offline replay excludes service latency; use separately observed stage telemetry"
+  },
+  "promotion": {
+    "release_id": "release_a87e291c6179442b86411e1e728ed7c2",
+    "scope": "test",
+    "action": "promote",
+    "config": {
+      "rent_weight_multiplier": 1.25
+    },
+    "previous_id": "release_376c9d96370541f99453a2b80797c7f7",
+    "production_changed": false
+  },
+  "rollback": {
+    "release_id": "release_6054da4f680c458094b4129b255c13f9",
+    "scope": "test",
+    "action": "rollback",
+    "config": {},
+    "previous_id": "release_a87e291c6179442b86411e1e728ed7c2",
+    "production_changed": false
+  },
+  "restored_config": {},
+  "production_changed": false,
+  "label_provenance": "existing demo snapshots; no fabricated labels",
+  "created_at": "2026-10-21T15:40:35.661100+00:00"
+}

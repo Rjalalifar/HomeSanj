@@ -1,0 +1,87 @@
+{
+  "checked_at": "2026-10-21T10:26:52.881349+00:00",
+  "phase": 2,
+  "implementation_status": "complete_with_documented_external_limits",
+  "offline_backend": {
+    "status": "PASS",
+    "tests": 97,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "artifact": "phase-2-pytest.xml"
+  },
+  "frontend_unit": {
+    "status": "PASS",
+    "tests": 8,
+    "command": "npm test"
+  },
+  "production_build": {
+    "status": "PASS",
+    "command": "npm run build"
+  },
+  "browser": {
+    "status": "PASS",
+    "passed": 6,
+    "failed": 0,
+    "duration_ms": 22775.738,
+    "artifact": "phase-2-browser-report.json",
+    "engine": "installed Microsoft Edge / Playwright",
+    "viewports": [
+      "1440x1000",
+      "390x844"
+    ]
+  },
+  "live_otp": {
+    "status": "PASS",
+    "artifact": "phase-2-live-acceptance-final.json",
+    "candidate_count": 3,
+    "eligible_count": 3,
+    "sort_only_cache_hits": 3,
+    "sort_only_cache_misses": 0
+  },
+  "real_semantic": {
+    "status": "PASS",
+    "collection": "homesanj_properties_v1",
+    "indexed_count": 5655,
+    "dimensions": 384,
+    "artifacts": [
+      "embedding-verification.json",
+      "qdrant-reconcile-report.json",
+      "advanced-semantic-live-report.json",
+      "semantic-benchmark.json"
+    ],
+    "browser_real_query_passed": true
+  },
+  "avalai_account_smoke": {
+    "status": "NOT_RUN",
+    "reason": "No backend account key configured",
+    "requested_model": "gemini-3.6-flash",
+    "resolved_model": null,
+    "paid_requests": 0
+  },
+  "independent_relevance_model": {
+    "status": "NOT_RUN",
+    "reason": "Zero independent confirmed human labels; deterministic baseline retained"
+  },
+  "docker_backend_to_otp": {
+    "status": "NOT_RUN",
+    "reason": "Backend runs directly on Windows host"
+  },
+  "external_geocoder": {
+    "status": "NOT_RUN",
+    "reason": "No geocoder configured; destination uses explicit map confirmation"
+  },
+  "limits": [
+    "Boundary source is from 2020 and not current official coverage",
+    "Observed OTP schedule provenance and graph fingerprint are unknown",
+    "Observed OTP API provides no verified aggregate transfer count",
+    "Small authored semantic fixture does not establish user relevance lift",
+    "No public/cloud deployment or multiuser production authentication claim"
+  ],
+  "environment_note": "Sandbox-hosted backend produced OTP HTTP 503; host execution passed the same real service checks. OTP was not reinstalled or altered.",
+  "screenshots": [
+    "screenshots/phase-2-desktop.png",
+    "screenshots/phase-2-mobile.png",
+    "screenshots/phase-2-live-route.png"
+  ]
+}

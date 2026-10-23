@@ -1,0 +1,25 @@
+{
+  "seed": 2026,
+  "dataset_version": "tehran-2020-v1",
+  "generator_version": "seed-v1",
+  "points_per_series_per_neighborhood": 5,
+  "neighborhood_count": 377,
+  "expected_count": 5655,
+  "generated_count": 5655,
+  "series_counts": {
+    "demo_a": 1885,
+    "demo_b": 1885,
+    "demo_c": 1885
+  },
+  "shortages": [],
+  "attempts": 5669,
+  "overlap_rejections": 14,
+  "max_attempts_per_point": 1000,
+  "sampling_crs": "EPSG:32639",
+  "identity_hash": "164201ae93081fb224cd2055c876ef34053c9c1db6629a351e6f6ff71e62e980",
+  "storage": {
+    "inserted": 5625,
+    "skipped_existing": 30
+  },
+  "max_bbox_draws_per_candidate": 100
+}

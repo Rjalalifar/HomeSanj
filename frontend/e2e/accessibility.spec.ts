@@ -1,0 +1,72 @@
+import { test, expect } from '@playwright/test';
+
+test.beforeEach(async ({ page }) => {
+  await page.route('**/tile.openstreetmap.org/**', route => route.abort());
+});
+
+test('automatic accessibility uses actual OTP, shared candidate filters and cached sort views', async ({ page }) => {
+  const errors: string[] = [], submissions: string[] = [];
+  page.on('pageerror', e => errors.push(e.message));
+  page.on('request', request => { if (request.method() === 'POST' && /\/api\/(advanced\/)?searches$/.test(request.url())) submissions.push(request.url()); });
+  await page.goto('/');
+  await expect(page.locator('.property-card').first()).toBeVisible();
+  await expect(page.getByLabel('تاریخ سفر (میلادی)')).toHaveCount(0);
+  await expect(page.getByLabel('ساعت تهران')).toHaveCount(0);
+  await page.locator('.boundary-options').first().locator('input').first().check();
+  await expect(page.locator('.property-card')).toHaveCount(15);
+  const previewIds = (await page.locator('.property-card').evaluateAll(cards => cards.map(card => card.getAttribute('data-property-id')))).sort();
+  await page.getByRole('button', { name: 'جست‌وجوی خانه', exact: true }).click();
+  await expect(page.locator('.search-progress')).toContainText('۳ آگهی با بررسی دسترسی', { timeout: 60000 });
+  await expect(page.locator('.accessibility-summary[data-accessibility-status="ok"]').first()).toBeVisible();
+  const cards = (await page.locator('.property-card').evaluateAll(nodes => nodes.map(node => node.getAttribute('data-property-id')))).sort();
+  expect(cards).toEqual(previewIds);
+  await expect(page.locator('.search-progress')).toContainText('زیرمجموعه');
+  expect(await page.getByLabel('مرتب‌سازی', { exact: true }).locator('option').evaluateAll(nodes => nodes.map(n => (n as HTMLOptionElement).value))).not.toContain('travel_time_asc');
+  const response = page.waitForResponse(r => r.url().includes('sort=stop_walk_time_asc') && r.request().method() === 'GET');
+  await page.getByLabel('مرتب‌سازی', { exact: true }).selectOption('stop_walk_time_asc');
+  const sorted = await (await response).json();
+  expect(sorted.results[0].accessibility.walk_duration_seconds).toBeGreaterThan(0);
+  expect(['live_otp', 'recorded_otp']).toContain(sorted.results[0].selected_itinerary.source_kind);
+  expect(sorted.results[0].selected_itinerary.legs.every((leg: { mode: string }) => leg.mode === 'WALK')).toBeTruthy();
+  expect(submissions).toHaveLength(1);
+  const snapshot = await page.request.get(`/api/searches/${sorted.request_id}/snapshot`);
+  expect((await snapshot.json()).state.sort).toBe('recommended');
+  const manifest = await page.request.get(`/api/searches/${sorted.request_id}`);
+  expect((await manifest.json()).candidate_count).toBe(15);
+  await page.screenshot({ path: '../docs/screenshots/accessibility-stops-desktop.png', fullPage: false });
+  expect(errors).toEqual([]);
+});
+
+test('regular destination is saved, changed and removed without changing neighborhood selection', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('.property-card').first()).toBeVisible();
+  await page.locator('.boundary-options').first().locator('input').first().check();
+  await page.getByRole('button', { name: 'انتخاب مقصد روی نقشه', exact: true }).click();
+  await page.locator('.leaflet-container').click({ position: { x: 220, y: 220 } });
+  await page.getByLabel('نام مقصد', { exact: true }).fill('مقصد نمونه');
+  await page.getByRole('button', { name: 'ذخیرهٔ مقصد', exact: true }).click();
+  await expect(page.locator('.boundary-options').first().locator('input:checked')).toHaveCount(1);
+  await expect(page.locator('.destination-editor')).toContainText('مقصد ذخیره‌شده: مقصد نمونه');
+  const first = await page.evaluate(() => localStorage.getItem('homesanj.regular-destination.v1'));
+  await page.getByRole('button', { name: 'تغییر مقصد روی نقشه', exact: true }).click();
+  await page.locator('.leaflet-container').click({ position: { x: 270, y: 245 } });
+  await page.getByRole('button', { name: 'ذخیرهٔ مقصد', exact: true }).click();
+  expect(await page.evaluate(() => localStorage.getItem('homesanj.regular-destination.v1'))).not.toBe(first);
+  const submittedResponse = page.waitForResponse(r => r.url().endsWith('/api/searches') && r.request().method() === 'POST');
+  await page.getByRole('button', { name: 'جست‌وجوی خانه', exact: true }).click();
+  const submitted = await (await submittedResponse).json();
+  expect(submitted.accessibility.mode).toBe('destination');
+  expect(submitted.state.travel.time_mode).toBe('DEPART_AT');
+  expect(Date.now() - Date.parse(submitted.accessibility.effective_at)).toBeLessThan(30000);
+  await expect(page.locator('.search-progress')).toContainText('زمان مبنای محاسبه');
+  await expect(page.locator('.search-progress')).toContainText('۳ آگهی با بررسی دسترسی', { timeout: 60000 });
+  await page.getByLabel('مرتب‌سازی', { exact: true }).selectOption('travel_time_asc');
+  await expect(page.getByLabel('مرتب‌سازی', { exact: true })).toHaveValue('travel_time_asc');
+  await page.reload();
+  await expect(page.locator('.destination-editor')).toContainText('مقصد ذخیره‌شده: مقصد نمونه');
+  await page.getByRole('button', { name: 'حذف مقصد همیشگی', exact: true }).click();
+  expect(await page.evaluate(() => localStorage.getItem('homesanj.regular-destination.v1'))).toBeNull();
+  await page.reload();
+  await expect(page.getByRole('button', { name: 'انتخاب مقصد روی نقشه', exact: true })).toBeVisible();
+  expect(page.url()).not.toMatch(/latitude|longitude|35\.|51\./);
+});

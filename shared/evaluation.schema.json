@@ -1,0 +1,402 @@
+{
+  "schema_version": "evaluation-contracts-1",
+  "review": {
+    "$defs": {
+      "PatchOperation": {
+        "additionalProperties": false,
+        "properties": {
+          "field": {
+            "title": "Field",
+            "type": "string"
+          },
+          "value": {
+            "default": null,
+            "title": "Value"
+          },
+          "remove": {
+            "default": false,
+            "title": "Remove",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "field"
+        ],
+        "title": "PatchOperation",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "idempotency_key": {
+        "maxLength": 120,
+        "minLength": 8,
+        "title": "Idempotency Key",
+        "type": "string"
+      },
+      "revision": {
+        "minimum": 0,
+        "title": "Revision",
+        "type": "integer"
+      },
+      "annotation_type": {
+        "default": "relevance_grade",
+        "enum": [
+          "relevance_grade",
+          "corrected_intent_patch",
+          "pairwise_preference",
+          "grounding_issue",
+          "explanation_comparison_issue",
+          "semantic_retrieval_miss",
+          "candidate_eligibility_issue",
+          "data_issue",
+          "infrastructure_issue"
+        ],
+        "title": "Annotation Type",
+        "type": "string"
+      },
+      "grade": {
+        "anyOf": [
+          {
+            "maximum": 3,
+            "minimum": 0,
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Grade"
+      },
+      "evidence_refs": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 40,
+        "title": "Evidence Refs",
+        "type": "array"
+      },
+      "reason": {
+        "default": "other",
+        "enum": [
+          "budget",
+          "commute",
+          "amenities",
+          "location",
+          "missing_evidence",
+          "other"
+        ],
+        "title": "Reason",
+        "type": "string"
+      },
+      "operations": {
+        "items": {
+          "$ref": "#/$defs/PatchOperation"
+        },
+        "maxItems": 20,
+        "title": "Operations",
+        "type": "array"
+      },
+      "preferred_id": {
+        "anyOf": [
+          {
+            "maxLength": 120,
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Preferred Id"
+      },
+      "other_id": {
+        "anyOf": [
+          {
+            "maxLength": 120,
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Other Id"
+      },
+      "supersedes": {
+        "anyOf": [
+          {
+            "maxLength": 120,
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Supersedes"
+      },
+      "action": {
+        "default": "annotate",
+        "enum": [
+          "annotate",
+          "skip",
+          "insufficient_evidence",
+          "resolve",
+          "escalate"
+        ],
+        "title": "Action",
+        "type": "string"
+      }
+    },
+    "required": [
+      "idempotency_key",
+      "revision"
+    ],
+    "title": "ReviewInput",
+    "type": "object"
+  },
+  "judge": {
+    "additionalProperties": false,
+    "properties": {
+      "candidate_id": {
+        "title": "Candidate Id",
+        "type": "string"
+      },
+      "hard_constraint_checks": {
+        "items": {
+          "enum": [
+            "pass",
+            "fail",
+            "unknown"
+          ],
+          "type": "string"
+        },
+        "maxItems": 40,
+        "title": "Hard Constraint Checks",
+        "type": "array"
+      },
+      "relevance_grade": {
+        "anyOf": [
+          {
+            "maximum": 3,
+            "minimum": 0,
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Relevance Grade"
+      },
+      "explanation_grounding": {
+        "enum": [
+          "supported",
+          "unsupported",
+          "unknown",
+          "no_claims"
+        ],
+        "title": "Explanation Grounding",
+        "type": "string"
+      },
+      "evidence_refs": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 40,
+        "title": "Evidence Refs",
+        "type": "array"
+      },
+      "unknown_reasons": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 10,
+        "title": "Unknown Reasons",
+        "type": "array"
+      },
+      "short_reason": {
+        "maxLength": 600,
+        "title": "Short Reason",
+        "type": "string"
+      },
+      "recommended_id_valid": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Recommended Id Valid"
+      },
+      "unsupported_claim_ids": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 20,
+        "title": "Unsupported Claim Ids",
+        "type": "array"
+      }
+    },
+    "required": [
+      "candidate_id",
+      "hard_constraint_checks",
+      "explanation_grounding",
+      "evidence_refs",
+      "short_reason"
+    ],
+    "title": "JudgeResult",
+    "type": "object"
+  },
+  "improvement": {
+    "additionalProperties": false,
+    "properties": {
+      "hypothesis": {
+        "maxLength": 500,
+        "title": "Hypothesis",
+        "type": "string"
+      },
+      "component": {
+        "enum": [
+          "parser",
+          "ranker",
+          "retrieval",
+          "explanation",
+          "data"
+        ],
+        "title": "Component",
+        "type": "string"
+      },
+      "proposed_change": {
+        "maxLength": 1000,
+        "title": "Proposed Change",
+        "type": "string"
+      },
+      "supporting_annotation_ids": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 20,
+        "title": "Supporting Annotation Ids",
+        "type": "array"
+      },
+      "risks": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 10,
+        "title": "Risks",
+        "type": "array"
+      },
+      "evaluation_plan": {
+        "maxLength": 1000,
+        "title": "Evaluation Plan",
+        "type": "string"
+      }
+    },
+    "required": [
+      "hypothesis",
+      "component",
+      "proposed_change",
+      "supporting_annotation_ids",
+      "risks",
+      "evaluation_plan"
+    ],
+    "title": "ImprovementProposal",
+    "type": "object"
+  },
+  "pairwise": {
+    "additionalProperties": false,
+    "properties": {
+      "preferred": {
+        "enum": [
+          "A",
+          "B",
+          "tie",
+          "unknown"
+        ],
+        "title": "Preferred",
+        "type": "string"
+      },
+      "evidence_refs": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 40,
+        "title": "Evidence Refs",
+        "type": "array"
+      },
+      "short_reason": {
+        "maxLength": 600,
+        "title": "Short Reason",
+        "type": "string"
+      }
+    },
+    "required": [
+      "preferred",
+      "evidence_refs",
+      "short_reason"
+    ],
+    "title": "PairwiseResult",
+    "type": "object"
+  },
+  "grounding": {
+    "additionalProperties": false,
+    "properties": {
+      "recommended_id_valid": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Recommended Id Valid"
+      },
+      "unsupported_claim_ids": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 40,
+        "title": "Unsupported Claim Ids",
+        "type": "array"
+      },
+      "evidence_refs": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 40,
+        "title": "Evidence Refs",
+        "type": "array"
+      },
+      "unknown_reasons": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 10,
+        "title": "Unknown Reasons",
+        "type": "array"
+      },
+      "short_reason": {
+        "maxLength": 600,
+        "title": "Short Reason",
+        "type": "string"
+      }
+    },
+    "required": [
+      "recommended_id_valid",
+      "unsupported_claim_ids",
+      "evidence_refs",
+      "unknown_reasons",
+      "short_reason"
+    ],
+    "title": "GroundingResult",
+    "type": "object"
+  }
+}

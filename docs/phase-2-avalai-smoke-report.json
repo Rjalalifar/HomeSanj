@@ -1,0 +1,16 @@
+{
+  "status": "NOT RUN",
+  "checked_at": "2026-10-20T20:56:46.390698+00:00",
+  "paid_requests": 0,
+  "credentials_configured": false,
+  "reason": "Real account credentials and explicit paid smoke enablement are required; no endpoint/model success claimed.",
+  "requested_models": {
+    "parser": "gemini-3.6-flash",
+    "explainer": "gemini-3.6-flash",
+    "judge": "gemini-3.6-flash",
+    "improvement": "gemini-3.6-flash"
+  },
+  "resolved_verified_model": null,
+  "json_schema_capability": "not_verified",
+  "command": ".\\.venv\\Scripts\\python.exe -m backend.app.cli avalai-smoke --allow-paid --max-requests 1"
+}

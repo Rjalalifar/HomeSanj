@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-22T17:05:24.719148+00:00",
+  "scope": "isolated copied synthetic listings; existing real local OTP; no LLM",
+  "property_count": 5655,
+  "candidate_count": 5655,
+  "evaluated_count": 3,
+  "completion_status": "partial",
+  "stop_count": 2460,
+  "stop_dataset_version": "otp-stops-1-0adc3fd9969896d292af",
+  "timing_ms": {
+    "filtered_snapshot_with_proximity": 3681.9967000000133,
+    "three_walking_routes": 1518.7048000000232,
+    "sort_full_candidate_set": 1221.6439000000037,
+    "cached_three_routes": 1088.1168999999318,
+    "three_destination_routes": 1709.6799999999348
+  },
+  "otp_requests": 6,
+  "concurrency_peak": 3,
+  "configured_concurrency": 3,
+  "sort_otp_requests": 0,
+  "repeat_stop_search_otp_requests": 0,
+  "cached_stop_hits": 3,
+  "walking_known_count": 3,
+  "destination_known_count": 2,
+  "destination_statuses": {
+    "ok": 2,
+    "not_evaluated": 98
+  },
+  "walking_sources": [
+    "live_otp"
+  ],
+  "destination_sources": [
+    "live_otp"
+  ],
+  "example_measured_walk": {
+    "straight_line_meters": 283.0364800307091,
+    "walk_distance_meters": 363.27,
+    "walk_duration_seconds": 276
+  },
+  "snapshot_replay_status": "ok",
+  "snapshot_replay_network_calls": 0,
+  "graph_version": null,
+  "schedule_basis": "unknown",
+  "full_city_routing_performed": false,
+  "price_and_coordinates_resampled": false,
+  "status": "pass"
+}

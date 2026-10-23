@@ -1,0 +1,7 @@
+{
+  "status": "not_run",
+  "reason": "Explicit --allow-paid flag is required; no paid request made.",
+  "llm_enabled": false,
+  "account_credentials_configured": false,
+  "paid_requests_made": 0
+}

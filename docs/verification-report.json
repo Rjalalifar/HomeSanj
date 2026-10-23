@@ -1,0 +1,39 @@
+{
+  "verified_at": "2026-10-20T15:23:52.830342+00:00",
+  "backend_offline_tests": {
+    "status": "passed",
+    "count": 49
+  },
+  "frontend_unit_tests": {
+    "status": "passed",
+    "count": 3
+  },
+  "frontend_production_build": "passed",
+  "browser_headless_edge": "passed",
+  "npm_audit_vulnerabilities": 0,
+  "boundary_counts": {
+    "neighborhoods": 377,
+    "districts": 22
+  },
+  "seed": {
+    "generated_count": 5655,
+    "shortages": 0,
+    "repeat_inserted": 0,
+    "repeat_skipped_existing": 5655
+  },
+  "otp": {
+    "root_reachable": true,
+    "routing_api_verified": true,
+    "fixture_mode": false,
+    "version": "2.10.0",
+    "api_path": "/otp/transmodel/v3",
+    "contract_itinerary_count": 5,
+    "live_search_evaluated": 3,
+    "live_search_candidates": 15
+  },
+  "avalai_smoke": {
+    "status": "not_run",
+    "reason": "No account key/enablement; no paid requests made."
+  },
+  "docker_network_test": "not_run"
+}

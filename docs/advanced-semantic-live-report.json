@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "request_id": "req_e6dfeb452851474d84ef5350fcd8fdb3",
+  "snapshot_id": "snap_44b5832af8104a5aaeb51cbe3f1258f2",
+  "candidate_count": 707,
+  "evaluated_count": 0,
+  "completion_status": "complete",
+  "initial_semantic": {
+    "status": "pending",
+    "candidate_policy": "all_structured_eligible_union",
+    "retrieved_count": 0
+  },
+  "semantic": {
+    "status": "ok",
+    "retrieved_count": 100,
+    "eligible_count": 707,
+    "coverage": 0.14144271570014144,
+    "partial": true,
+    "index_version": "Xenova/multilingual-e5-small@761b726dd34fb83930e26aab4e9ac3899aa1fa78:q8:mean-l2:384:known-facts-fa-1",
+    "policy_version": "vector-overretrieve-3x-v1",
+    "is_probability": false,
+    "stale_hit_count": 0,
+    "reason": null,
+    "overretrieved_count": 300,
+    "approximate_retrieval": true,
+    "latency_ms": 4951.25,
+    "lexical_count": 62,
+    "structured_count": 707,
+    "candidate_policy": "RRF k=60 priority; all structured eligible retained; utility ties only",
+    "structured_coverage": 1.0,
+    "retrieval_scope": "approximate_vector_union_exhaustive_structured"
+  },
+  "first_result_ms": 756.58,
+  "elapsed_ms": 6512.07,
+  "displayed_count": 100,
+  "invalid_hard_match_count": 0,
+  "constraints": {
+    "max_deposit_toman": null,
+    "max_monthly_rent_toman": 15000000,
+    "min_area_m2": null,
+    "min_bedrooms": null,
+    "parking_required": true,
+    "elevator_required": false
+  },
+  "otp_requested": false,
+  "paid_llm_requested": false
+}

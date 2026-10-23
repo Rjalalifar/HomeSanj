@@ -1,0 +1,142 @@
+{
+  "checked_at": "2026-10-21T15:46:03.825850+00:00",
+  "environment": "Windows host; Python virtual environment; local SQLite/Qdrant/OTP; Edge headless",
+  "backend": {
+    "status": "PASS",
+    "tests": 125,
+    "failures": 0,
+    "skipped": 0,
+    "command": "python -m pytest -q --junitxml=docs/phase-3-pytest.xml",
+    "evidence": "docs/phase-3-pytest.xml"
+  },
+  "frontend_unit": {
+    "status": "PASS",
+    "tests": 8,
+    "command": "cd frontend; npm test"
+  },
+  "frontend_build": {
+    "status": "PASS",
+    "command": "cd frontend; npm run build"
+  },
+  "browser": {
+    "status": "PASS",
+    "stats": {
+      "startTime": "2026-10-21T15:43:32.420Z",
+      "duration": 30620.715,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "command": "cd frontend; npx playwright test --config playwright.phase3.config.ts",
+    "origin": "isolated synthetic SQLite copy; real existing Qdrant; no paid models",
+    "reused_scenario": "phase2 advanced confirmation"
+  },
+  "versioned_scenarios": 123,
+  "corpus": "data/evaluation/scenario-manifest.json",
+  "qdrant": {
+    "status": "PASS",
+    "canonical_count": 5655,
+    "index_status": "healthy",
+    "ann_recall_at_20": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "human_semantic_recall": null,
+    "report": "docs/phase-3-ann-report.json"
+  },
+  "otp": {
+    "status": "PASS",
+    "root_reachable": true,
+    "routing_api_verified": true,
+    "fixture_mode": false,
+    "api_type": "transmodel_v3",
+    "api_path": "/otp/transmodel/v3",
+    "base_url": "http://127.0.0.1:8821",
+    "itinerary_count": 5,
+    "source_kinds": [
+      "live_otp"
+    ],
+    "request_fixture": "data/otp/contract-input.json",
+    "checked_at": "2026-10-21T15:46:03.810372+00:00",
+    "command": "python -m backend.app.otp_probe --contract data/otp/contract-input.json --output runtime/phase3-otp"
+  },
+  "avalai": {
+    "status": "NOT RUN",
+    "reason": "No enabled verified offline role",
+    "backend_key_present": true,
+    "roles_enabled": {
+      "parser": false,
+      "explainer": false,
+      "judge": false,
+      "improvement": false
+    },
+    "requested_models": {
+      "parser": "gemini-3.6-flash",
+      "explainer": "gemini-3.6-flash",
+      "judge": "gemini-3.6-flash",
+      "improvement": "gemini-3.6-flash"
+    },
+    "paid_calls_this_verification": 0,
+    "next_command": "python -m backend.app.cli avalai-smoke --allow-paid --max-requests 1 --report docs/phase-3-avalai-report.json",
+    "prerequisite": "Configure backend key, enable only the desired role and set its request/token/cost budgets first"
+  },
+  "dataset": {
+    "dataset_id": "annotations_39c21ffccf0c5aa8f1c296e6",
+    "schema_version": "annotation-jsonl-1",
+    "rubric_version": "hard-pass-relevance-0-3-1",
+    "split_seed": 17,
+    "split_policy": "linked_task_property_confirmed_intent_70_15_15",
+    "task_groups": {
+      "task_3f960cb8a2ac4685bc693c38cc4cf17c": {
+        "group_id": "task_3f960cb8a2ac4685bc693c38cc4cf17c",
+        "split": "train"
+      }
+    },
+    "count": 1,
+    "independent_groups": 1,
+    "sha256": "f98cad70ed795d1a420ffe08900d86e7bdf3ef47feaf7d238839b48268245152",
+    "source": "existing_review_annotations",
+    "human_real_graded": 0,
+    "holdout_policy": "final_milestone_only; not acquisition, prompts or tuning",
+    "path": "data\\evaluation\\demo-review\\annotations_39c21ffccf0c5aa8f1c296e6",
+    "roundtrip": {
+      "status": "ok",
+      "inserted": 0,
+      "duplicates": 1,
+      "human_gold_auto_approved": false
+    },
+    "data_origin": "automated_browser_review_of_synthetic_listings",
+    "independent_human_review_count": 0
+  },
+  "improvement_cycle": {
+    "status": "mechanics_verified",
+    "candidate_diff": {
+      "rent_weight_multiplier": {
+        "before": 1.0,
+        "after": 1.25
+      }
+    },
+    "comparison_status": "insufficient_evidence",
+    "production_changed": false,
+    "cases": 4,
+    "changed_top5_cases": 1,
+    "report": "docs/phase-3-improvement-cycle.json"
+  },
+  "english_code_comments": {
+    "status": "PASS",
+    "violations": []
+  },
+  "independent_human_labels": 0,
+  "real_qs_at_5": null,
+  "human_ranking_lift": null,
+  "training_status": "not_trained_insufficient_human_labels",
+  "learning_curve": "unavailable_without_equal_human_label_budget",
+  "external_dependencies": [
+    "Independent human review and real-user feedback",
+    "Opt-in AvalAI account access and smoke verification"
+  ],
+  "production_release": "not_performed; insufficient independent evidence"
+}

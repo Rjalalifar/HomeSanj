@@ -1,0 +1,21 @@
+{
+  "origin": {
+    "latitude": 35.8059894,
+    "longitude": 51.3839047
+  },
+  "travel": {
+    "destination": {
+      "latitude": 35.8050421,
+      "longitude": 51.4369707,
+      "confirmed": true
+    },
+    "date": "2026-10-20",
+    "time": "08:00:00",
+    "timezone": "Asia/Tehran",
+    "time_mode": "DEPART_AT",
+    "modes": [
+      "BUS"
+    ],
+    "include_walk_only": false
+  }
+}

@@ -1,0 +1,6 @@
+﻿{"ads":[
+  {"listing_code":"B-1","headline":"آگهی نمایشی","location":{"latitude":35.7,"longitude":51.4},"price":{"bond":"١٢ میلیارد ریال","per_month":"١٠٠ میلیون ریال","unit":"rial"},"features":{"square_meters":75,"bedrooms":2,"car_space":true},"posted":"2026-01-01T12:00:00+03:30"},
+  {"listing_code":"B-1","headline":"آگهی نمایشی","price":{"bond":"١٢ میلیارد ریال","per_month":"١١٠ میلیون ریال","unit":"rial"},"features":{"square_meters":75},"posted":"2026-01-02T12:00:00+03:30"},
+  {"listing_code":"B-2","headline":"آگهی نمایشی ناقص","features":{"lift":false}},
+  {"listing_code":"B-3","location":{"latitude":35.7},"price":{}}
+]}

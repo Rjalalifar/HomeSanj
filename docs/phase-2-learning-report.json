@@ -1,0 +1,21 @@
+{
+  "status": "insufficient_data",
+  "feature_version": "finance-route-knownness-1",
+  "model_version": "local-logistic-candidate-1",
+  "confirmed_independent_labels": 0,
+  "independent_groups": 0,
+  "positive_count": 0,
+  "negative_count": 0,
+  "required_labels": 200,
+  "required_groups": 30,
+  "excluded": [
+    "AI suggestions",
+    "demo/test listings",
+    "implicit clicks/saves",
+    "rule-derived failures"
+  ],
+  "activation": "deterministic_baseline_retained",
+  "created_at": "2026-10-20T20:26:08.069602+00:00",
+  "split_policy": "connected task/session/property groups; frozen deterministic 80/20 holdout",
+  "selection_bias": "Reviewed examples are selectively sampled; no production lift can be inferred."
+}

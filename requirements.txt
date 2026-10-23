@@ -1,0 +1,14 @@
+fastapi==0.115.12
+pydantic==2.12.5
+uvicorn==0.34.2
+SQLAlchemy==2.0.41
+httpx==0.28.1
+openai==1.82.1
+shapely==2.1.2
+pyproj==3.7.2
+python-dotenv==1.2.3
+tzdata==2025.2
+pytest==9.0.2
+numpy==2.2.6
+onnxruntime==1.22.0
+tokenizers==0.21.1

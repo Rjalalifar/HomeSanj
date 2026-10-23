@@ -1,0 +1,378 @@
+﻿id,name_fa,name_normalized,district_no,quality_flags
+neighborhood_6f56f1da349765c7ed3170c5,اراج,اراج,1,"[""overlapping_neighborhood""]"
+neighborhood_cdee2a6fc16c2b59e7f5e790,ازگل,ازگل,1,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_edd88b960062bb48a0ddbdc7,امام زاده قاسم,امام زاده قاسم,1,"[""overlapping_neighborhood""]"
+neighborhood_c7eabb75ddf965c7e136fc51,اوین,اوین,1,"[""source_district_mismatch""]"
+neighborhood_1dccc7782ec36085368c899b,باغ فردوس,باغ فردوس,1,"[""overlapping_neighborhood""]"
+neighborhood_ea7f322195b37d7574572986,تجریش,تجریش,1,"[""overlapping_neighborhood""]"
+neighborhood_72aa7d0c189bd17bf4ceb170,جماران,جماران,1,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_cda6388475e930ab3308f8bf,جوزستان,جوزستان,1,"[""overlapping_neighborhood""]"
+neighborhood_fcf57306f5a500f7778f0dee,چیذر,چیذر,1,"[""overlapping_neighborhood""]"
+neighborhood_eebfd971aba9cb4d641065a4,حصار بوعلی,حصار بوعلی,1,[]
+neighborhood_514f1572a41561a62d6fe635,حکمت-دزاشیب,حکمت-دزاشیب,1,"[""overlapping_neighborhood""]"
+neighborhood_285eabcb6df6aa96a1ada6c7,دارآباد,دارآباد,1,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_3c5e0e933d939c61a805e470,دربند,دربند,1,"[""source_district_mismatch""]"
+neighborhood_d40fcaf83e87b3416dbc6d39,درکه,درکه,1,"[""source_district_mismatch""]"
+neighborhood_6aee6266ed0057deec93dfb7,رستم اباد,رستم اباد,1,[]
+neighborhood_356ee59ac1e15bb909cf58be,زعفرانیه,زعفرانیه,1,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_6e0822930c1db361e55c75f8,سوهانک,سوهانک,1,"[""source_district_mismatch""]"
+neighborhood_dcd7f72bf168aea59eaf2450,شهرک گلها,شهرک گلها,1,"[""overlapping_neighborhood""]"
+neighborhood_1067d9b2924ca3af672ac378,شهرک محلاتی,شهرک محلاتی,1,"[""source_district_mismatch""]"
+neighborhood_89d8ea84e8ea2e7e7b11a9a3,شهرک نفت,شهرک نفت,1,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_3a274e7cb78ab8dcda85ef45,قیطریه,قیطریه,1,[]
+neighborhood_b311f8f489fffda87bf36a24,کاشانک,کاشانک,1,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_76cac860833cf54b6225cdab,گلاب دره,گلاب دره,1,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_0e6c6659a14e4e8dcf198b12,محمودیه,محمودیه,1,"[""overlapping_neighborhood""]"
+neighborhood_769a2e94832cbfc69e634328,نیاوران,نیاوران,1,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_2060222b8c7e5d2023482c16,ولنجک,ولنجک,1,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_43579d4b8b6fe5a11a0c3422,اسلام آباد (شهرک نیایش),اسلام آباد (شهرک نیایش),2,"[""overlapping_neighborhood""]"
+neighborhood_59c63bef8a775984bb7d77b2,ایوانک,ایوانک,2,[]
+neighborhood_96d4f60e062850b5c25af391,آسمان,آسمان,2,"[""source_district_mismatch""]"
+neighborhood_a49ce0c57d07674ebeb9d805,آلستوم,آلستوم,2,[]
+neighborhood_78405dd7a48128c95e5b39c5,پردیسان,پردیسان,2,[]
+neighborhood_43b39f64c3083edbc188ea4d,پرواز شرقی,پرواز شرقی,2,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_780689f15e9aefaddab6c003,پونک,پونک,2,"[""source_district_mismatch""]"
+neighborhood_2874ccbcdb1416e6f29344c8,تهران ویلا,تهران ویلا,2,[]
+neighborhood_df6ccea4e4e2be779cb58f74,توحید,توحید,2,[]
+neighborhood_6c0f560ced4d766c4a967fbb,تیموری,تیموری,2,[]
+neighborhood_f5ead415722b9fe4662f8236,چوب تراش,چوب تراش,2,[]
+neighborhood_122225a4f5d434df3a33da03,خرم رودی,خرم رودی,2,[]
+neighborhood_ccbe3c94b22996587c5e6dbc,درختی,درختی,2,[]
+neighborhood_83b8d3ab7742ed2a692bd1d4,دریا,دریا,2,[]
+neighborhood_254c667a513158ea211ced0b,زنجان,زنجان,2,[]
+neighborhood_be0d6ee89336571fa3ea0b6e,سعادت آباد,سعادت آباد,2,"[""overlapping_neighborhood""]"
+neighborhood_880edba1a9f609034281a7d6,شادمهر,شادمهر,2,[]
+neighborhood_1bff7f6c0026727abd3980da,شهرآرا,شهرآرا,2,[]
+neighborhood_b2e06c23ccfc994e8bb67bed,شهرک آزمایش,شهرک آزمایش,2,[]
+neighborhood_6f0291e19ddba86506fccbd0,شهرک بوعلی,شهرک بوعلی,2,"[""source_district_mismatch""]"
+neighborhood_e2623a18848a482df1da2650,شهرک غرب,شهرک غرب,2,[]
+neighborhood_9de8d73d74d415f1f6cb59db,شهرک مخابرات,شهرک مخابرات,2,"[""source_district_mismatch""]"
+neighborhood_6449784b2c591038cedeb52b,شهرک هما,شهرک هما,2,"[""source_district_mismatch""]"
+neighborhood_dfd1841fb72e61a82bc76250,صادقیه,صادقیه,2,"[""source_district_mismatch""]"
+neighborhood_0b2841d3b50b6d75e65ca6ab,طرشت,طرشت,2,"[""source_district_mismatch""]"
+neighborhood_2180d7ad37fd1c79731b7d26,فرحزاد,فرحزاد,2,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_ed6d8520acb77c3ec6e8a675,کوهسار,کوهسار,2,"[""source_district_mismatch""]"
+neighborhood_3a7b74411ddb0365d6a34054,کوی نصر,کوی نصر,2,"[""overlapping_neighborhood""]"
+neighborhood_ebabb8f391bffe87a04e7135,مدیریت,مدیریت,2,"[""overlapping_neighborhood""]"
+neighborhood_17c9095fbbfa5ddfe2b08378,همایون شهر,همایون شهر,2,[]
+neighborhood_e3246eda0bc0d6e2d25586fc,ونک,ونک,3,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_8d1c8aa0a1ef457648c4bf1b,آرارات,آرارات,3,"[""overlapping_neighborhood""]"
+neighborhood_606706e643289696ebc6b0d0,کاووسیه,کاووسیه,3,"[""overlapping_neighborhood""]"
+neighborhood_9d08373d81848888b9f31148,امانیه,امانیه,3,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_305d29dd1960b9fdb96d4b3b,اراضی عباس آباد,اراضی عباس آباد,3,"[""overlapping_neighborhood""]"
+neighborhood_637947a964be543ec33f3c84,سیدخندان,سیدخندان,3,"[""source_district_mismatch""]"
+neighborhood_042b317f8acc8e0bf3e63e17,داوودیه,داوودیه,3,"[""overlapping_neighborhood""]"
+neighborhood_ee8165705550ef4653fe35e2,حسن اباد- زرگنده,حسن اباد- زرگنده,3,"[""overlapping_neighborhood""]"
+neighborhood_43dac4399fb65bdbc958e2e9,قبا,قبا,3,"[""overlapping_neighborhood""]"
+neighborhood_b0094c5be69f17b7ce857e71,قلهک,قلهک,3,"[""overlapping_neighborhood""]"
+neighborhood_a00e3fc92f729c31d6d40066,درب دوم,درب دوم,3,"[""overlapping_neighborhood""]"
+neighborhood_e63737a419a8eb924b55b0b1,دروس,دروس,3,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_812cd7584800cad3e8d4665c,رستم آباد- اختیاریه,رستم آباد- اختیاریه,3,"[""source_district_mismatch""]"
+neighborhood_3a0c0ce3200b44904664a86e,مهران,مهران,4,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_864e79d68fdc90e5944c45c1,پاسداران- ضرابخانه,پاسداران- ضرابخانه,4,"[""overlapping_neighborhood""]"
+neighborhood_68b43ca37e171536a705fe51,حسین آباد- مبارک آباد,حسین آباد- مبارک آباد,4,"[""overlapping_neighborhood""]"
+neighborhood_eca407c89fa6c75ef9c28d3f,کاظم آباد,کاظم آباد,4,"[""overlapping_neighborhood""]"
+neighborhood_cf784924ac2ca99163173900,لویزان شیان,لویزان شیان,4,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_988da34203d5c0898a5d9034,شمیران نو,شمیران نو,4,"[""geometry_repaired"", ""overlapping_neighborhood""]"
+neighborhood_29580b26ee62ce46b6dca241,کالاد,کالاد,4,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_b8d41acf565a93b73027e7d1,شمس آباد,شمس آباد,4,"[""overlapping_neighborhood""]"
+neighborhood_74ac6f84180113e94c187718,قاسم آباد,قاسم آباد,4,"[""overlapping_neighborhood""]"
+neighborhood_4ebe584a628d9754def22444,اوقاف,اوقاف,4,"[""overlapping_neighborhood""]"
+neighborhood_375fc04f518526c7d6501fbe,علم و صنعت,علم و صنعت,4,"[""overlapping_neighborhood""]"
+neighborhood_6c4c480ab27412b96b71e0bf,نارمک,نارمک,4,"[""overlapping_neighborhood""]"
+neighborhood_c23e17d456b2fd1c9aaedda7,قنات کوثر,قنات کوثر,4,"[""overlapping_neighborhood""]"
+neighborhood_99ba679051014f2edc76a8c4,مجید آباد,مجید آباد,4,"[""overlapping_neighborhood""]"
+neighborhood_9208b063ed3a7357a51882ad,کوهسار,کوهسار,4,[]
+neighborhood_4626e40646448440c88e5f72,تهرانپارس شرقی,تهرانپارس شرقی,4,"[""overlapping_neighborhood""]"
+neighborhood_db4b15d5d2e1b644946fd3d4,جوادیه,جوادیه,4,"[""overlapping_neighborhood""]"
+neighborhood_ad48c0049441504d945cb578,گلشن,گلشن,4,[]
+neighborhood_7e173e9ddebbfb2fc47e7c56,حکیمیه,حکیمیه,4,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_5c2bc5d88496893f4c500a3d,تهرانپارس غربی,تهرانپارس غربی,4,"[""overlapping_neighborhood""]"
+neighborhood_af6c35fb08ed77c9b87b4766,آپادانا,آپادانا,5,"[""source_district_mismatch""]"
+neighborhood_2052deb96322ebf3958f6352,بیمه,بیمه,5,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_68fc7cee46ae6d0da8a7ef17,اکباتان,اکباتان,5,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_6a6af99df8eaef6a3d041e8c,فردوس,فردوس,5,[]
+neighborhood_1816696a6b8e5bfe3213b2bd,ابوذر,ابوذر,5,[]
+neighborhood_18b6936720b2bfa122158033,مهران,مهران,5,[]
+neighborhood_7dc9f1ee4a1329c934685d3f,باغ فیض,باغ فیض,5,"[""overlapping_neighborhood""]"
+neighborhood_37c87d629f768188b825c3e3,پونک جنوبی,پونک جنوبی,5,"[""overlapping_neighborhood""]"
+neighborhood_62f56f3a99b5e7ac995f3eba,پونک شمالی,پونک شمالی,5,"[""overlapping_neighborhood""]"
+neighborhood_aea7b94c06f7cf903315ba20,المهدی,المهدی,5,[]
+neighborhood_a7f4e1889102ae6faa25dea3,سازمان برنامه شمالی,سازمان برنامه شمالی,5,[]
+neighborhood_5321542ed7d1614b3792f61c,شهرک پرواز,شهرک پرواز,5,[]
+neighborhood_51e535071f082669ff382c84,سازمان جنوبی,سازمان جنوبی,5,[]
+neighborhood_61de118e6cbea32bac9d5970,شاهین شمالی,شاهین شمالی,5,"[""overlapping_neighborhood""]"
+neighborhood_675f2d653bc29c529d26c2b4,جنت اباد مرکز,جنت اباد مرکز,5,[]
+neighborhood_d90668873e98858da6175e24,جنت آباد شمالی,جنت آباد شمالی,5,"[""overlapping_neighborhood""]"
+neighborhood_8becc32295e773d265992c36,ارم,ارم,5,"[""overlapping_neighborhood""]"
+neighborhood_0301432fe31c5e9c0ed7ef55,سازما آب,سازما آب,5,[]
+neighborhood_13bcd977dde33d39b43ee664,شهرزیبا,شهرزیبا,5,[]
+neighborhood_d1b961bc1dc3a8be01834c91,شهران جنوبی,شهران جنوبی,5,[]
+neighborhood_3912cc3735e8e60653431e37,اندیشه,اندیشه,5,"[""overlapping_neighborhood""]"
+neighborhood_5d9d765ebfb9b5d242a1424b,کن,کن,5,[]
+neighborhood_e0f641ca73b7d09dbf999766,بهاران,بهاران,5,"[""overlapping_neighborhood""]"
+neighborhood_cc3be30d2ea381b3f3088ffe,شهران شمالی,شهران شمالی,5,[]
+neighborhood_3aefb106aa9618281623ee79,شهرک نفت,شهرک نفت,5,[]
+neighborhood_a82fafb64cd0fe8d7e1186c0,شهرک کوهسار,شهرک کوهسار,5,[]
+neighborhood_39da761034b1e7e5328cbb9c,مرادآباد,مرادآباد,5,[]
+neighborhood_e54143d11e83e60535ad91ad,حصارک,حصارک,5,[]
+neighborhood_7a39dcb34bac948e7026eb42,جنت آباد جنوبی,جنت آباد جنوبی,5,[]
+neighborhood_0e77547d03a526b3b5171c03,ایرانشهر,ایرانشهر,6,[]
+neighborhood_e9248b5192dda3a60bad9b03,آرزانتین-ساعی,آرزانتین-ساعی,6,"[""overlapping_neighborhood""]"
+neighborhood_d0b9af7e3efcd49813a4a636,بهجت آباد,بهجت آباد,6,"[""overlapping_neighborhood""]"
+neighborhood_5976a2488b21155bacd2f782,پارک لاله,پارک لاله,6,"[""overlapping_neighborhood""]"
+neighborhood_7e3f18d40f5dff809fc2c390,دانشگاه تهران,دانشگاه تهران,6,"[""overlapping_neighborhood""]"
+neighborhood_161dbb5d9b0e12d06d0cbe78,شریعتی,شریعتی,6,"[""overlapping_neighborhood""]"
+neighborhood_106f0baf4cf011f83b5730c7,سنایی,سنایی,6,"[""overlapping_neighborhood""]"
+neighborhood_047804a24a4732af644fc05c,شیراز,شیراز,6,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_20b585baa3356a25269b9d3c,فاطمی,فاطمی,6,"[""overlapping_neighborhood""]"
+neighborhood_4620f04cdbcc9d9fe88f0a90,قزل قلعه,قزل قلعه,6,"[""overlapping_neighborhood""]"
+neighborhood_7bcd8d8b5ead0f4b3655651b,کشاورز غربی,کشاورز غربی,6,[]
+neighborhood_c5e2f59f5f6befe470f0aedb,گاندی,گاندی,6,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_0a1917fa9e8a73f1b3887fe7,میدان جهاد,میدان جهاد,6,[]
+neighborhood_9dbc1e4b6588b6509403f243,میدان ولیعصر,میدان ولیعصر,6,"[""overlapping_neighborhood""]"
+neighborhood_e22457587cd2e67939e24e84,نصرت,نصرت,6,"[""overlapping_neighborhood""]"
+neighborhood_501de4b0a0a5c35d0b85d0e4,یوسف آباد,یوسف آباد,6,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_5a093715a154e187327b8da9,نیلوفر- شهید قندی,نیلوفر- شهید قندی,7,[]
+neighborhood_75a841ce070b3afc36430a6c,عباس آباد- اندیشه,عباس آباد- اندیشه,7,"[""overlapping_neighborhood""]"
+neighborhood_da95b5d82c21c403f8793df3,باغ صبا- سهروردی,باغ صبا- سهروردی,7,[]
+neighborhood_2d03cd74d3d7b83ef1be5383,امجدیه- خاقانی,امجدیه- خاقانی,7,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_e39b6a96e31d0619771065c7,بهار,بهار,7,[]
+neighborhood_c2b566b8689cd70a03fdb8c5,خواجه نصیر- حقوقی,خواجه نصیر- حقوقی,7,"[""overlapping_neighborhood""]"
+neighborhood_c389572d0e05b040046e86f1,کاج,کاج,7,"[""overlapping_neighborhood""]"
+neighborhood_f5ea16ab434fb23c2792798c,خواجه نظام غربی,خواجه نظام غربی,7,"[""overlapping_neighborhood""]"
+neighborhood_5136d626daf9113b42c64d56,خواجه نظام شرقی,خواجه نظام شرقی,7,[]
+neighborhood_6e33311ddd49dbcee88218ef,گرگان,گرگان,7,[]
+neighborhood_dfd80bb49e7c951b1613eda8,نظام آباد,نظام آباد,7,"[""overlapping_neighborhood""]"
+neighborhood_8352fa2d06857d4df6c18e52,شارق غربی,شارق غربی,7,[]
+neighborhood_47d835fc0ad3e7cf11d4b74b,شارق شرقی,شارق شرقی,7,"[""overlapping_neighborhood""]"
+neighborhood_8a79142578afb5a52b94ea08,دهقان,دهقان,7,[]
+neighborhood_3818ab02e032e64aa40dfa7a,ارامنه جنوبی,ارامنه جنوبی,7,[]
+neighborhood_25262c7eab3130f2cc948cc3,ارامنه شمالی,ارامنه شمالی,7,"[""overlapping_neighborhood""]"
+neighborhood_4ff33e9895994ea375f45252,قصر,قصر,7,"[""overlapping_neighborhood""]"
+neighborhood_3c6cb49c8c7f0d36da929136,حشمتیه,حشمتیه,7,"[""overlapping_neighborhood""]"
+neighborhood_f0b160e9fbb16959f64733c9,دبستان- مجیدیه,دبستان- مجیدیه,7,"[""overlapping_neighborhood""]"
+neighborhood_2a18d46d522f9358f2849c20,مجیدیه,مجیدیه,8,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_7bd021d9477a3eccc21b652e,کرمان,کرمان,8,"[""overlapping_neighborhood""]"
+neighborhood_d23adfdd269603730e8a51c0,فدک,فدک,8,"[""overlapping_neighborhood""]"
+neighborhood_64abcb6fc9e066233efc6ee0,هفت حوض,هفت حوض,8,"[""overlapping_neighborhood""]"
+neighborhood_03af25be75eb3492dc1d5748,مدائن,مدائن,8,"[""overlapping_neighborhood""]"
+neighborhood_0e96f2a2d16bb9890a98b384,دردشت,دردشت,8,"[""overlapping_neighborhood""]"
+neighborhood_91fc32e635f23c10b59dd5f1,تهرانپارس,تهرانپارس,8,"[""overlapping_neighborhood""]"
+neighborhood_cdf38032584092719d9a267a,لشگر غربی,لشگر غربی,8,"[""source_district_mismatch""]"
+neighborhood_588b1141ca62d7a41b2e51e6,تسحیلات,تسحیلات,8,[]
+neighborhood_d967207b3a7efa6e8f471f33,وحیدیه,وحیدیه,8,"[""source_district_mismatch""]"
+neighborhood_5d9d3736e16ba3e84cea5140,زرکش,زرکش,8,[]
+neighborhood_0e6ad472d0a6edef571beaaf,نارمک جنوبی,نارمک جنوبی,8,[]
+neighborhood_f9ec3cb69aabcb267fcae91f,لشگر شرقی,لشگر شرقی,8,[]
+neighborhood_99a65959ba8824b42fd6c8e1,دکترهوشیار,دکترهوشیار,9,"[""overlapping_neighborhood""]"
+neighborhood_778c26a4513b031e1ee9b8c5,استادمعین,استادمعین,9,"[""overlapping_neighborhood""]"
+neighborhood_99841cd43439d6eff5c9aada,شهید دست غیب,شهید دست غیب,9,[]
+neighborhood_fc2e6e6ca2999c0f1dfd52c3,امام زاده عبداله,امام زاده عبداله,9,[]
+neighborhood_2a21238a9baa13105c07ce17,شمشیری,شمشیری,9,[]
+neighborhood_43e678f3f5c3e6c71e8e839f,مهرابادجنوبی,مهرابادجنوبی,9,[]
+neighborhood_999d0eb6747f088675d14cb5,سرآسیاب مهرآباد,سرآسیاب مهرآباد,9,[]
+neighborhood_be2509feba8567eaaf87afba,عمار,عمار,9,"[""overlapping_neighborhood""]"
+neighborhood_86581f05c320f822b9ae329c,فرودگاه,فرودگاه,9,[]
+neighborhood_05b0b120e0da29c60460736b,فتح,فتح,9,"[""overlapping_neighborhood""]"
+neighborhood_24283b57888f53fc62720639,سلسبیل شمالی,سلسبیل شمالی,10,"[""overlapping_neighborhood""]"
+neighborhood_d5e03a58e83f201661dc5bd6,سلسبیل جنوبی,سلسبیل جنوبی,10,[]
+neighborhood_64aebd5529dfeba2f6457eb5,بریانک,بریانک,10,"[""overlapping_neighborhood""]"
+neighborhood_f7f2e52b5e6dcddbafd8c1c4,هفت چنار,هفت چنار,10,"[""overlapping_neighborhood""]"
+neighborhood_52bad88454ea974b32360f58,سلیمانی تیموری,سلیمانی تیموری,10,[]
+neighborhood_945e00bf54939aa745050704,شبیری-جی,شبیری-جی,10,"[""source_district_mismatch""]"
+neighborhood_bd1afe758fcf8de661e1aa4a,کارون جنوبی,کارون جنوبی,10,[]
+neighborhood_d811bd6c8cd1ccd3e3f8a59f,کارون شمالی,کارون شمالی,10,[]
+neighborhood_50f54d5a808a82d60750bd5e,زنجان جنوبی,زنجان جنوبی,10,"[""source_district_mismatch""]"
+neighborhood_d43f6b94263fbd3051a73d50,هاشمی,هاشمی,10,"[""source_district_mismatch""]"
+neighborhood_0b36dbe89b5a92d7e9f121bf,جمهوری,جمهوری,11,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_dbefb2a2826d60fcf8f375d2,جمالزاده-حشمت دوله,جمالزاده-حشمت دوله,11,[]
+neighborhood_83f5b968d12a312f05355dcd,فلسطین-انقلاب,فلسطین-انقلاب,11,"[""source_district_mismatch""]"
+neighborhood_d93ae7bd23f6d32c00b4f775,شیخ هادی,شیخ هادی,11,[]
+neighborhood_d28ebe22711244e99c2767e5,اسکندری,اسکندری,11,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_c70a402ec0e6002ecf2ae22f,میدان حر,میدان حر,11,[]
+neighborhood_a5245301269b8de543c7d647,آذربایجان,آذربایجان,11,[]
+neighborhood_486f6d590a1fb65a02967047,منیریه,منیریه,11,[]
+neighborhood_e19cc66e54956f77f25cd42d,خرمشهر,خرمشهر,11,"[""source_district_mismatch""]"
+neighborhood_00398efedc8ae951e7f1276b,مخصوص,مخصوص,11,[]
+neighborhood_d8a2b7ab5b580db8fa6bb5b6,امیریه,امیریه,11,[]
+neighborhood_9da885650247600c2b307aef,هلال احمر,هلال احمر,11,[]
+neighborhood_733952eaebe5f7c2c04ba3eb,قلمستان-برادران جوادیان,قلمستان-برادران جوادیان,11,[]
+neighborhood_bfcb38333b528d12c369096a,فروزش-امیربهادر,فروزش-امیربهادر,11,[]
+neighborhood_1d52a29726126c614e600b66,عباسی,عباسی,11,"[""source_district_mismatch""]"
+neighborhood_6216e8f410050f29a9cd4d5f,انبار نفت,انبار نفت,11,[]
+neighborhood_0a97b5eaa87e7b61754f09bd,مختاری,مختاری,11,[]
+neighborhood_80c873ca9ddd54b816e97e5c,راه آهن,راه آهن,11,[]
+neighborhood_1b581443803b7fd7552754fe,فردوسی,فردوسی,12,[]
+neighborhood_e3ad24116a49cb979ef360ef,بهارستان,بهارستان,12,[]
+neighborhood_7fa1806700ccb7f6f15be78d,دروازه شمیران,دروازه شمیران,12,"[""source_district_mismatch""]"
+neighborhood_4553d5f56ec05c27b81c2d1c,ایران,ایران,12,[]
+neighborhood_c030e5a166e453248baf8bbf,سنگلج,سنگلج,12,"[""source_district_mismatch""]"
+neighborhood_c0d23210be67b4d1ce64e915,ارگ پامنار,ارگ پامنار,12,[]
+neighborhood_2a40336bd0a84ac5e87a83d4,امامزاده یحیی,امامزاده یحیی,12,[]
+neighborhood_ea93d4d89ef31b0a4014eb57,آبشار,آبشار,12,[]
+neighborhood_42b4b80f2c4dd9ddf6b1f16f,تختی,تختی,12,"[""overlapping_neighborhood""]"
+neighborhood_d22393ca6d664d96a996e6bc,شهید هرندی,شهید هرندی,12,"[""overlapping_neighborhood""]"
+neighborhood_d1f5ed89d9a51060c2632671,کوثر,کوثر,12,"[""overlapping_neighborhood""]"
+neighborhood_aeee1c0b108c78ca6a24890a,قیام,قیام,12,"[""overlapping_neighborhood""]"
+neighborhood_d594751fdaf3cf45337ed6a4,شهید اسدی,شهید اسدی,13,"[""source_district_mismatch""]"
+neighborhood_ec98b21980150cdf7310f283,صفا,صفا,13,[]
+neighborhood_e7808ef30625f19c27243e1b,زاهد گیلانی,زاهد گیلانی,13,[]
+neighborhood_c09e3985b428bd9c01600003,نیروهوایی,نیروهوایی,13,[]
+neighborhood_6a46ade7d4e9c4f6fab8e4dd,قاسم آباد,قاسم آباد,13,"[""source_district_mismatch""]"
+neighborhood_d31aaf583ef058912fd14a4f,دهقان,دهقان,13,[]
+neighborhood_990892f4e2786703d4d084ae,پیروزی,پیروزی,13,[]
+neighborhood_43a4c62bbd386189f4807c35,امامت,امامت,13,[]
+neighborhood_828c76aae4882ccf063e0fea,شورا,شورا,13,[]
+neighborhood_b2d70533c7254c27f727f00b,حافظیه,حافظیه,13,[]
+neighborhood_26af28cafd712d9553685d24,آشتیانی,آشتیانی,13,"[""source_district_mismatch""]"
+neighborhood_6f0eebaaad98c452e8016e13,زینبیه,زینبیه,13,"[""source_district_mismatch""]"
+neighborhood_199a908ba8744af17c708b7a,سرخه حصار,سرخه حصار,13,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_c929b9d699959d8ed4e41194,شکوفه,شکوفه,14,"[""source_district_mismatch""]"
+neighborhood_2ecced3afa4c9572eb4b6f5b,جابری,جابری,14,[]
+neighborhood_0cc25244d1b62bea39d3c549,چهارصد دستگاه,چهارصد دستگاه,14,[]
+neighborhood_853ad3fea38382cc8f8df48f,نیکام,نیکام,14,[]
+neighborhood_fc2880fb6bbb1cd1d70ce9a0,دژکام,دژکام,14,[]
+neighborhood_32cd0bc999a23b907098b7d1,مینای شمالی,مینای شمالی,14,[]
+neighborhood_c8f5479d0569ce0156281f93,آهنگران,آهنگران,14,[]
+neighborhood_a1b958ca90a2737062bfe7dc,شاهین,شاهین,14,[]
+neighborhood_e0b4c7277a3aaed22dfbd70a,بروجردی,بروجردی,14,[]
+neighborhood_12231b7a031d071020daf34d,سرآسیاب دولاب,سرآسیاب دولاب,14,[]
+neighborhood_5c71f021d1e3974266dd45cd,شیوا,شیوا,14,[]
+neighborhood_f2f81175f2489f08d62aa911,شکیب,شکیب,14,"[""overlapping_neighborhood""]"
+neighborhood_c9a2f74df1007550b088295a,صددستگاه,صددستگاه,14,"[""source_district_mismatch""]"
+neighborhood_597e74a07ce9005a4e96d7c2,فرزانه,فرزانه,14,[]
+neighborhood_3983f18fc68128ba0c389377,نبی اکرم,نبی اکرم,14,[]
+neighborhood_3a4573c47a880cbd473d574a,قیام,قیام,14,"[""overlapping_neighborhood""]"
+neighborhood_dea94245f33947a2f88aaa93,پرستار,پرستار,14,"[""source_district_mismatch""]"
+neighborhood_75a91551f5a1c17e9b818a51,سیزده آبان,سیزده آبان,14,[]
+neighborhood_46c1935f2f5d017c0e3dece2,ابوذز,ابوذز,14,[]
+neighborhood_a793c2daf31d479b1731dd9c,تاکسیرانی,تاکسیرانی,14,[]
+neighborhood_8201403da1471b36d14b417d,قصر فیروزه,قصر فیروزه,14,[]
+neighborhood_fea4966906368e5ab13426c3,مینای جنوبی,مینای جنوبی,14,[]
+neighborhood_4b4ab632e069130b847a6584,خاوران,خاوران,14,"[""overlapping_neighborhood""]"
+neighborhood_8f1c155b3e752430cb1d1284,دولاب,دولاب,14,"[""overlapping_neighborhood""]"
+neighborhood_d67893239018a8acddad2c5d,اردیبهشت,اردیبهشت,15,"[""source_district_mismatch""]"
+neighborhood_abf3c8653d698a7b634c52b9,افسریه,افسریه,15,[]
+neighborhood_94fb82707d372a605705a87c,افسریه جنوبی,افسریه جنوبی,15,"[""overlapping_neighborhood""]"
+neighborhood_76a1219b7f04aca7983e941d,اسلام آباد والفجر,اسلام آباد والفجر,15,"[""source_district_mismatch""]"
+neighborhood_73f9e456b537d2058e5a9b17,ابوذر,ابوذر,15,"[""overlapping_neighborhood""]"
+neighborhood_bb33db2bcc0ed9064072ae95,مسعودیه,مسعودیه,15,"[""source_district_mismatch""]"
+neighborhood_584b8d531973ca899872782f,اتابک,اتابک,15,[]
+neighborhood_049d2d76d043552a2757b2ab,هاشم آباد,هاشم آباد,15,[]
+neighborhood_2d4a64dd425550a5f0d2f96c,مینایی,مینایی,15,[]
+neighborhood_aeddd16f04d7d93ecb3555c0,طیب,طیب,15,"[""source_district_mismatch""]"
+neighborhood_33bfed6a293f2b17fd93cd3e,ولیعصر-بی سیم,ولیعصر-بی سیم,15,[]
+neighborhood_aa1e3b25a1a5c3bab92ba42d,شوش,شوش,15,"[""source_district_mismatch""]"
+neighborhood_471316061e3eb3163bc3523c,مظاهری,مظاهری,15,[]
+neighborhood_d590f6e70953dbfdd761d681,شهید مطهری,شهید مطهری,15,[]
+neighborhood_0c0acd2dbd619367e05bdf2e,شهرک رضویه,شهرک رضویه,15,"[""source_district_mismatch""]"
+neighborhood_86cd7b3518f475ffcd82f975,مشیریه,مشیریه,15,[]
+neighborhood_6dcf9ab627ca36896bb1400f,بروجردی دهقان,بروجردی دهقان,15,[]
+neighborhood_bc0a2db64e3af9d6a9bc3c1c,کیانشهر جنوبی,کیانشهر جنوبی,15,"[""overlapping_neighborhood""]"
+neighborhood_430714933b01063f0ef9b386,کیانشهر شمالی,کیانشهر شمالی,15,[]
+neighborhood_7e21523b6a1562680a7f620a,باغ آذری,باغ آذری,16,[]
+neighborhood_1566246ee59cfe88630064ee,جوادیه,جوادیه,16,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_f38e4a48de3f66dba62ffd58,شهرک بعثت,شهرک بعثت,16,[]
+neighborhood_117635dc40a22d2e5d27831e,خزانه,خزانه,16,[]
+neighborhood_a86ae0c3d674eb0a2a236933,علی آباد شمالی,علی آباد شمالی,16,[]
+neighborhood_9a52f9b3512a48294c96f780,نازی اباد,نازی اباد,16,[]
+neighborhood_45627a621a324895dde86cfa,علی اباد جنوبی,علی اباد جنوبی,16,[]
+neighborhood_2c0fe67b598b3c70cd00131d,تختی,تختی,16,[]
+neighborhood_0719fba6cfa55f152b3d8f87,یاخچی آباد,یاخچی آباد,16,[]
+neighborhood_54b5ddb10e492263324ebf85,بلورسازی,بلورسازی,17,"[""source_district_mismatch""]"
+neighborhood_d48f30584d2fcac42c5c358c,باغ خزانه,باغ خزانه,17,"[""source_district_mismatch""]"
+neighborhood_599064d6076cbe364501dcc8,امام زاده حسن,امام زاده حسن,17,"[""source_district_mismatch""]"
+neighborhood_a088b65c8dc4baf8965171de,آذری,آذری,17,"[""source_district_mismatch""]"
+neighborhood_468ac08f0acf3d1cba079e7b,مقدم,مقدم,17,[]
+neighborhood_5ce945c520c9ac48448b398e,ابوذر شرقی,ابوذر شرقی,17,[]
+neighborhood_00e7fe66881c31676c9e2b64,ابوذر غربی,ابوذر غربی,17,[]
+neighborhood_9a2a2b2a4ae2094107e7980a,گلچین,گلچین,17,[]
+neighborhood_e894b376da5cb5009a893775,جلیلی,جلیلی,17,[]
+neighborhood_701d50a19ff96f458ba4e49a,سجاد,سجاد,17,[]
+neighborhood_877a879d69808dc004f63ec1,یافت آباد,یافت آباد,17,"[""source_district_mismatch""]"
+neighborhood_65ba1b86b8f56f6519e424af,وصفنارد,وصفنارد,17,"[""source_district_mismatch""]"
+neighborhood_9ff6f1601e5f8e6f7fd7a38c,زمزم,زمزم,17,[]
+neighborhood_ee513b576f9e223cdcc9bae7,زهتابی,زهتابی,17,[]
+neighborhood_50e8e1bcd7bd26788a599e03,تولید دارو,تولید دارو,18,"[""source_district_mismatch""]"
+neighborhood_73ad316cfb60074bf24300ba,شهرک امام خمینی,شهرک امام خمینی,18,"[""overlapping_neighborhood""]"
+neighborhood_7c104359d9af33586b95c4d3,هفده شهریور,هفده شهریور,18,"[""source_district_mismatch""]"
+neighborhood_5280cf44cbe03aad803063c6,شمس آباد,شمس آباد,18,[]
+neighborhood_c3c934c01650eb1962ef5bdd,شادآباد,شادآباد,18,[]
+neighborhood_1984d3ecd8ae6ba1e58b79fa,خلیج فارس,خلیج فارس,18,[]
+neighborhood_7f8f8abe9e34651234b19e45,خلیج فارس شمالی,خلیج فارس شمالی,18,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_6208ed0af324884e647ffad6,بهداشت,بهداشت,18,[]
+neighborhood_7b30e4356c8d103fc73138b8,ولیعصر شمالی,ولیعصر شمالی,18,"[""overlapping_neighborhood""]"
+neighborhood_bb0597eb31a9d3929ca5390b,ولیعصر جنوبی,ولیعصر جنوبی,18,"[""overlapping_neighborhood""]"
+neighborhood_ca6a7773e95e85da66788f60,صادقیه,صادقیه,18,[]
+neighborhood_c07c31263bce6c8ccd3201e7,شهیدرجایی,شهیدرجایی,18,[]
+neighborhood_7f72b6bd67af112187eaec59,صاحب الزمان,صاحب الزمان,18,[]
+neighborhood_e012f66a4e57291047052664,یافت آباد جنوبی,یافت آباد جنوبی,18,[]
+neighborhood_f5bdc555a9f43c719879cfb9,فردوس-18,فردوس-18,18,"[""source_district_mismatch""]"
+neighborhood_2a46ec1751a377f9259a578a,یافت آباد شمالی,یافت آباد شمالی,18,[]
+neighborhood_17c41de758ff868f036f3d8a,بهمنیار,بهمنیار,19,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_b76cd7b0acafc809b2658e8b,خانی آباد جنوبی,خانی آباد جنوبی,19,"[""overlapping_neighborhood""]"
+neighborhood_c6f84c88c6e928e2b62e67f4,شریعتی شمالی,شریعتی شمالی,19,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_f3dda70df28709fe559e0448,اسفندیاریو بستان,اسفندیاریو بستان,19,"[""overlapping_neighborhood""]"
+neighborhood_42b88d73dcec0c1d377b644b,شهیدکاظمی,شهیدکاظمی,19,[]
+neighborhood_fc09760960704e4b993737ac,نعمت آباد,نعمت آباد,19,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_fb7ebb37ddd4ae4d5393ce85,اسماعیل آباد,اسماعیل آباد,19,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_06351eadef38164a18e66a01,دولت آباد,دولت آباد,20,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_01b2c87f5f80039c0a4b9a1c,شهادت,شهادت,20,"[""source_district_mismatch""]"
+neighborhood_764869d9e39f78dec42406a4,صفائیه چشمه علی,صفائیه چشمه علی,20,[]
+neighborhood_5413cf95ddb93919c9919916,منصوریه و منگل,منصوریه و منگل,20,[]
+neighborhood_40c8147ee3c301492dd63935,ابن باویه و ظهیر آباد,ابن باویه و ظهیر آباد,20,"[""overlapping_neighborhood""]"
+neighborhood_b9de85208fb157c4ceb117f4,شهید غیوری,شهید غیوری,20,"[""overlapping_neighborhood""]"
+neighborhood_da3e72364592726826b2554e,اقدسیه,اقدسیه,20,[]
+neighborhood_97e1c0e41aa65b5b773097f6,جوانمرد قصاب,جوانمرد قصاب,20,"[""source_district_mismatch""]"
+neighborhood_4efe71df031a69ed19889186,استخر,استخر,20,"[""overlapping_neighborhood""]"
+neighborhood_3553b2047c5b5a53ad00d4f7,سرتخت,سرتخت,20,[]
+neighborhood_eaa277aa787856ef032d25ae,نفر آباد و هاشم آباد,نفر آباد و هاشم آباد,20,"[""source_district_mismatch""]"
+neighborhood_06f2ea6273e0901ac630dff2,ولی آباد,ولی آباد,20,"[""overlapping_neighborhood""]"
+neighborhood_18574d75a6df9e9b7f75741f,فیروزآبادی,فیروزآبادی,20,"[""overlapping_neighborhood""]"
+neighborhood_9ba2a3694dc82ee36945efd0,دیلمان,دیلمان,20,"[""overlapping_neighborhood""]"
+neighborhood_987a0a60fbd62bd41e456166,حمزه آباد,حمزه آباد,20,[]
+neighborhood_dd21e19843f49a65d3ac2507,سیزده آبان,سیزده آبان,20,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_2e5bcc7a1fdf9fe7a6a1ceb8,تهرانسر مرکزی,تهرانسر مرکزی,21,[]
+neighborhood_b9f789c062b304b2df87b8eb,شهرک پاسداران,شهرک پاسداران,21,[]
+neighborhood_cf70ec27534eb231d60138a9,تهرانسر شمالی,تهرانسر شمالی,21,[]
+neighborhood_004ef5f00e017cfcba3aef81,تهرانسر شرقی,تهرانسر شرقی,21,[]
+neighborhood_76b058e35a8b63ff8fc7dc49,باشگاه نفت,باشگاه نفت,21,[]
+neighborhood_2c3a0ced33cdd845645744fb,تهرانسر غربی,تهرانسر غربی,21,[]
+neighborhood_5ca7c2acc549c435f1a40241,شهرک دریا,شهرک دریا,21,[]
+neighborhood_add6354a2704d8baf26e1d95,شهرک فرهنگیان,شهرک فرهنگیان,21,"[""source_district_mismatch""]"
+neighborhood_90d70298b8b04f38aa2e1d3a,شهرک آزادی,شهرک آزادی,21,"[""source_district_mismatch""]"
+neighborhood_55215a1bdb5c8527004d9b58,شهرک استقلال,شهرک استقلال,21,[]
+neighborhood_a591c9427d9e185a19595a47,شهرک دانشگاه تهران,شهرک دانشگاه تهران,21,"[""source_district_mismatch""]"
+neighborhood_424edfd655782d431ca74555,چیتگرشمالی,چیتگرشمالی,21,"[""source_district_mismatch""]"
+neighborhood_a3fa77d21b1cf32f73fad2a0,شهرک شهرداری,شهرک شهرداری,21,"[""source_district_mismatch""]"
+neighborhood_f542df7ab8a62bb419f07146,ویلاشهر,ویلاشهر,21,"[""source_district_mismatch""]"
+neighborhood_a44803a789cd3d2503b12378,شهرک غزالی,شهرک غزالی,21,"[""source_district_mismatch""]"
+neighborhood_b8ba943b69d64a34e376a38d,وردآورد,وردآورد,21,"[""source_district_mismatch""]"
+neighborhood_71aaaeb15021a682b1383b0b,چیتگر,چیتگر,22,"[""source_district_mismatch""]"
+neighborhood_cc152c5e0c4d8fdd725a1576,دهکده المپیک,دهکده المپیک,22,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_4f13e21683bddcac481703d4,امید دژبان,امید دژبان,22,"[""overlapping_neighborhood""]"
+neighborhood_8fbce1c5c06c3296928bf989,زیبادشت بالا,زیبادشت بالا,22,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_1d956095e5c2daea747f6bcd,گلستان شرقی,گلستان شرقی,22,[]
+neighborhood_21ad325f10c3054f32296bfe,شهرک صدرا,شهرک صدرا,22,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_100d40b0c66ee4dcce54ac41,گلستان غربی,گلستان غربی,22,"[""overlapping_neighborhood""]"
+neighborhood_157458a6201aa890b9fc1d86,دریاچه,دریاچه,22,"[""overlapping_neighborhood""]"
+neighborhood_b757fa7933ccc5029fe3a024,شهرک شهید باقری,شهرک شهید باقری,22,"[""overlapping_neighborhood""]"
+neighborhood_848c3254cc8412c1791c52be,آزادشهر-پیکان شهر,آزادشهر-پیکان شهر,22,"[""source_district_mismatch""]"
+neighborhood_5d8ac81e571594ea1006a521,شهرک دانشگاه صنعتی شریف,شهرک دانشگاه صنعتی شریف,22,"[""geometry_repaired"", ""source_district_mismatch""]"
+neighborhood_812fc8832d8e81db5d8e5289,علائین,علائین,20,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_2310fb051c3b6f78474f28f4,تقی آباد,تقی آباد,20,"[""source_district_mismatch""]"
+neighborhood_be691a614c00dd591bd2489c,عباس آباد,عباس آباد,20,"[""source_district_mismatch""]"
+neighborhood_1f6e0fa4f5c15d0ea7985961,بهشتی,بهشتی,20,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_3c299e40f8bcfc7fd1fb02ef, خانی آباد شمالی,خانی آباد شمالی,19,"[""overlapping_neighborhood""]"
+neighborhood_8d0529710cd78ddfa9dd29c8, شریعتی جنوبی,شریعتی جنوبی,19,"[""overlapping_neighborhood""]"
+neighborhood_689e47dfb87a214f78fe76be,شکوفه,شکوفه,19,"[""overlapping_neighborhood""]"
+neighborhood_d1f56288ee5ca40472747df6,عبدل آباد,عبدل آباد,19,"[""overlapping_neighborhood""]"
+neighborhood_89ff2f8b47d3f757128aaaf2,دولتخواه جنوبی,دولتخواه جنوبی,19,"[""overlapping_neighborhood""]"
+neighborhood_f172cedf1825fb7d011c137d,دولتخواه شمالی,دولتخواه شمالی,19,"[""overlapping_neighborhood"", ""source_district_mismatch""]"
+neighborhood_dd81f08df48a8eab72967e85,شهدای گمنام,شهدای گمنام,14,"[""overlapping_neighborhood""]"
+neighborhood_94c56d361443fbbc721720ae,حسین آباد دولاب (آهنگ غربی),حسین آباد دولاب (آهنگ غربی),14,"[""overlapping_neighborhood""]"
+neighborhood_5f1cf41fd57a5fb9dccfbafb,سیروس,سیروس,12,[]
+neighborhood_1c1a1ea504208817935a4121,بازار,بازار,12,[]
+neighborhood_bf2ef633e7b1dbe8803a1990,والفجر,والفجر,6,"[""source_district_mismatch""]"
+neighborhood_b8b2a85557e01cca9bd13512,امیرآباد,امیرآباد,6,"[""overlapping_neighborhood"", ""source_district_mismatch""]"

@@ -1,0 +1,414 @@
+{
+  "status": "passed",
+  "measured_at": "2026-10-20T20:28:33.968545+00:00",
+  "fixture_version": "persian-property-paraphrases-1",
+  "label_origin": "Authored synthetic factual relevance fixture; not independent user satisfaction labels",
+  "collection": "homesanj_relevance_fixture_v1",
+  "model": "Xenova/multilingual-e5-small",
+  "model_revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+  "index_version": "Xenova/multilingual-e5-small@761b726dd34fb83930e26aab4e9ac3899aa1fa78:q8:mean-l2:384:known-facts-fa-1",
+  "fixture_properties": 8,
+  "query_count": 8,
+  "policy": "Cosine vector ranking; FTS5 BM25 OR terms; RRF constant 60 over each full fixture ranking",
+  "limitations": [
+    "Small authored synthetic fixture; not user relevance labels or a production holdout.",
+    "Measures paraphrase retrieval only; does not establish Hit Rate improvement or hard eligibility.",
+    "The encoder may be warm from indexing; latency includes actual service work."
+  ],
+  "summary": {
+    "vector_recall_at_3": 0.875,
+    "vector_recall_at_5": 0.875,
+    "fts_recall_at_3": 0.4375,
+    "fts_recall_at_5": 0.6875,
+    "hybrid_recall_at_3": 0.625,
+    "hybrid_recall_at_5": 1.0
+  },
+  "latency_ms": {
+    "semantic_p50": 302.92,
+    "semantic_p95": 384.68,
+    "fts_p50": 0.22,
+    "fts_p95": 1.32
+  },
+  "index_report": {
+    "status": "healthy",
+    "canonical_count": 8,
+    "indexed_count": 8,
+    "missing_count": 0,
+    "stale_count": 0,
+    "orphan_count": 0,
+    "wrong_version_count": 0,
+    "index_version": "Xenova/multilingual-e5-small@761b726dd34fb83930e26aab4e9ac3899aa1fa78:q8:mean-l2:384:known-facts-fa-1",
+    "collection": "homesanj_relevance_fixture_v1",
+    "upserted_count": 8,
+    "deleted_count": 0,
+    "verified_at": "2026-10-20T20:28:27.742853+00:00",
+    "latency_ms": 12936.58
+  },
+  "queries": [
+    {
+      "query_id": "q1",
+      "query_text": "دو اتاق با جای خودرو و بالابر",
+      "relevant_ids": [
+        "fixture_p1"
+      ],
+      "semantic_status": "ok",
+      "semantic_latency_ms": 309.48,
+      "fts_latency_ms": 1.32,
+      "vector_ids": [
+        "fixture_p5",
+        "fixture_p3",
+        "fixture_p4",
+        "fixture_p6",
+        "fixture_p2",
+        "fixture_p1",
+        "fixture_p7",
+        "fixture_p8"
+      ],
+      "fts_ids": [
+        "fixture_p1",
+        "fixture_p2",
+        "fixture_p3",
+        "fixture_p4",
+        "fixture_p5",
+        "fixture_p6",
+        "fixture_p7",
+        "fixture_p8"
+      ],
+      "hybrid_ids": [
+        "fixture_p3",
+        "fixture_p5",
+        "fixture_p1",
+        "fixture_p2",
+        "fixture_p4",
+        "fixture_p6",
+        "fixture_p7",
+        "fixture_p8"
+      ],
+      "vector_recall_at_3": 0.0,
+      "vector_recall_at_5": 0.0,
+      "fts_recall_at_3": 1.0,
+      "fts_recall_at_5": 1.0,
+      "hybrid_recall_at_3": 1.0,
+      "hybrid_recall_at_5": 1.0
+    },
+    {
+      "query_id": "q2",
+      "query_text": "واحد کوچک یک اتاقه با اجاره پایین",
+      "relevant_ids": [
+        "fixture_p3",
+        "fixture_p6"
+      ],
+      "semantic_status": "ok",
+      "semantic_latency_ms": 279.6,
+      "fts_latency_ms": 0.23,
+      "vector_ids": [
+        "fixture_p3",
+        "fixture_p6",
+        "fixture_p8",
+        "fixture_p4",
+        "fixture_p5",
+        "fixture_p7",
+        "fixture_p2",
+        "fixture_p1"
+      ],
+      "fts_ids": [
+        "fixture_p1",
+        "fixture_p2",
+        "fixture_p3",
+        "fixture_p4",
+        "fixture_p5",
+        "fixture_p6",
+        "fixture_p7",
+        "fixture_p8"
+      ],
+      "hybrid_ids": [
+        "fixture_p3",
+        "fixture_p6",
+        "fixture_p4",
+        "fixture_p1",
+        "fixture_p2",
+        "fixture_p5",
+        "fixture_p8",
+        "fixture_p7"
+      ],
+      "vector_recall_at_3": 1.0,
+      "vector_recall_at_5": 1.0,
+      "fts_recall_at_3": 0.5,
+      "fts_recall_at_5": 0.5,
+      "hybrid_recall_at_3": 1.0,
+      "hybrid_recall_at_5": 1.0
+    },
+    {
+      "query_id": "q3",
+      "query_text": "خانه بزرگ سه خوابه با آسانسور",
+      "relevant_ids": [
+        "fixture_p4"
+      ],
+      "semantic_status": "ok",
+      "semantic_latency_ms": 294.72,
+      "fts_latency_ms": 0.72,
+      "vector_ids": [
+        "fixture_p4",
+        "fixture_p3",
+        "fixture_p5",
+        "fixture_p8",
+        "fixture_p7",
+        "fixture_p6",
+        "fixture_p2",
+        "fixture_p1"
+      ],
+      "fts_ids": [
+        "fixture_p1",
+        "fixture_p2",
+        "fixture_p3",
+        "fixture_p4",
+        "fixture_p5",
+        "fixture_p6",
+        "fixture_p7",
+        "fixture_p8"
+      ],
+      "hybrid_ids": [
+        "fixture_p4",
+        "fixture_p3",
+        "fixture_p5",
+        "fixture_p1",
+        "fixture_p2",
+        "fixture_p8",
+        "fixture_p7",
+        "fixture_p6"
+      ],
+      "vector_recall_at_3": 1.0,
+      "vector_recall_at_5": 1.0,
+      "fts_recall_at_3": 0.0,
+      "fts_recall_at_5": 1.0,
+      "hybrid_recall_at_3": 1.0,
+      "hybrid_recall_at_5": 1.0
+    },
+    {
+      "query_id": "q4",
+      "query_text": "آپارتمان در نارمک",
+      "relevant_ids": [
+        "fixture_p3",
+        "fixture_p4"
+      ],
+      "semantic_status": "ok",
+      "semantic_latency_ms": 384.68,
+      "fts_latency_ms": 0.19,
+      "vector_ids": [
+        "fixture_p3",
+        "fixture_p4",
+        "fixture_p5",
+        "fixture_p6",
+        "fixture_p8",
+        "fixture_p7",
+        "fixture_p2",
+        "fixture_p1"
+      ],
+      "fts_ids": [
+        "fixture_p3",
+        "fixture_p4",
+        "fixture_p1",
+        "fixture_p2",
+        "fixture_p5",
+        "fixture_p6",
+        "fixture_p7",
+        "fixture_p8"
+      ],
+      "hybrid_ids": [
+        "fixture_p3",
+        "fixture_p4",
+        "fixture_p5",
+        "fixture_p6",
+        "fixture_p1",
+        "fixture_p2",
+        "fixture_p8",
+        "fixture_p7"
+      ],
+      "vector_recall_at_3": 1.0,
+      "vector_recall_at_5": 1.0,
+      "fts_recall_at_3": 1.0,
+      "fts_recall_at_5": 1.0,
+      "hybrid_recall_at_3": 1.0,
+      "hybrid_recall_at_5": 1.0
+    },
+    {
+      "query_id": "q5",
+      "query_text": "دو خوابه در ستارخان",
+      "relevant_ids": [
+        "fixture_p1",
+        "fixture_p2"
+      ],
+      "semantic_status": "ok",
+      "semantic_latency_ms": 303.62,
+      "fts_latency_ms": 0.22,
+      "vector_ids": [
+        "fixture_p1",
+        "fixture_p2",
+        "fixture_p5",
+        "fixture_p3",
+        "fixture_p4",
+        "fixture_p6",
+        "fixture_p7",
+        "fixture_p8"
+      ],
+      "fts_ids": [
+        "fixture_p1",
+        "fixture_p2"
+      ],
+      "hybrid_ids": [
+        "fixture_p1",
+        "fixture_p2",
+        "fixture_p5",
+        "fixture_p3",
+        "fixture_p4",
+        "fixture_p6",
+        "fixture_p7",
+        "fixture_p8"
+      ],
+      "vector_recall_at_3": 1.0,
+      "vector_recall_at_5": 1.0,
+      "fts_recall_at_3": 1.0,
+      "fts_recall_at_5": 1.0,
+      "hybrid_recall_at_3": 1.0,
+      "hybrid_recall_at_5": 1.0
+    },
+    {
+      "query_id": "q6",
+      "query_text": "جای پارک دارد و آسانسور ندارد",
+      "relevant_ids": [
+        "fixture_p6"
+      ],
+      "semantic_status": "ok",
+      "semantic_latency_ms": 291.04,
+      "fts_latency_ms": 0.27,
+      "vector_ids": [
+        "fixture_p5",
+        "fixture_p6",
+        "fixture_p8",
+        "fixture_p3",
+        "fixture_p2",
+        "fixture_p7",
+        "fixture_p4",
+        "fixture_p1"
+      ],
+      "fts_ids": [
+        "fixture_p1",
+        "fixture_p2",
+        "fixture_p3",
+        "fixture_p4",
+        "fixture_p5",
+        "fixture_p6",
+        "fixture_p7",
+        "fixture_p8"
+      ],
+      "hybrid_ids": [
+        "fixture_p5",
+        "fixture_p2",
+        "fixture_p3",
+        "fixture_p6",
+        "fixture_p1",
+        "fixture_p8",
+        "fixture_p4",
+        "fixture_p7"
+      ],
+      "vector_recall_at_3": 1.0,
+      "vector_recall_at_5": 1.0,
+      "fts_recall_at_3": 0.0,
+      "fts_recall_at_5": 0.0,
+      "hybrid_recall_at_3": 0.0,
+      "hybrid_recall_at_5": 1.0
+    },
+    {
+      "query_id": "q7",
+      "query_text": "آپارتمان چهار خوابه",
+      "relevant_ids": [
+        "fixture_p7"
+      ],
+      "semantic_status": "ok",
+      "semantic_latency_ms": 302.92,
+      "fts_latency_ms": 0.17,
+      "vector_ids": [
+        "fixture_p3",
+        "fixture_p7",
+        "fixture_p4",
+        "fixture_p6",
+        "fixture_p5",
+        "fixture_p2",
+        "fixture_p8",
+        "fixture_p1"
+      ],
+      "fts_ids": [
+        "fixture_p1",
+        "fixture_p2",
+        "fixture_p3",
+        "fixture_p4",
+        "fixture_p5",
+        "fixture_p6",
+        "fixture_p7",
+        "fixture_p8"
+      ],
+      "hybrid_ids": [
+        "fixture_p3",
+        "fixture_p4",
+        "fixture_p2",
+        "fixture_p1",
+        "fixture_p7",
+        "fixture_p6",
+        "fixture_p5",
+        "fixture_p8"
+      ],
+      "vector_recall_at_3": 1.0,
+      "vector_recall_at_5": 1.0,
+      "fts_recall_at_3": 0.0,
+      "fts_recall_at_5": 0.0,
+      "hybrid_recall_at_3": 0.0,
+      "hybrid_recall_at_5": 1.0
+    },
+    {
+      "query_id": "q8",
+      "query_text": "واحد بدون اتاق خواب",
+      "relevant_ids": [
+        "fixture_p8"
+      ],
+      "semantic_status": "ok",
+      "semantic_latency_ms": 323.86,
+      "fts_latency_ms": 0.21,
+      "vector_ids": [
+        "fixture_p3",
+        "fixture_p6",
+        "fixture_p8",
+        "fixture_p5",
+        "fixture_p2",
+        "fixture_p4",
+        "fixture_p7",
+        "fixture_p1"
+      ],
+      "fts_ids": [
+        "fixture_p2",
+        "fixture_p3",
+        "fixture_p5",
+        "fixture_p6",
+        "fixture_p8",
+        "fixture_p1",
+        "fixture_p4",
+        "fixture_p7"
+      ],
+      "hybrid_ids": [
+        "fixture_p3",
+        "fixture_p2",
+        "fixture_p6",
+        "fixture_p5",
+        "fixture_p8",
+        "fixture_p4",
+        "fixture_p1",
+        "fixture_p7"
+      ],
+      "vector_recall_at_3": 1.0,
+      "vector_recall_at_5": 1.0,
+      "fts_recall_at_3": 0.0,
+      "fts_recall_at_5": 1.0,
+      "hybrid_recall_at_3": 0.0,
+      "hybrid_recall_at_5": 1.0
+    }
+  ]
+}

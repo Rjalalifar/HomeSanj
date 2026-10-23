@@ -1,0 +1,212 @@
+{
+  "itineraries": [
+    {
+      "itinerary_id": "it_980a1bac7c1e415ec45cf596",
+      "otp_response_id": "walking_contract_public_sample",
+      "origin": {
+        "latitude": 35.76897090251798,
+        "longitude": 51.47337646693164
+      },
+      "destination": {
+        "latitude": 35.7671261,
+        "longitude": 51.47622
+      },
+      "request_datetime": "2026-10-21T19:39:29+03:30",
+      "time_mode": "DEPART_AT",
+      "start_datetime": "2026-10-21T19:39:29+03:30",
+      "end_datetime": "2026-10-21T19:45:56+03:30",
+      "total_duration_seconds": 387,
+      "walk_duration_seconds": 387,
+      "walk_distance_meters": 510.51,
+      "transfers": null,
+      "legs": [
+        {
+          "mode": "WALK",
+          "is_transit": false,
+          "duration_seconds": 387,
+          "distance_meters": 510.51,
+          "start_datetime": "2026-10-21T19:39:29+03:30",
+          "end_datetime": "2026-10-21T19:45:56+03:30",
+          "route": null,
+          "from": {
+            "name": "Origin",
+            "latitude": 35.7689709,
+            "longitude": 51.4733765
+          },
+          "to": {
+            "name": "Destination",
+            "latitude": 35.7671261,
+            "longitude": 51.47622
+          },
+          "realtime": false,
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                51.47335,
+                35.76904
+              ],
+              [
+                51.47277,
+                35.76927
+              ],
+              [
+                51.47248,
+                35.76878
+              ],
+              [
+                51.47285,
+                35.76863
+              ],
+              [
+                51.47474,
+                35.7679
+              ],
+              [
+                51.47601,
+                35.7674
+              ],
+              [
+                51.47608,
+                35.76736
+              ],
+              [
+                51.47612,
+                35.76733
+              ],
+              [
+                51.47616,
+                35.76729
+              ],
+              [
+                51.47618,
+                35.76724
+              ],
+              [
+                51.47622,
+                35.76718
+              ],
+              [
+                51.47624,
+                35.76713
+              ]
+            ]
+          },
+          "interchange_from": null,
+          "interchange_to": null
+        }
+      ],
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            51.47335,
+            35.76904
+          ],
+          [
+            51.47277,
+            35.76927
+          ],
+          [
+            51.47248,
+            35.76878
+          ],
+          [
+            51.47285,
+            35.76863
+          ],
+          [
+            51.47474,
+            35.7679
+          ],
+          [
+            51.47601,
+            35.7674
+          ],
+          [
+            51.47608,
+            35.76736
+          ],
+          [
+            51.47612,
+            35.76733
+          ],
+          [
+            51.47616,
+            35.76729
+          ],
+          [
+            51.47618,
+            35.76724
+          ],
+          [
+            51.47622,
+            35.76718
+          ],
+          [
+            51.47624,
+            35.76713
+          ]
+        ]
+      },
+      "status": "ok",
+      "source_kind": "live_otp",
+      "schedule_basis": "unknown",
+      "realtime_status": "unknown",
+      "location_accuracy": "unknown",
+      "graph_version": null,
+      "fetched_at": "2026-10-21T16:09:29.871398+00:00",
+      "missing_fields": [
+        "transfers"
+      ],
+      "request_to_start_seconds": 0
+    }
+  ],
+  "otp_response_id": "walking_contract_public_sample",
+  "raw_response": {
+    "data": {
+      "trip": {
+        "routingErrors": [],
+        "tripPatterns": [
+          {
+            "expectedStartTime": "2026-10-21T19:39:29+03:30",
+            "expectedEndTime": "2026-10-21T19:45:56+03:30",
+            "duration": 387,
+            "walkTime": 387,
+            "walkDistance": 510.51,
+            "legs": [
+              {
+                "mode": "foot",
+                "ride": false,
+                "duration": 387,
+                "distance": 510.51,
+                "expectedStartTime": "2026-10-21T19:39:29+03:30",
+                "expectedEndTime": "2026-10-21T19:45:56+03:30",
+                "realtime": false,
+                "pointsOnLink": {
+                  "points": "ociyEmkdyHm@rB`Bx@\\iApCyJbB}FFMDGFGHCJGHC"
+                },
+                "line": null,
+                "fromPlace": {
+                  "name": "Origin",
+                  "latitude": 35.7689709,
+                  "longitude": 51.4733765
+                },
+                "toPlace": {
+                  "name": "Destination",
+                  "latitude": 35.7671261,
+                  "longitude": 51.47622
+                },
+                "interchangeFrom": null,
+                "interchangeTo": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "invalid_itineraries": [],
+  "routing_errors": [],
+  "status": "ok"
+}
